@@ -1,11 +1,1 @@
-/**
- *
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
- */
-
-require([
-    'jquery/fileUploader/jquery.fileupload-ui',
-    'mage/adminhtml/browser',
-    'Magento_Theme/js/form'
-]);
+/var/www/html/magento2-2.4.1/app/code/Magento/Theme/view/adminhtml/web/js/bootstrap.js
