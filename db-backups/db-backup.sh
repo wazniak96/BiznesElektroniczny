@@ -1,4 +1,4 @@
-]#!/bin/bash
+#!/bin/bash
 # mysql-backup.sh
 # use mysqldump to Dump DB and compress it on the fly to a mounted partition
 #
