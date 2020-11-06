@@ -33,7 +33,7 @@ echo "====== Log End   =========" >> $LF
 function GetDBList
 {
 echo "Calling GetDBList()" >> $LF
-mysqlshow --password="$PASSWORD" --user="$USER" |grep "|"| tr -d ' '|tr -d '|'| egrep -v Databases > $DBLIST
+mysqlshow --password="$PASSWORD" --user="$USER" |grep "|"| tr -d ' '|tr -d '|'| egrep -v Databases | grep "magento2" > $DBLIST
 }
  
 #=====================================

@@ -1,17 +1,1 @@
-/**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
- */
-
-/**
- * @api
- */
-define([
-    'Magento_Checkout/js/model/quote'
-], function (quote) {
-    'use strict';
-
-    return function (shippingAddress) {
-        quote.shippingAddress(shippingAddress);
-    };
-});
+/var/www/html/magento2-2.4.1/app/code/Magento/Checkout/view/frontend/web/js/action/select-shipping-address.js
