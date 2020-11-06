@@ -1,4 +1,4 @@
-#!/bin/bash
+]#!/bin/bash
 # mysql-backup.sh
 # use mysqldump to Dump DB and compress it on the fly to a mounted partition
 #
@@ -52,8 +52,6 @@ mv $DBFILE $DBFILE.`date '+%M%S'`
 fi
 echo "Dumping ${DB}" >> $LF
 mysqldump --password="$PASSWORD" --user="$USER" --no-tablespaces -B ${DB}  --add-drop-database --add-drop-table >> ${DBFILE}
-echo "Zipping up file!" >> $LF
-gzip ${DBFILE}
 echo "Done!" >> $LF
 }
  
