@@ -1,0 +1,11 @@
+/phpMyAdmin-4.7.4-all-languages.zip
+/src/phpmyadmin
+/src/log
+/src/cache
+/src/app/cache
+/src/app/logs
+/src/override/classes/cache
+/src/tools/tcpdf/cache
+/src/classes/cache
+/src/themes/default-bootstrap/cache
+/src_rekomendacji/SystemRekomendacjiMaven/target

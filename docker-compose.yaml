@@ -1,0 +1,41 @@
+version: '3.3'
+
+services:
+   db_presta:
+     image: mysql:5.7
+     ports:
+      - "3306:3306"
+     volumes:
+       - E:/VM/baza:/var/lib/mysql
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: admin
+       MYSQL_DATABASE: prestashop_db
+       MYSQL_USER: ps
+       MYSQL_PASSWORD: ps
+
+   prestashop:
+     depends_on:
+       - db_presta
+     image: prestashop/prestashop:1.6
+     ports:
+       - "8080:80"
+     restart: always
+     environment:
+       PS_FOLDER_ADMIN: psadmin
+       PS_FOLDER_INSTALL: psinstall
+     volumes:
+       - E:/VM/presta:/var/www/html
+       
+   phpmyadmin:
+     depends_on:
+       - db_presta
+     image: phpmyadmin/phpmyadmin
+     container_name: phpmyadmin
+     restart: always
+     ports:
+       - '8181:80'
+     environment:
+       PMA_HOST: db_presta
+       
+       
