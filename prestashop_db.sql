@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db_presta
--- Czas generowania: 30 Lis 2020, 18:09
+-- Czas generowania: 30 Lis 2020, 22:41
 -- Wersja serwera: 5.7.32
 -- Wersja PHP: 7.4.11
 
@@ -121,7 +121,6 @@ INSERT INTO `ps_access` (`id_profile`, `id_tab`, `view`, `add`, `edit`, `delete`
 (1, 102, 1, 1, 1, 1),
 (1, 103, 1, 1, 1, 1),
 (1, 104, 1, 1, 1, 1),
-(1, 105, 1, 1, 1, 1),
 (1, 106, 1, 1, 1, 1),
 (2, 0, 1, 1, 1, 1),
 (2, 1, 0, 0, 0, 0),
@@ -228,7 +227,6 @@ INSERT INTO `ps_access` (`id_profile`, `id_tab`, `view`, `add`, `edit`, `delete`
 (2, 102, 0, 0, 0, 0),
 (2, 103, 0, 0, 0, 0),
 (2, 104, 0, 0, 0, 0),
-(2, 105, 0, 0, 0, 0),
 (2, 106, 0, 0, 0, 0),
 (3, 0, 1, 1, 1, 1),
 (3, 1, 0, 0, 0, 0),
@@ -335,7 +333,6 @@ INSERT INTO `ps_access` (`id_profile`, `id_tab`, `view`, `add`, `edit`, `delete`
 (3, 102, 0, 0, 0, 0),
 (3, 103, 0, 0, 0, 0),
 (3, 104, 0, 0, 0, 0),
-(3, 105, 0, 0, 0, 0),
 (3, 106, 0, 0, 0, 0),
 (4, 0, 1, 1, 1, 1),
 (4, 1, 0, 0, 0, 0),
@@ -442,7 +439,6 @@ INSERT INTO `ps_access` (`id_profile`, `id_tab`, `view`, `add`, `edit`, `delete`
 (4, 102, 0, 0, 0, 0),
 (4, 103, 0, 0, 0, 0),
 (4, 104, 0, 0, 0, 0),
-(4, 105, 0, 0, 0, 0),
 (4, 106, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
@@ -1660,11 +1656,8 @@ CREATE TABLE `ps_cms` (
 --
 
 INSERT INTO `ps_cms` (`id_cms`, `id_cms_category`, `position`, `active`, `indexation`) VALUES
-(1, 1, 0, 1, 0),
-(2, 1, 1, 1, 0),
-(3, 1, 2, 1, 0),
-(4, 1, 3, 1, 0),
-(5, 1, 4, 1, 0);
+(3, 1, 0, 1, 0),
+(4, 1, 1, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -1836,11 +1829,8 @@ CREATE TABLE `ps_cms_lang` (
 --
 
 INSERT INTO `ps_cms_lang` (`id_cms`, `id_lang`, `id_shop`, `meta_title`, `meta_description`, `meta_keywords`, `content`, `link_rewrite`) VALUES
-(1, 1, 1, 'Delivery', 'Our terms and conditions of delivery', 'conditions, delivery, delay, shipment, pack', '<h2>Shipments and returns</h2><h3>Your pack shipment</h3><p>Packages are generally dispatched within 2 days after receipt of payment and are shipped via UPS with tracking and drop-off without signature. If you prefer delivery by UPS Extra with required signature, an additional cost will be applied, so please contact us before choosing this method. Whichever shipment choice you make, we will provide you with a link to track your package online.</p><p>Shipping fees include handling and packing fees as well as postage costs. Handling fees are fixed, whereas transport fees vary according to total weight of the shipment. We advise you to group your items in one order. We cannot group two distinct orders placed separately, and shipping fees will apply to each of them. Your package will be dispatched at your own risk, but special care is taken to protect fragile objects.<br /><br />Boxes are amply sized and your items are well-protected.</p>', 'delivery'),
-(2, 1, 1, 'Legal Notice', 'Legal notice', 'notice, legal, credits', '<h2>Legal</h2><h3>Credits</h3><p>Concept and production:</p><p>This Web site was created using <a href=\"http://www.prestashop.com\">PrestaShop</a>&trade; open-source software.</p>', 'legal-notice'),
-(3, 1, 1, 'Terms and conditions of use', 'Our terms and conditions of use', 'conditions, terms, use, sell', '<h2>Your terms and conditions of use</h2><h3>Rule 1</h3><p>Here is the rule 1 content</p>\r\n<h3>Rule 2</h3><p>Here is the rule 2 content</p>\r\n<h3>Rule 3</h3><p>Here is the rule 3 content</p>', 'terms-and-conditions-of-use'),
-(4, 1, 1, 'About us', 'Learn more about us', 'about us, informations', '<h2>About us</h2>\r\n<h3>Our company</h3><p>Our company</p>\r\n<h3>Our team</h3><p>Our team</p>\r\n<h3>Informations</h3><p>Informations</p>', 'about-us'),
-(5, 1, 1, 'Secure payment', 'Our secure payment mean', 'secure payment, ssl, visa, mastercard, paypal', '<h2>Secure payment</h2>\r\n<h3>Our secure payment</h3><p>With SSL</p>\r\n<h3>Using Visa/Mastercard/Paypal</h3><p>About this services</p>', 'secure-payment');
+(3, 1, 1, 'Regulamin', 'Regulamin sklepu Templates4U', '', '<div class=\"text_block\">\n<div id=\"templates_block\" class=\"container regulamin\">\n<h2>Regulamin</h2>\n<div class=\"text_block\">\n<h4>1. WAŻNA INFORMACJA</h4>\n<p>Proszę uważnie przeczytać warunki zakupu. Zakup szablonu w naszym sklepie oznacza akceptację poniższych zasad.</p>\n<h4>2. WARUNKI ZAKUPU</h4>\n<p>Zakup na naszej stronie objęty jest ograniczoną licencją na używanie szablonów stron i innych produktów dostępnych na stronie. Licencja na projekt ma charakter niewyłączny, chyba że klient zakupi dany projekt jako pierwszy w opcji zakupu wyłącznego.</p>\n<h5>a) Warunki licencji</h5>\n<p>Nabywca ma prawo do użycia zakupionego projektu w jednym serwisie internetowym (niezależnie od jego wielkości), należącym do nabywcy lub jego klienta. Jeśli nabywca planuje użycie projektu w kolejnej witrynie internetowej, powinien dokonać zakupu ponownie.</p>\n<h5>b) Charakterystyka produktu</h5>\n<p>Przedmiotem zakupu jest projekt graficzny, wraz ze wszystkimi plikami źródłowymi i animacjami, oraz plikami HTML. Szablon najczęściej nie zawierać skryptów dynamicznych np. obsługujących formularze, czy systemy newsów. W razie jakichkolwiek wątpliwości w tej kwestii - prosimy o kontakt ze sprzedawcą.</p>\n<h5>c) Modyfikacje produktu</h5>\n<p>Nabywca ma prawo do dokonania wszelkich koniecznych modyfikacji projektu, dostosowując go do własnych potrzeb.</p>\n<h5>d) Niedozwolone użycie szablonu</h5>\n<p>Niedozwolone jest umieszczanie produktów objętych licencją (niezależnie od tego czy zostały one zmodyfikowane) na dyskietkach, CD, stronie internetowej etc. z przeznaczeniem do dalszego rozprowadzania lub sprzedaży, bez wyraźnej zgody dostawcy treści.</p>\n<h5>e) Przeniesienie licencji</h5>\n<p>Nie jest dozwolone udzielanie licencji pochodnej, ani przeniesienie licencji na inny podmiot bez pisemnej zgody dostawcy treści.</p>\n<h5>f) Prawo własności</h5>\n<p>Nabywca nie może dochodzić praw autorskich do żadnego z oferowanych projektów (zmodyfikowanych lub nie). Projekty są własnością intelektualną ich autorów. Produkty są udostępniane w takiej formie w jakiej zostały dostarczone przez autorów. Sprzedawca nie udziela gwarancji na oferowane produkty i nie odpowiada za żadne szkody (bezpośrednie ani pośrednie), które mogą wyniknąć z użycia niniejszych produktów.</p>\n<h4>3. PRZEWALUTOWANIE I TRANSAKCJE KARTĄ</h4>\n<p>Zakup przy użyciu karty kredytowej może zostać wstrzymany na 10-20 minut do ręcznej weryfikacji karty, lub na okres dłuższy (do 20 godz.) w przypadku podejrzenia nieautoryzowanego użycia karty. Transakcja zakupu będzie przewalutowana na dolary amerykańskie. Niektóre banki mogą pobierać drobną prowizję od operacji przewalutowania transakcji (np 1%).</p>\n<h4>4. ZWROT PRODUKTU</h4>\n<p>Produkty oferowane na tej stronie mają charakter niematerialny (są dostarczane w formie elektronicznej). W związku z tym towar nie może zostać zwrócony po dokonaniu zakupu. Prosimy więc o dokładne zapoznanie się ze specyfikacją projektu i dostępnymi źródłami na stronie opisu danego szablonu. Zachęcamy także do pobrania darmowych próbek. Zwrot może nastąpić jedynie w przypadku niezgodności towaru z umową. W takim przypadku należy dostarczyć zrzeczenie się prawa do wykorzystania projektu, najpóźniej tydzień po dokonaniu zakupu.</p>\n<p>Sprzedawca zastrzega sobie prawo do zmiany powyższego regulaminu bez wcześniejszego powiadomienia.</p>\n</div>\n</div>\n</div>', 'regulamin'),
+(4, 1, 1, 'O nas', 'Dowiedz się więcej o naszym sklepie', 'about us, informations', '<p>Firma nasza specjalizuje się od 2020r w sprzedaży internetowej. Dzięki naszemu wieloletniemu doświadczeniu możesz nam zaufać i liczyć na fachowe i bezpiczenie obsłużenie każdego zlecenia. Zaufało nam już zero klientów. Byliśmy niejednokrotnie odznaczeni mianem \"Super Sprzedawcy\" oraz \"Standard Allegro\" przez zespół Allegro. </p>\n<p><b>Sprzedaż na Allegro prowadzimy nieprzerwanie od 2020 roku</b>. Posiadamy zarejestrowaną działalność gospodarczą, więc wszystkie nasze transakcje są w pełni legalne. Robiąc zakupy właśnie u nas, masz 100% gwarancję satysfakcji z zakupionych przedmiotów. Dzięki dużej sprzedaży możemy zapewnić najtańsze szablony przy wysokiej jakości wykonania. Z tego miejsca chciałbym Państwu podziękować za zaufanie bo dzięki niemu szukamy takich towarów dla Państwa już od pół roku ciągle sporstając rosnącym wymaganiom klientów. Niezależne systemy oceny wskazuję że 98,6 % klientów poleca nasz asortyment oraz jakość obsługi. </p>', 'about-us');
 
 -- --------------------------------------------------------
 
@@ -1883,11 +1873,8 @@ CREATE TABLE `ps_cms_shop` (
 --
 
 INSERT INTO `ps_cms_shop` (`id_cms`, `id_shop`) VALUES
-(1, 1),
-(2, 1),
 (3, 1),
-(4, 1),
-(5, 1);
+(4, 1);
 
 -- --------------------------------------------------------
 
@@ -2069,7 +2056,7 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (89, NULL, NULL, 'PS_SMARTY_FORCE_COMPILE', '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (90, NULL, NULL, 'PS_DISTANCE_UNIT', 'km', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (91, NULL, NULL, 'PS_STORES_DISPLAY_CMS', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(92, NULL, NULL, 'PS_STORES_DISPLAY_FOOTER', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(92, NULL, NULL, 'PS_STORES_DISPLAY_FOOTER', NULL, '0000-00-00 00:00:00', '2020-11-30 23:36:02'),
 (93, NULL, NULL, 'PS_STORES_SIMPLIFIED', '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (94, NULL, NULL, 'SHOP_LOGO_WIDTH', '350', '0000-00-00 00:00:00', '2020-11-30 19:04:02'),
 (95, NULL, NULL, 'SHOP_LOGO_HEIGHT', '99', '0000-00-00 00:00:00', '2020-11-30 19:04:02'),
@@ -2097,7 +2084,7 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (117, NULL, NULL, 'PS_STORES_CENTER_LONG', '-80.226439', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (118, NULL, NULL, 'PS_USE_ECOTAX', '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (119, NULL, NULL, 'PS_CANONICAL_REDIRECT', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(120, NULL, NULL, 'PS_IMG_UPDATE_TIME', '1324977642', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(120, NULL, NULL, 'PS_IMG_UPDATE_TIME', '1606771326', '0000-00-00 00:00:00', '2020-11-30 22:22:06'),
 (121, NULL, NULL, 'PS_BACKUP_DROP_TABLE', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (122, NULL, NULL, 'PS_OS_CHEQUE', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (123, NULL, NULL, 'PS_OS_PAYMENT', '2', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -2186,8 +2173,8 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (206, NULL, NULL, 'CHECKUP_STOCK_LT', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (207, NULL, NULL, 'CHECKUP_STOCK_GT', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (208, NULL, NULL, 'FOOTER_CMS', '0_3|0_4', '0000-00-00 00:00:00', '2020-11-30 19:05:11'),
-(209, NULL, NULL, 'FOOTER_BLOCK_ACTIVATION', '0_3|0_4', '0000-00-00 00:00:00', '2020-11-30 19:05:11'),
-(210, NULL, NULL, 'FOOTER_POWEREDBY', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(209, NULL, NULL, 'FOOTER_BLOCK_ACTIVATION', '1', '0000-00-00 00:00:00', '2020-11-30 23:28:18'),
+(210, NULL, NULL, 'FOOTER_POWEREDBY', '0', '0000-00-00 00:00:00', '2020-11-30 23:28:18'),
 (211, NULL, NULL, 'BLOCKADVERT_LINK', 'http://www.prestashop.com', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (212, NULL, NULL, 'BLOCKSTORE_IMG', 'store.jpg', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (213, NULL, NULL, 'BLOCKADVERT_IMG_EXT', 'jpg', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -2196,12 +2183,12 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (216, NULL, NULL, 'BLOCKSOCIAL_FACEBOOK', 'http://www.facebook.com/prestashop', '0000-00-00 00:00:00', '2020-11-30 19:05:00'),
 (217, NULL, NULL, 'BLOCKSOCIAL_TWITTER', 'http://www.twitter.com/prestashop', '0000-00-00 00:00:00', '2020-11-30 19:05:00'),
 (218, NULL, NULL, 'BLOCKSOCIAL_RSS', 'http://www.prestashop.com/blog/en/', '0000-00-00 00:00:00', '2020-11-30 19:05:00'),
-(219, NULL, NULL, 'BLOCKCONTACTINFOS_COMPANY', 'My Company', '0000-00-00 00:00:00', '2020-11-30 19:05:13'),
-(220, NULL, NULL, 'BLOCKCONTACTINFOS_ADDRESS', '42 Puffin street\n12345 Puffinville\nFrance', '0000-00-00 00:00:00', '2020-11-30 19:05:13'),
-(221, NULL, NULL, 'BLOCKCONTACTINFOS_PHONE', '0123-456-789', '0000-00-00 00:00:00', '2020-11-30 19:05:13'),
-(222, NULL, NULL, 'BLOCKCONTACTINFOS_EMAIL', 'sales@yourcompany.com', '0000-00-00 00:00:00', '2020-11-30 19:05:13'),
-(223, NULL, NULL, 'BLOCKCONTACT_TELNUMBER', '0123-456-789', '0000-00-00 00:00:00', '2020-11-30 19:05:13'),
-(224, NULL, NULL, 'BLOCKCONTACT_EMAIL', 'sales@yourcompany.com', '0000-00-00 00:00:00', '2020-11-30 19:05:13'),
+(219, NULL, NULL, 'BLOCKCONTACTINFOS_COMPANY', 'Templates4U', '0000-00-00 00:00:00', '2020-11-30 22:21:26'),
+(220, NULL, NULL, 'BLOCKCONTACTINFOS_ADDRESS', 'ul. Nieistniejąca 1\r\n80-222 Gdańsk', '0000-00-00 00:00:00', '2020-11-30 22:21:26'),
+(221, NULL, NULL, 'BLOCKCONTACTINFOS_PHONE', '555-555-555', '0000-00-00 00:00:00', '2020-11-30 22:21:26'),
+(222, NULL, NULL, 'BLOCKCONTACTINFOS_EMAIL', 'sales@templates4U.pl', '0000-00-00 00:00:00', '2020-11-30 22:21:26'),
+(223, NULL, NULL, 'BLOCKCONTACT_TELNUMBER', '555-555-555', '0000-00-00 00:00:00', '2020-11-30 23:10:24'),
+(224, NULL, NULL, 'BLOCKCONTACT_EMAIL', 'sales@templates4U.pl', '0000-00-00 00:00:00', '2020-11-30 23:10:24'),
 (225, NULL, NULL, 'SUPPLIER_DISPLAY_TEXT', '1', '0000-00-00 00:00:00', '2020-11-30 19:05:18'),
 (226, NULL, NULL, 'SUPPLIER_DISPLAY_TEXT_NB', '5', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (227, NULL, NULL, 'SUPPLIER_DISPLAY_FORM', '1', '0000-00-00 00:00:00', '2020-11-30 19:05:18'),
@@ -2293,11 +2280,11 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (313, NULL, NULL, 'PS_LAYERED_FILTER_INDEX_CAT', '0', '2020-11-30 19:05:03', '2020-11-30 19:05:03'),
 (314, NULL, NULL, 'PS_LAYERED_FILTER_PRICE_ROUNDING', '1', '2020-11-30 19:05:03', '2020-11-30 19:05:03'),
 (315, NULL, NULL, 'PS_LAYERED_INDEXED', '1', '2020-11-30 19:05:08', '2020-11-30 19:05:08'),
-(316, NULL, NULL, 'FOOTER_PRICE-DROP', '1', '2020-11-30 19:05:11', '2020-11-30 19:05:11'),
-(317, NULL, NULL, 'FOOTER_NEW-PRODUCTS', '1', '2020-11-30 19:05:11', '2020-11-30 19:05:11'),
-(318, NULL, NULL, 'FOOTER_BEST-SALES', '1', '2020-11-30 19:05:12', '2020-11-30 19:05:12'),
+(316, NULL, NULL, 'FOOTER_PRICE-DROP', '0', '2020-11-30 19:05:11', '2020-11-30 23:28:18'),
+(317, NULL, NULL, 'FOOTER_NEW-PRODUCTS', '0', '2020-11-30 19:05:11', '2020-11-30 23:28:18'),
+(318, NULL, NULL, 'FOOTER_BEST-SALES', '0', '2020-11-30 19:05:12', '2020-11-30 23:28:18'),
 (319, NULL, NULL, 'FOOTER_CONTACT', '1', '2020-11-30 19:05:12', '2020-11-30 19:05:12'),
-(320, NULL, NULL, 'FOOTER_SITEMAP', '1', '2020-11-30 19:05:12', '2020-11-30 19:05:12'),
+(320, NULL, NULL, 'FOOTER_SITEMAP', '0', '2020-11-30 19:05:12', '2020-11-30 23:36:02'),
 (321, NULL, NULL, 'PS_NEWSLETTER_RAND', '1446188412334130795', '2020-11-30 19:05:15', '2020-11-30 19:05:15'),
 (322, NULL, NULL, 'BLOCKSPECIALS_NB_CACHES', '20', '2020-11-30 19:05:16', '2020-11-30 19:05:16'),
 (323, NULL, NULL, 'BLOCKSPECIALS_SPECIALS_NBR', '5', '2020-11-30 19:05:16', '2020-11-30 19:05:16'),
@@ -2324,8 +2311,8 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (344, NULL, NULL, 'PS_TC_THEME', NULL, '2020-11-30 19:05:33', '2020-11-30 19:05:33'),
 (345, NULL, NULL, 'PS_TC_FONT', NULL, '2020-11-30 19:05:33', '2020-11-30 19:05:33'),
 (346, NULL, NULL, 'PS_TC_ACTIVE', '1', '2020-11-30 19:05:33', '2020-11-30 19:05:33'),
-(347, NULL, NULL, 'PS_SET_DISPLAY_SUBCATEGORIES', '1', '2020-11-30 19:05:33', '2020-11-30 19:05:33'),
-(348, NULL, NULL, 'GF_INSTALL_CALC', '0', '2020-11-30 19:05:54', '2020-11-30 19:05:54'),
+(347, NULL, NULL, 'PS_SET_DISPLAY_SUBCATEGORIES', '1', '2020-11-30 19:05:33', '2020-11-30 21:20:28'),
+(348, NULL, NULL, 'GF_INSTALL_CALC', '1', '2020-11-30 19:05:54', '2020-11-30 19:53:46'),
 (349, NULL, NULL, 'GF_CURRENT_LEVEL', '1', '2020-11-30 19:05:54', '2020-11-30 19:05:54'),
 (350, NULL, NULL, 'GF_CURRENT_LEVEL_PERCENT', '0', '2020-11-30 19:05:54', '2020-11-30 19:05:54'),
 (351, NULL, NULL, 'GF_NOTIFICATION', '0', '2020-11-30 19:05:54', '2020-11-30 19:05:54'),
@@ -2344,7 +2331,24 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (364, NULL, NULL, 'EMARKETING_FB_VIEWCONTENT', NULL, '2020-11-30 19:05:55', '2020-11-30 19:05:55'),
 (365, NULL, NULL, 'EMARKETING_FB_ADDTOCART', NULL, '2020-11-30 19:05:55', '2020-11-30 19:05:55'),
 (366, NULL, NULL, 'EMARKETING_FB_PURCHASE', NULL, '2020-11-30 19:05:55', '2020-11-30 19:05:55'),
-(367, NULL, NULL, 'EMARKETING_ROUTETOKEN', 'ci36TpoG', '2020-11-30 19:05:55', '2020-11-30 19:05:55');
+(367, NULL, NULL, 'EMARKETING_ROUTETOKEN', 'ci36TpoG', '2020-11-30 19:05:55', '2020-11-30 19:05:55'),
+(368, NULL, NULL, 'GF_NOT_VIEWED_BADGE', NULL, '2020-11-30 19:53:47', '2020-11-30 23:39:42'),
+(369, NULL, NULL, 'PS_SHOW_TYPE_MODULES_1', 'allModules', '2020-11-30 19:57:24', '2020-11-30 19:57:24'),
+(370, NULL, NULL, 'PS_SHOW_INSTALLED_MODULES_1', 'installed', '2020-11-30 19:57:24', '2020-11-30 19:57:24'),
+(371, NULL, NULL, 'PS_SHOW_ENABLED_MODULES_1', 'enabledDisabled', '2020-11-30 19:57:24', '2020-11-30 19:57:24'),
+(372, NULL, NULL, 'PS_GRID_PRODUCT', '0', '2020-11-30 21:16:34', '2020-11-30 21:16:34'),
+(373, NULL, NULL, 'PS_STORES_DISPLAY_SITEMAP', '0', '2020-11-30 22:53:47', '2020-11-30 22:53:47'),
+(374, NULL, NULL, 'PS_SHOP_DETAILS', NULL, '2020-11-30 22:53:48', '2020-11-30 22:53:53'),
+(375, NULL, NULL, 'PS_SHOP_ADDR1', 'ul. Nieistniejąca 1', '2020-11-30 22:53:48', '2020-11-30 22:53:48'),
+(376, NULL, NULL, 'PS_SHOP_ADDR2', NULL, '2020-11-30 22:53:48', '2020-11-30 22:53:53'),
+(377, NULL, NULL, 'PS_SHOP_CODE', '80-222 ', '2020-11-30 22:53:48', '2020-11-30 22:53:48'),
+(378, NULL, NULL, 'PS_SHOP_CITY', 'Gdańsk', '2020-11-30 22:53:48', '2020-11-30 22:53:48'),
+(379, NULL, NULL, 'PS_SHOP_COUNTRY_ID', '14', '2020-11-30 22:53:48', '2020-11-30 22:53:48'),
+(380, NULL, NULL, 'PS_SHOP_COUNTRY', 'Polska', '2020-11-30 22:53:48', '2020-11-30 22:53:48'),
+(381, NULL, NULL, 'PS_SHOP_PHONE', '555-555-555', '2020-11-30 22:53:48', '2020-11-30 22:53:48'),
+(382, NULL, NULL, 'PS_SHOP_FAX', NULL, '2020-11-30 22:53:48', '2020-11-30 22:53:53'),
+(383, NULL, NULL, 'FOOTER_CMS_TEXT_1', NULL, '2020-11-30 23:28:18', '2020-11-30 23:36:02'),
+(384, NULL, NULL, 'PS_SHOW_CAT_MODULES_1', NULL, '2020-11-30 23:33:07', '2020-11-30 23:38:43');
 
 -- --------------------------------------------------------
 
@@ -2402,7 +2406,8 @@ INSERT INTO `ps_configuration_kpi` (`id_configuration_kpi`, `id_shop_group`, `id
 (33, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_11_2020', '80', '2020-11-30 19:05:22', '2020-11-30 19:05:22'),
 (34, NULL, NULL, 'DASHGOALS_TRAFFIC_12_2020', '600', '2020-11-30 19:05:23', '2020-11-30 19:05:23'),
 (35, NULL, NULL, 'DASHGOALS_CONVERSION_12_2020', '2', '2020-11-30 19:05:23', '2020-11-30 19:05:23'),
-(36, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_12_2020', '80', '2020-11-30 19:05:23', '2020-11-30 19:05:23');
+(36, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_12_2020', '80', '2020-11-30 19:05:23', '2020-11-30 19:05:23'),
+(37, NULL, NULL, 'UPDATE_MODULES', '0', '2020-11-30 19:57:14', '2020-11-30 19:57:14');
 
 -- --------------------------------------------------------
 
@@ -2468,7 +2473,8 @@ CREATE TABLE `ps_connections` (
 
 INSERT INTO `ps_connections` (`id_connections`, `id_shop_group`, `id_shop`, `id_guest`, `id_page`, `ip_address`, `date_add`, `http_referer`) VALUES
 (1, 1, 1, 1, 1, 2130706433, '2020-11-30 19:04:33', 'https://www.prestashop.com'),
-(2, 1, 1, 2, 1, 2887188481, '2020-11-30 19:07:27', '');
+(2, 1, 1, 2, 1, 2887188481, '2020-11-30 19:07:27', ''),
+(3, 1, 1, 2, 1, 2887188481, '2020-11-30 21:14:20', '');
 
 -- --------------------------------------------------------
 
@@ -2497,6 +2503,72 @@ CREATE TABLE `ps_connections_source` (
   `keywords` varchar(255) DEFAULT NULL,
   `date_add` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Zrzut danych tabeli `ps_connections_source`
+--
+
+INSERT INTO `ps_connections_source` (`id_connections_source`, `id_connections`, `http_referer`, `request_uri`, `keywords`, `date_add`) VALUES
+(1, 3, 'http://localhost:8080/', 'localhost:8080/3-women', '', '2020-11-30 21:18:26'),
+(2, 3, 'http://localhost:8080/', 'localhost:8080/3-women', '', '2020-11-30 21:19:41'),
+(3, 3, 'http://localhost:8080/3-women', 'localhost:8080/', '', '2020-11-30 21:19:45'),
+(4, 3, 'http://localhost:8080/3-women', 'localhost:8080/', '', '2020-11-30 21:20:32'),
+(5, 3, 'http://localhost:8080/3-women', 'localhost:8080/', '', '2020-11-30 21:20:52'),
+(6, 3, 'http://localhost:8080/3-women', 'localhost:8080/', '', '2020-11-30 21:21:54'),
+(7, 3, 'http://localhost:8080/3-women', 'localhost:8080/', '', '2020-11-30 21:23:43'),
+(8, 3, 'http://localhost:8080/3-women', 'localhost:8080/', '', '2020-11-30 21:24:48'),
+(9, 3, 'http://localhost:8080/3-women', 'localhost:8080/', '', '2020-11-30 21:35:00'),
+(10, 3, 'http://localhost:8080/3-women', 'localhost:8080/', '', '2020-11-30 22:21:43'),
+(11, 3, 'http://localhost:8080/3-women', 'localhost:8080/', '', '2020-11-30 22:22:29'),
+(12, 3, 'http://localhost:8080/', 'localhost:8080/evening-dresses/4-printed-dress.html', '', '2020-11-30 22:23:10'),
+(13, 3, 'http://localhost:8080/evening-dresses/4-printed-dress.html', 'localhost:8080/', '', '2020-11-30 22:24:21'),
+(14, 3, 'http://localhost:8080/', 'localhost:8080/', '', '2020-11-30 22:24:24'),
+(15, 3, 'http://localhost:8080/', 'localhost:8080/logowanie?back=history', '', '2020-11-30 22:50:01'),
+(16, 3, 'http://localhost:8080/logowanie?back=history', 'localhost:8080/logowanie?back=order-slip', '', '2020-11-30 22:50:12'),
+(17, 3, 'http://localhost:8080/logowanie?back=order-slip', 'localhost:8080/logowanie?back=addresses', '', '2020-11-30 22:50:16'),
+(18, 3, 'http://localhost:8080/logowanie?back=addresses', 'localhost:8080/logowanie?back=identity', '', '2020-11-30 22:50:19'),
+(19, 3, 'http://localhost:8080/logowanie?back=identity', 'localhost:8080/promocje', '', '2020-11-30 22:50:27'),
+(20, 3, 'http://localhost:8080/promocje', 'localhost:8080/sklepy', '', '2020-11-30 22:51:31'),
+(21, 3, 'http://localhost:8080/sklepy', 'localhost:8080/kontakt', '', '2020-11-30 22:51:54'),
+(22, 3, 'http://localhost:8080/kontakt', 'localhost:8080/mapa-strony', '', '2020-11-30 22:52:05'),
+(23, 3, 'http://localhost:8080/mapa-strony', 'localhost:8080/', '', '2020-11-30 22:54:00'),
+(24, 3, 'http://localhost:8080/', 'localhost:8080/kontakt', '', '2020-11-30 22:54:14'),
+(25, 3, 'http://localhost:8080/kontakt', 'localhost:8080/content/4-about-us', '', '2020-11-30 22:54:18'),
+(26, 3, 'http://localhost:8080/kontakt', 'localhost:8080/content/4-about-us', '', '2020-11-30 22:59:21'),
+(27, 3, 'http://localhost:8080/content/4-about-us', 'localhost:8080/', '', '2020-11-30 23:02:28'),
+(28, 3, 'http://localhost:8080/', 'localhost:8080/content/3-regulamin', '', '2020-11-30 23:02:35'),
+(29, 3, 'http://localhost:8080/content/3-regulamin', 'localhost:8080/zamowienie', '', '2020-11-30 23:03:07'),
+(30, 3, 'http://localhost:8080/zamowienie', 'localhost:8080/', '', '2020-11-30 23:03:24'),
+(31, 3, 'http://localhost:8080/', 'localhost:8080/mapa-strony', '', '2020-11-30 23:03:47'),
+(32, 3, 'http://localhost:8080/mapa-strony', 'localhost:8080/kontakt', '', '2020-11-30 23:04:01'),
+(33, 3, 'http://localhost:8080/mapa-strony', 'localhost:8080/content/category/1-glowna', '', '2020-11-30 23:04:08'),
+(34, 3, 'http://localhost:8080/mapa-strony', 'localhost:8080/content/category/1-glowna', '', '2020-11-30 23:04:22'),
+(35, 3, 'http://localhost:8080/content/category/1-glowna', 'localhost:8080/', '', '2020-11-30 23:04:32'),
+(36, 3, 'http://localhost:8080/', 'localhost:8080/mapa-strony', '', '2020-11-30 23:04:37'),
+(37, 3, 'http://localhost:8080/mapa-strony', 'localhost:8080/dostawcy', '', '2020-11-30 23:04:43'),
+(38, 3, 'http://localhost:8080/dostawcy', 'localhost:8080/', '', '2020-11-30 23:04:50'),
+(39, 3, 'http://localhost:8080/', 'localhost:8080/mapa-strony', '', '2020-11-30 23:09:17'),
+(40, 3, 'http://localhost:8080/mapa-strony', 'localhost:8080/dostawcy', '', '2020-11-30 23:09:23'),
+(41, 3, 'http://localhost:8080/mapa-strony', 'localhost:8080/producenci', '', '2020-11-30 23:09:29'),
+(42, 3, 'http://localhost:8080/', 'localhost:8080/mapa-strony', '', '2020-11-30 23:10:31'),
+(43, 3, 'http://localhost:8080/', 'localhost:8080/mapa-strony', '', '2020-11-30 23:11:49'),
+(44, 3, 'http://localhost:8080/mapa-strony', 'localhost:8080/sklepy', '', '2020-11-30 23:11:59'),
+(45, 3, 'http://localhost:8080/sklepy', 'localhost:8080/', '', '2020-11-30 23:12:04'),
+(46, 3, 'http://localhost:8080/sklepy', 'localhost:8080/', '', '2020-11-30 23:13:33'),
+(47, 3, 'http://localhost:8080/sklepy', 'localhost:8080/', '', '2020-11-30 23:14:33'),
+(48, 3, 'http://localhost:8080/sklepy', 'localhost:8080/', '', '2020-11-30 23:14:39'),
+(49, 3, 'http://localhost:8080/', 'localhost:8080/nowe-produkty', '', '2020-11-30 23:14:57'),
+(50, 3, 'http://localhost:8080/', 'localhost:8080/nowe-produkty', '', '2020-11-30 23:17:31'),
+(51, 3, 'http://localhost:8080/', 'localhost:8080/nowe-produkty', '', '2020-11-30 23:23:21'),
+(52, 3, 'http://localhost:8080/nowe-produkty', 'localhost:8080/5-tshirts', '', '2020-11-30 23:25:00'),
+(53, 3, 'http://localhost:8080/5-tshirts', 'localhost:8080/', '', '2020-11-30 23:25:10'),
+(54, 3, 'http://localhost:8080/5-tshirts', 'localhost:8080/', '', '2020-11-30 23:28:23'),
+(55, 3, 'http://localhost:8080/', 'localhost:8080/mapa-strony', '', '2020-11-30 23:29:34'),
+(56, 3, 'http://localhost:8080/mapa-strony', 'localhost:8080/', '', '2020-11-30 23:36:25'),
+(57, 3, 'http://localhost:8080/', 'localhost:8080/szukaj?controller=search&orderby=position&orderway=desc&search_query=mapa&submit_search=', '', '2020-11-30 23:36:48'),
+(58, 3, 'http://localhost:8080/', 'localhost:8080/szukaj?controller=search&orderby=position&orderway=desc&search_query=map&submit_search=', '', '2020-11-30 23:36:55'),
+(59, 3, 'http://localhost:8080/', 'localhost:8080/3-women', '', '2020-11-30 23:40:18'),
+(60, 3, 'http://localhost:8080/3-women', 'localhost:8080/', '', '2020-11-30 23:40:53');
 
 -- --------------------------------------------------------
 
@@ -3648,7 +3720,7 @@ CREATE TABLE `ps_employee` (
 --
 
 INSERT INTO `ps_employee` (`id_employee`, `id_profile`, `id_lang`, `lastname`, `firstname`, `email`, `passwd`, `last_passwd_gen`, `stats_date_from`, `stats_date_to`, `stats_compare_from`, `stats_compare_to`, `stats_compare_option`, `preselect_date_range`, `bo_color`, `bo_theme`, `bo_css`, `default_tab`, `bo_width`, `bo_menu`, `active`, `optin`, `id_last_order`, `id_last_customer_message`, `id_last_customer`, `last_connection_date`) VALUES
-(1, 1, 1, 'XXX', 'Dawid', 'wazniak96@gmail.com', '571605331338e1e84fa8b355703024de', '2020-11-30 13:04:08', '2020-10-30', '2020-11-30', '0000-00-00', '0000-00-00', 1, NULL, NULL, 'default', 'admin-theme.css', 1, 0, 1, 1, 1, 0, 0, 0, '0000-00-00');
+(1, 1, 1, 'XXX', 'Dawid', 'wazniak96@gmail.com', '571605331338e1e84fa8b355703024de', '2020-11-30 13:04:08', '2020-10-30', '2020-11-30', '0000-00-00', '0000-00-00', 1, NULL, NULL, 'default', 'admin-theme.css', 1, 0, 1, 1, 1, 5, 0, 0, '2020-11-30');
 
 -- --------------------------------------------------------
 
@@ -4475,7 +4547,6 @@ INSERT INTO `ps_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (50, 1, 12, 1),
 (63, 1, 9, 1),
 (63, 1, 57, 1),
-(65, 1, 58, 1),
 (67, 1, 142, 1),
 (2, 1, 10, 2),
 (5, 1, 15, 2),
@@ -4553,7 +4624,7 @@ INSERT INTO `ps_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (38, 1, 68, 4),
 (43, 1, 39, 4),
 (6, 1, 10, 5),
-(16, 1, 8, 5),
+(17, 1, 8, 5),
 (18, 1, 26, 5),
 (38, 1, 13, 5),
 (38, 1, 14, 5),
@@ -4563,36 +4634,34 @@ INSERT INTO `ps_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (64, 1, 149, 5),
 (7, 1, 10, 6),
 (15, 1, 26, 6),
-(17, 1, 8, 6),
+(19, 1, 8, 6),
 (41, 1, 15, 6),
 (45, 1, 39, 6),
-(65, 1, 149, 6),
 (8, 1, 10, 7),
-(19, 1, 8, 7),
+(21, 1, 8, 7),
 (46, 1, 39, 7),
 (50, 1, 26, 7),
 (9, 1, 10, 8),
-(21, 1, 8, 8),
+(23, 1, 8, 8),
 (47, 1, 39, 8),
 (63, 1, 26, 8),
 (10, 1, 10, 9),
-(23, 1, 8, 9),
+(24, 1, 8, 9),
 (48, 1, 39, 9),
 (11, 1, 10, 10),
-(24, 1, 8, 10),
+(25, 1, 8, 10),
 (49, 1, 39, 10),
 (12, 1, 10, 11),
-(25, 1, 8, 11),
+(26, 1, 8, 11),
 (51, 1, 39, 11),
 (14, 1, 10, 12),
-(26, 1, 8, 12),
+(29, 1, 8, 12),
 (52, 1, 39, 12),
 (15, 1, 10, 13),
-(29, 1, 8, 13),
 (53, 1, 39, 13),
+(63, 1, 8, 13),
 (16, 1, 10, 14),
 (54, 1, 39, 14),
-(63, 1, 8, 14),
 (17, 1, 10, 15),
 (55, 1, 39, 15),
 (18, 1, 10, 16),
@@ -4640,7 +4709,6 @@ CREATE TABLE `ps_hook_module_exceptions` (
 
 INSERT INTO `ps_hook_module_exceptions` (`id_hook_module_exceptions`, `id_shop`, `id_module`, `id_hook`, `file_name`) VALUES
 (1, 1, 4, 8, 'category'),
-(2, 1, 16, 8, 'category'),
 (3, 1, 17, 8, 'category'),
 (4, 1, 21, 8, 'category'),
 (5, 1, 25, 8, 'category');
@@ -5355,6 +5423,13 @@ CREATE TABLE `ps_log` (
   `date_upd` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Zrzut danych tabeli `ps_log`
+--
+
+INSERT INTO `ps_log` (`id_log`, `severity`, `error_code`, `message`, `object_type`, `object_id`, `id_employee`, `date_add`, `date_upd`) VALUES
+(1, 1, 0, 'Połączenie z panelem administracyjnym z 172.23.0.1', '', 0, 1, '2020-11-30 19:53:39', '2020-11-30 19:53:39');
+
 -- --------------------------------------------------------
 
 --
@@ -5660,7 +5735,6 @@ INSERT INTO `ps_module` (`id_module`, `name`, `active`, `version`) VALUES
 (62, 'statsvisits', 1, '1.6.1'),
 (63, 'themeconfigurator', 1, '2.1.3'),
 (64, 'gamification', 1, '2.3.2'),
-(65, 'onboarding', 1, '1.0.2'),
 (66, 'emarketing', 1, '2.2.0'),
 (67, 'psaddonsconnect', 1, '1.0.1');
 
@@ -5764,7 +5838,6 @@ INSERT INTO `ps_module_access` (`id_profile`, `id_module`, `view`, `configure`, 
 (2, 62, 1, 1, 1),
 (2, 63, 1, 1, 1),
 (2, 64, 1, 1, 1),
-(2, 65, 1, 1, 1),
 (2, 66, 1, 1, 1),
 (2, 67, 1, 1, 1),
 (3, 1, 1, 0, 0),
@@ -5831,7 +5904,6 @@ INSERT INTO `ps_module_access` (`id_profile`, `id_module`, `view`, `configure`, 
 (3, 62, 1, 0, 0),
 (3, 63, 1, 0, 0),
 (3, 64, 1, 0, 0),
-(3, 65, 1, 0, 0),
 (3, 66, 1, 0, 0),
 (3, 67, 1, 0, 0),
 (4, 1, 1, 1, 1),
@@ -5898,7 +5970,6 @@ INSERT INTO `ps_module_access` (`id_profile`, `id_module`, `view`, `configure`, 
 (4, 62, 1, 1, 1),
 (4, 63, 1, 1, 1),
 (4, 64, 1, 1, 1),
-(4, 65, 1, 1, 1),
 (4, 66, 1, 1, 1),
 (4, 67, 1, 1, 1);
 
@@ -6151,9 +6222,6 @@ INSERT INTO `ps_module_group` (`id_module`, `id_shop`, `id_group`) VALUES
 (64, 1, 1),
 (64, 1, 2),
 (64, 1, 3),
-(65, 1, 1),
-(65, 1, 2),
-(65, 1, 3),
 (66, 1, 1),
 (66, 1, 2),
 (66, 1, 3),
@@ -6192,43 +6260,31 @@ CREATE TABLE `ps_module_shop` (
 --
 
 INSERT INTO `ps_module_shop` (`id_module`, `id_shop`, `enable_device`) VALUES
-(1, 1, 7),
-(2, 1, 3),
 (3, 1, 7),
-(4, 1, 7),
 (5, 1, 7),
-(6, 1, 7),
 (7, 1, 7),
 (8, 1, 7),
-(9, 1, 7),
 (10, 1, 7),
 (11, 1, 7),
 (12, 1, 7),
-(13, 1, 1),
 (14, 1, 7),
 (15, 1, 7),
-(16, 1, 7),
 (17, 1, 7),
 (18, 1, 7),
-(19, 1, 7),
 (20, 1, 7),
 (21, 1, 7),
 (22, 1, 7),
 (23, 1, 7),
-(24, 1, 7),
-(25, 1, 7),
 (26, 1, 7),
 (27, 1, 7),
 (28, 1, 7),
 (29, 1, 7),
-(30, 1, 7),
 (31, 1, 7),
 (32, 1, 7),
 (33, 1, 7),
 (34, 1, 7),
 (35, 1, 7),
 (36, 1, 7),
-(37, 1, 3),
 (38, 1, 7),
 (39, 1, 7),
 (40, 1, 7),
@@ -6256,7 +6312,6 @@ INSERT INTO `ps_module_shop` (`id_module`, `id_shop`, `enable_device`) VALUES
 (62, 1, 7),
 (63, 1, 7),
 (64, 1, 7),
-(65, 1, 7),
 (66, 1, 7),
 (67, 1, 7);
 
@@ -6362,10 +6417,10 @@ CREATE TABLE `ps_orders` (
 
 INSERT INTO `ps_orders` (`id_order`, `reference`, `id_shop_group`, `id_shop`, `id_carrier`, `id_lang`, `id_customer`, `id_cart`, `id_currency`, `id_address_delivery`, `id_address_invoice`, `current_state`, `secure_key`, `payment`, `conversion_rate`, `module`, `recyclable`, `gift`, `gift_message`, `mobile_theme`, `shipping_number`, `total_discounts`, `total_discounts_tax_incl`, `total_discounts_tax_excl`, `total_paid`, `total_paid_tax_incl`, `total_paid_tax_excl`, `total_paid_real`, `total_products`, `total_products_wt`, `total_shipping`, `total_shipping_tax_incl`, `total_shipping_tax_excl`, `carrier_tax_rate`, `total_wrapping`, `total_wrapping_tax_incl`, `total_wrapping_tax_excl`, `round_mode`, `round_type`, `invoice_number`, `delivery_number`, `invoice_date`, `delivery_date`, `valid`, `date_add`, `date_upd`) VALUES
 (1, 'XKBKNABJK', 1, 1, 2, 1, 1, 1, 1, 4, 4, 6, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 'Payment by check', '1.000000', 'cheque', 0, 0, '', 0, '', '0.000000', '0.000000', '0.000000', '55.000000', '55.000000', '55.000000', '0.000000', '53.000000', '53.000000', '2.000000', '2.000000', '2.000000', '0.000', '0.000000', '0.000000', '0.000000', 0, 0, 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, '2020-11-30 19:04:43', '2020-11-30 19:04:45'),
-(2, 'OHSATSERP', 1, 1, 2, 1, 1, 2, 1, 4, 4, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 'Payment by check', '1.000000', 'cheque', 0, 0, '', 0, '', '0.000000', '0.000000', '0.000000', '75.900000', '75.900000', '75.900000', '0.000000', '73.900000', '73.900000', '2.000000', '2.000000', '2.000000', '0.000', '0.000000', '0.000000', '0.000000', 0, 0, 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, '2020-11-30 19:04:43', '2020-11-30 19:04:44'),
-(3, 'UOYEVOLI', 1, 1, 2, 1, 1, 3, 1, 4, 4, 8, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 'Payment by check', '1.000000', 'cheque', 0, 0, '', 0, '', '0.000000', '0.000000', '0.000000', '76.010000', '76.010000', '76.010000', '0.000000', '74.010000', '74.010000', '2.000000', '2.000000', '2.000000', '0.000', '0.000000', '0.000000', '0.000000', 0, 0, 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, '2020-11-30 19:04:43', '2020-11-30 19:04:45'),
-(4, 'FFATNOMMJ', 1, 1, 2, 1, 1, 4, 1, 4, 4, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 'Payment by check', '1.000000', 'cheque', 0, 0, '', 0, '', '0.000000', '0.000000', '0.000000', '89.890000', '89.890000', '89.890000', '0.000000', '87.890000', '87.890000', '2.000000', '2.000000', '2.000000', '0.000', '0.000000', '0.000000', '0.000000', 0, 0, 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, '2020-11-30 19:04:44', '2020-11-30 19:04:45'),
-(5, 'KHWLILZLL', 1, 1, 2, 1, 1, 5, 1, 4, 4, 10, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 'Bank wire', '1.000000', 'bankwire', 0, 0, '', 0, '', '0.000000', '0.000000', '0.000000', '71.510000', '71.510000', '71.510000', '0.000000', '69.510000', '69.510000', '2.000000', '2.000000', '2.000000', '0.000', '0.000000', '0.000000', '0.000000', 0, 0, 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, '2020-11-30 19:04:44', '2020-11-30 19:04:45');
+(2, 'OHSATSERP', 1, 1, 2, 1, 1, 2, 1, 4, 4, 6, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 'Payment by check', '1.000000', 'cheque', 0, 0, '', 0, '', '0.000000', '0.000000', '0.000000', '75.900000', '75.900000', '75.900000', '0.000000', '73.900000', '73.900000', '2.000000', '2.000000', '2.000000', '0.000', '0.000000', '0.000000', '0.000000', 0, 0, 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, '2020-11-30 19:04:43', '2020-11-30 21:10:46'),
+(3, 'UOYEVOLI', 1, 1, 2, 1, 1, 3, 1, 4, 4, 6, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 'Payment by check', '1.000000', 'cheque', 0, 0, '', 0, '', '0.000000', '0.000000', '0.000000', '76.010000', '76.010000', '76.010000', '0.000000', '74.010000', '74.010000', '2.000000', '2.000000', '2.000000', '0.000', '0.000000', '0.000000', '0.000000', 0, 0, 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, '2020-11-30 19:04:43', '2020-11-30 21:10:45'),
+(4, 'FFATNOMMJ', 1, 1, 2, 1, 1, 4, 1, 4, 4, 6, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 'Payment by check', '1.000000', 'cheque', 0, 0, '', 0, '', '0.000000', '0.000000', '0.000000', '89.890000', '89.890000', '89.890000', '0.000000', '87.890000', '87.890000', '2.000000', '2.000000', '2.000000', '0.000', '0.000000', '0.000000', '0.000000', 0, 0, 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, '2020-11-30 19:04:44', '2020-11-30 21:10:45'),
+(5, 'KHWLILZLL', 1, 1, 2, 1, 1, 5, 1, 4, 4, 6, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 'Bank wire', '1.000000', 'bankwire', 0, 0, '', 0, '', '0.000000', '0.000000', '0.000000', '71.510000', '71.510000', '71.510000', '0.000000', '69.510000', '69.510000', '2.000000', '2.000000', '2.000000', '0.000', '0.000000', '0.000000', '0.000000', 0, 0, 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, '2020-11-30 19:04:44', '2020-11-30 21:10:43');
 
 -- --------------------------------------------------------
 
@@ -6525,7 +6580,11 @@ INSERT INTO `ps_order_history` (`id_order_history`, `id_employee`, `id_order`, `
 (4, 0, 4, 1, '2020-11-30 19:04:45'),
 (5, 0, 5, 10, '2020-11-30 19:04:45'),
 (6, 1, 1, 6, '2020-11-30 19:04:45'),
-(7, 1, 3, 8, '2020-11-30 19:04:45');
+(7, 1, 3, 8, '2020-11-30 19:04:45'),
+(8, 1, 5, 6, '2020-11-30 21:10:43'),
+(9, 1, 4, 6, '2020-11-30 21:10:45'),
+(10, 1, 3, 6, '2020-11-30 21:10:45'),
+(11, 1, 2, 6, '2020-11-30 21:10:46');
 
 -- --------------------------------------------------------
 
@@ -8758,6 +8817,13 @@ CREATE TABLE `ps_smarty_last_flush` (
   `last_flush` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Zrzut danych tabeli `ps_smarty_last_flush`
+--
+
+INSERT INTO `ps_smarty_last_flush` (`type`, `last_flush`) VALUES
+('template', '2020-11-30 21:22:06');
+
 -- --------------------------------------------------------
 
 --
@@ -8777,26 +8843,58 @@ CREATE TABLE `ps_smarty_lazy_cache` (
 --
 
 INSERT INTO `ps_smarty_lazy_cache` (`template_hash`, `cache_id`, `compile_id`, `filepath`, `last_update`) VALUES
-('1c2cb083a2501296262fc9eacdebdcbd', 'homeslider|1|1|14', '', 'homeslider/1/1/14/b7/99/17/b79917e19c39a5c2f6896b068d19cda5bdc51987.homeslider.tpl.php', '2020-11-30 18:07:28'),
-('2132324ad7612ed7cb91de8444f03dae', 'blocksearch-top|1|1|14', '', 'blocksearch_top/1/1/14/4e/c5/f0/4ec5f09962f5f0725e3faf31c01e69428a9d500b.blocksearch-top.tpl.php', '2020-11-30 18:07:20'),
-('35cd305a7376d26fe34a5dbc3549c31d', 'blockcontact|1|1|14', '', 'blockcontact/1/1/14/3d/5b/15/3d5b1584ffcf7c8b56d0c79b9f00a62f9454dc0f.nav.tpl.php', '2020-11-30 18:07:28'),
-('48095caa3a1c074015638eecd2e31faa', 'blockfacebook|1|1|14', '', 'blockfacebook/1/1/14/16/49/f3/1649f3ea15558d48d79b3b5025c3e07fce0f53bd.blockfacebook.tpl.php', '2020-11-30 18:07:21'),
-('4f294e125e754c54d07798d2ae66c229', 'blockbanner|1|1|14', '', 'blockbanner/1/1/14/fa/20/76/fa207644db1eb26d98a795ad71b4eee2ee5ecf5a.blockbanner.tpl.php', '2020-11-30 18:07:27'),
-('4f296089919889fb5b29e0c5220afb8a', 'blockcontactinfos|1|1|14', '', 'blockcontactinfos/1/1/14/44/a3/ca/44a3ca6f70fb7cf18ad9ccaabb7c9b7695475dd2.blockcontactinfos.tpl.php', '2020-11-30 18:07:27'),
-('614548d004ca83d561fc28811f573952', 'blockspecials-tab|20201130|1|1|14', '', 'blockspecials_tab/20201130/1/1/14/ff/a2/f3/ffa2f3cf0f343957a57c8a99d56c5295164533de.tab.tpl.php', '2020-11-30 18:07:22'),
-('704e55cc1ebad8ca8d9ca6a5b7b2240d', 'blockbestsellers-home|1|1|14', '', 'blockbestsellers_home/1/1/14/2d/22/db/2d22db7b3d282a8d505bf2d26f4fe2cf5c580dc6.blockbestsellers-home.tpl.php', '2020-11-30 18:07:24'),
-('729e08a789498e11db4ee7ed1dafd3af', 'blockspecials-home|20201130|1|1|14', '', 'blockspecials_home/20201130/1/1/14/b7/13/c1/b713c100fedffddfa260c35747bbce951f5ad6f6.blockspecials-home.tpl.php', '2020-11-30 18:07:25'),
-('8cce06d74fb470f1ea86b9243a28d1c9', 'homefeatured-tab|1|1|14', '', 'homefeatured_tab/1/1/14/d1/ec/35/d1ec35425663d01dcc0e04833a4aa96a7fdfb7ba.tab.tpl.php', '2020-11-30 18:07:22'),
-('9b076b330c3b383e100e4c23e6c16d43', 'blocktopmenu|1|1|14|index', '', 'blocktopmenu/1/1/14/index/20/22/61/202261737f7471ff70a95274dd663f2dc7c8ef47.blocktopmenu.tpl.php', '2020-11-30 18:07:21'),
-('b96e09f72175b88e25c97cde76542dd6', 'blockmyaccountfooter|1|1|14', '', 'blockmyaccountfooter/1/1/14/05/44/40/054440a5b928799e8ca909a0b328db11279aee9a.blockmyaccountfooter.tpl.php', '2020-11-30 18:07:27'),
-('bfe7a83fb1ce61839575db203c6a12a1', 'blockcategories|1|1|14|1', '', 'blockcategories/1/1/14/1/a5/88/0b/a5880b37cb81397979bd6724b1e436aac6fc922c.blockcategories_footer.tpl.php', '2020-11-30 18:07:26'),
-('c48d03e88434c1b36ef2d67d66d7f58a', 'blockbestsellers-tab|1|1|14', '', 'blockbestsellers_tab/1/1/14/3f/09/f5/3f09f5b8078a6ad6ef0b7a13bf583277fab06f7f.tab.tpl.php', '2020-11-30 18:07:23'),
-('d22b953fa4736374feaaf4b2ee38dd9a', 'blockcms|2|1|1|14', '', 'blockcms/2/1/1/14/1d/89/e8/1d89e8014f347982d948469f9543b359301e5949.blockcms.tpl.php', '2020-11-30 18:07:26'),
-('d233cdf4166f53d791a695a6bfafa3cc', 'blocknewproducts-home|20201130|1|1|14', '', 'blocknewproducts_home/20201130/1/1/14/d4/f9/31/d4f9319358b5a40d86ff79038511f880f81b70fd.blocknewproducts_home.tpl.php', '2020-11-30 18:07:23'),
-('dfd47bacacbb45d7173526c60076e7e3', 'blocksocial|1|1|14', '', 'blocksocial/1/1/14/1c/f6/15/1cf6151950192708b2e4c671fbc321fd1d6133d1.blocksocial.tpl.php', '2020-11-30 18:07:25'),
-('eb92149692f7b06a705be8a062f03a16', 'blocknewproducts-tab|20201130|1|1|14', '', 'blocknewproducts_tab/20201130/1/1/14/72/4f/6d/724f6d692f525ebf1cf9abc827e367ef14b60def.tab.tpl.php', '2020-11-30 18:07:22'),
-('efc359ef82cf3c2f7740e9fba91ea1d9', 'blockcmsinfo|1|1|14', '', 'blockcmsinfo/1/1/14/2d/79/4a/2d794ad7481b74d454bafcbae8772db1320ae2ba.blockcmsinfo.tpl.php', '2020-11-30 18:07:21'),
-('f7b2d8122648c39fdccc4e63f44364ce', 'homefeatured|1|1|14', '', 'homefeatured/1/1/14/3a/a0/d6/3aa0d62e1049e5b9d12bc2cae084fdddf0d39b7a.homefeatured.tpl.php', '2020-11-30 18:07:24');
+('073db4b24be9294adb8875f6c6bcc9a5', 'blocknewproducts|20201130|1|1|14', '', 'blocknewproducts/20201130/1/1/14/5b/3f/a5/5b3fa53881f85e796313ba8b6a28dc2b1239402d.blocknewproducts.tpl.php', '2020-11-30 21:50:25'),
+('1351997e08672ab4dd22f146817c4391', 'blockbestsellers-col|1|1|14', '', 'blockbestsellers_col/1/1/14/17/dd/2a/17dd2a1d04af1317780f8a0fbe6c0fd0dfd3c035.blockbestsellers.tpl.php', '2020-11-30 21:50:23'),
+('17e36eec92e685dbd4e4df1b9011309f', 'blockstore|1|1|14', '', 'blockstore/1/1/14/96/47/f2/9647f2bfb40be35a425efa9b5cdf4eea88f1e945.blockstore.tpl.php', '2020-11-30 21:50:25'),
+('1cdf7e0610a586e2208481caae275dda', 'blockmanufacturer|1|1|14', '', 'blockmanufacturer/1/1/14/bd/6d/07/bd6d075f59b3bfa48bab4aac370402e0689d4036.blockmanufacturer.tpl.php', '2020-11-30 21:50:24'),
+('2132324ad7612ed7cb91de8444f03dae', 'blocksearch-top|1|1|14', '', 'blocksearch_top/1/1/14/4e/c5/f0/4ec5f09962f5f0725e3faf31c01e69428a9d500b.blocksearch-top.tpl.php', '2020-11-30 21:23:08'),
+('2b2a79d6bd38f7bf5531d6b8fa3a98c0', 'productpaymentlogos|1|1|14', '', 'productpaymentlogos/1/1/14/75/d4/f9/75d4f91ce2330a2faca072687d07c774bc9e6d01.productpaymentlogos.tpl.php', '2020-11-30 21:23:09'),
+('35cd305a7376d26fe34a5dbc3549c31d', 'blockcontact|1|1|14', '', 'blockcontact/1/1/14/3d/5b/15/3d5b1584ffcf7c8b56d0c79b9f00a62f9454dc0f.nav.tpl.php', '2020-11-30 22:10:31'),
+('399f3a8c743ef048e012f3c13f1bc314', 'blockcategories|1|1|14|2|1', '', 'blockcategories/1/1/14/2/1/1b/1c/21/1b1c215ce32173764aa2a2d1f148af37261154be.blockcategories.tpl.php', '2020-11-30 21:50:24'),
+('399f3a8c743ef048e012f3c13f1bc314', 'blockcategories|1|1|14|3|3|1', '', 'blockcategories/1/1/14/3/3/1/1b/1c/21/1b1c215ce32173764aa2a2d1f148af37261154be.blockcategories.tpl.php', '2020-11-30 22:40:16'),
+('399f3a8c743ef048e012f3c13f1bc314', 'blockcategories|1|1|14|5|5|1', '', 'blockcategories/1/1/14/5/5/1/1b/1c/21/1b1c215ce32173764aa2a2d1f148af37261154be.blockcategories.tpl.php', '2020-11-30 22:24:59'),
+('4f296089919889fb5b29e0c5220afb8a', 'blockcontactinfos|1|1|14', '', 'blockcontactinfos/1/1/14/44/a3/ca/44a3ca6f70fb7cf18ad9ccaabb7c9b7695475dd2.blockcontactinfos.tpl.php', '2020-11-30 21:22:29'),
+('614548d004ca83d561fc28811f573952', 'blockspecials-tab|20201130|1|1|14', '', 'blockspecials_tab/20201130/1/1/14/ff/a2/f3/ffa2f3cf0f343957a57c8a99d56c5295164533de.tab.tpl.php', '2020-11-30 21:22:27'),
+('614e4802f9dfd7bc3afb863d07cd8835', 'productlist_colors|1|1|1', '', 'productlist_colors/1/1/1/a2/cd/4f/a2cd4fb565c420961c99f5ef2cf555dc48db91ba.product-list-colors.tpl.php', '2020-11-30 22:14:55'),
+('614e4802f9dfd7bc3afb863d07cd8835', 'productlist_colors|2|1|1', '', 'productlist_colors/2/1/1/a2/cd/4f/a2cd4fb565c420961c99f5ef2cf555dc48db91ba.product-list-colors.tpl.php', '2020-11-30 22:14:55'),
+('614e4802f9dfd7bc3afb863d07cd8835', 'productlist_colors|3|1|1', '', 'productlist_colors/3/1/1/a2/cd/4f/a2cd4fb565c420961c99f5ef2cf555dc48db91ba.product-list-colors.tpl.php', '2020-11-30 22:14:55'),
+('614e4802f9dfd7bc3afb863d07cd8835', 'productlist_colors|4|1|1', '', 'productlist_colors/4/1/1/a2/cd/4f/a2cd4fb565c420961c99f5ef2cf555dc48db91ba.product-list-colors.tpl.php', '2020-11-30 22:14:55'),
+('614e4802f9dfd7bc3afb863d07cd8835', 'productlist_colors|5|1|1', '', 'productlist_colors/5/1/1/a2/cd/4f/a2cd4fb565c420961c99f5ef2cf555dc48db91ba.product-list-colors.tpl.php', '2020-11-30 21:50:26'),
+('614e4802f9dfd7bc3afb863d07cd8835', 'productlist_colors|6|1|1', '', 'productlist_colors/6/1/1/a2/cd/4f/a2cd4fb565c420961c99f5ef2cf555dc48db91ba.product-list-colors.tpl.php', '2020-11-30 22:14:55'),
+('614e4802f9dfd7bc3afb863d07cd8835', 'productlist_colors|7|1|1', '', 'productlist_colors/7/1/1/a2/cd/4f/a2cd4fb565c420961c99f5ef2cf555dc48db91ba.product-list-colors.tpl.php', '2020-11-30 21:50:26'),
+('704e55cc1ebad8ca8d9ca6a5b7b2240d', 'blockbestsellers-home|1|1|14', '', 'blockbestsellers_home/1/1/14/2d/22/db/2d22db7b3d282a8d505bf2d26f4fe2cf5c580dc6.blockbestsellers-home.tpl.php', '2020-11-30 21:22:28'),
+('729e08a789498e11db4ee7ed1dafd3af', 'blockspecials-home|20201130|1|1|14', '', 'blockspecials_home/20201130/1/1/14/b7/13/c1/b713c100fedffddfa260c35747bbce951f5ad6f6.blockspecials-home.tpl.php', '2020-11-30 21:22:28'),
+('8cce06d74fb470f1ea86b9243a28d1c9', 'homefeatured-tab|1|1|14', '', 'homefeatured_tab/1/1/14/d1/ec/35/d1ec35425663d01dcc0e04833a4aa96a7fdfb7ba.tab.tpl.php', '2020-11-30 21:22:26'),
+('9b076b330c3b383e100e4c23e6c16d43', 'blocktopmenu|1|1|14|category|3', '', 'blocktopmenu/1/1/14/category/3/20/22/61/202261737f7471ff70a95274dd663f2dc7c8ef47.blocktopmenu.tpl.php', '2020-11-30 22:40:16'),
+('9b076b330c3b383e100e4c23e6c16d43', 'blocktopmenu|1|1|14|category|5', '', 'blocktopmenu/1/1/14/category/5/20/22/61/202261737f7471ff70a95274dd663f2dc7c8ef47.blocktopmenu.tpl.php', '2020-11-30 22:24:58'),
+('9b076b330c3b383e100e4c23e6c16d43', 'blocktopmenu|1|1|14|cms|0', '', 'blocktopmenu/1/1/14/cms/0/20/22/61/202261737f7471ff70a95274dd663f2dc7c8ef47.blocktopmenu.tpl.php', '2020-11-30 22:04:21'),
+('9b076b330c3b383e100e4c23e6c16d43', 'blocktopmenu|1|1|14|index', '', 'blocktopmenu/1/1/14/index/20/22/61/202261737f7471ff70a95274dd663f2dc7c8ef47.blocktopmenu.tpl.php', '2020-11-30 22:04:30'),
+('9b076b330c3b383e100e4c23e6c16d43', 'blocktopmenu|1|1|14|manufacturer|0', '', 'blocktopmenu/1/1/14/manufacturer/0/20/22/61/202261737f7471ff70a95274dd663f2dc7c8ef47.blocktopmenu.tpl.php', '2020-11-30 22:09:28'),
+('9b076b330c3b383e100e4c23e6c16d43', 'blocktopmenu|1|1|14|supplier|0', '', 'blocktopmenu/1/1/14/supplier/0/20/22/61/202261737f7471ff70a95274dd663f2dc7c8ef47.blocktopmenu.tpl.php', '2020-11-30 22:04:42'),
+('a4edb6e4925cf4f684fdf466d509564a', 'blockpaymentlogo|1|1|14', '', '', '2020-11-30 22:36:54'),
+('a818646d437d1d648322d07d6c385caa', 'blockspecials|20201130|10|20201130|1|1|14', '', 'blockspecials/20201130/10/20201130/1/1/14/c7/cb/5a/c7cb5a1b8f4aaa78439a29b3cc549b5c1e053c83.blockspecials.tpl.php', '2020-11-30 22:10:30'),
+('a818646d437d1d648322d07d6c385caa', 'blockspecials|20201130|11|20201130|1|1|14', '', 'blockspecials/20201130/11/20201130/1/1/14/c7/cb/5a/c7cb5a1b8f4aaa78439a29b3cc549b5c1e053c83.blockspecials.tpl.php', '2020-11-30 22:29:33'),
+('a818646d437d1d648322d07d6c385caa', 'blockspecials|20201130|13|20201130|1|1|14', '', 'blockspecials/20201130/13/20201130/1/1/14/c7/cb/5a/c7cb5a1b8f4aaa78439a29b3cc549b5c1e053c83.blockspecials.tpl.php', '2020-11-30 22:03:46'),
+('a818646d437d1d648322d07d6c385caa', 'blockspecials|20201130|14|20201130|1|1|14', '', 'blockspecials/20201130/14/20201130/1/1/14/c7/cb/5a/c7cb5a1b8f4aaa78439a29b3cc549b5c1e053c83.blockspecials.tpl.php', '2020-11-30 22:04:36'),
+('a818646d437d1d648322d07d6c385caa', 'blockspecials|20201130|15|20201130|1|1|14', '', 'blockspecials/20201130/15/20201130/1/1/14/c7/cb/5a/c7cb5a1b8f4aaa78439a29b3cc549b5c1e053c83.blockspecials.tpl.php', '2020-11-30 22:23:20'),
+('a818646d437d1d648322d07d6c385caa', 'blockspecials|20201130|2|20201130|1|1|14', '', 'blockspecials/20201130/2/20201130/1/1/14/c7/cb/5a/c7cb5a1b8f4aaa78439a29b3cc549b5c1e053c83.blockspecials.tpl.php', '2020-11-30 22:09:16'),
+('a818646d437d1d648322d07d6c385caa', 'blockspecials|20201130|3|20201130|1|1|14', '', 'blockspecials/20201130/3/20201130/1/1/14/c7/cb/5a/c7cb5a1b8f4aaa78439a29b3cc549b5c1e053c83.blockspecials.tpl.php', '2020-11-30 22:36:54'),
+('a818646d437d1d648322d07d6c385caa', 'blockspecials|20201130|6|20201130|1|1|14', '', 'blockspecials/20201130/6/20201130/1/1/14/c7/cb/5a/c7cb5a1b8f4aaa78439a29b3cc549b5c1e053c83.blockspecials.tpl.php', '2020-11-30 22:17:30'),
+('a818646d437d1d648322d07d6c385caa', 'blockspecials|20201130|7|20201130|1|1|14', '', 'blockspecials/20201130/7/20201130/1/1/14/c7/cb/5a/c7cb5a1b8f4aaa78439a29b3cc549b5c1e053c83.blockspecials.tpl.php', '2020-11-30 21:50:25'),
+('a818646d437d1d648322d07d6c385caa', 'blockspecials|20201130|8|20201130|1|1|14', '', 'blockspecials/20201130/8/20201130/1/1/14/c7/cb/5a/c7cb5a1b8f4aaa78439a29b3cc549b5c1e053c83.blockspecials.tpl.php', '2020-11-30 22:09:28'),
+('a818646d437d1d648322d07d6c385caa', 'blockspecials|20201130|9|20201130|1|1|14', '', 'blockspecials/20201130/9/20201130/1/1/14/c7/cb/5a/c7cb5a1b8f4aaa78439a29b3cc549b5c1e053c83.blockspecials.tpl.php', '2020-11-30 21:52:04'),
+('b616481032ef196caf77e93f8740ba2b', 'blocksupplier|1|1|14', '', 'blocksupplier/1/1/14/4f/a7/f2/4fa7f22c9b08ac2c7995b5c4efea27f59c142246.blocksupplier.tpl.php', '2020-11-30 21:50:25'),
+('b96e09f72175b88e25c97cde76542dd6', 'blockmyaccountfooter|1|1|14', '', 'blockmyaccountfooter/1/1/14/05/44/40/054440a5b928799e8ca909a0b328db11279aee9a.blockmyaccountfooter.tpl.php', '2020-11-30 21:22:29'),
+('bfe7a83fb1ce61839575db203c6a12a1', 'blockcategories|1|1|14|1', '', 'blockcategories/1/1/14/1/a5/88/0b/a5880b37cb81397979bd6724b1e436aac6fc922c.blockcategories_footer.tpl.php', '2020-11-30 21:22:28'),
+('bfe7a83fb1ce61839575db203c6a12a1', 'blockcategories|1|1|14|10|1', '', 'blockcategories/1/1/14/10/1/a5/88/0b/a5880b37cb81397979bd6724b1e436aac6fc922c.blockcategories_footer.tpl.php', '2020-11-30 21:23:09'),
+('bfe7a83fb1ce61839575db203c6a12a1', 'blockcategories|1|1|14|3|1', '', 'blockcategories/1/1/14/3/1/a5/88/0b/a5880b37cb81397979bd6724b1e436aac6fc922c.blockcategories_footer.tpl.php', '2020-11-30 22:40:17'),
+('bfe7a83fb1ce61839575db203c6a12a1', 'blockcategories|1|1|14|5|1', '', 'blockcategories/1/1/14/5/1/a5/88/0b/a5880b37cb81397979bd6724b1e436aac6fc922c.blockcategories_footer.tpl.php', '2020-11-30 22:24:59'),
+('c48d03e88434c1b36ef2d67d66d7f58a', 'blockbestsellers-tab|1|1|14', '', 'blockbestsellers_tab/1/1/14/3f/09/f5/3f09f5b8078a6ad6ef0b7a13bf583277fab06f7f.tab.tpl.php', '2020-11-30 21:22:27'),
+('d22b953fa4736374feaaf4b2ee38dd9a', 'blockcms|0|1|1|14', '', 'blockcms/0/1/1/14/1d/89/e8/1d89e8014f347982d948469f9543b359301e5949.blockcms.tpl.php', '2020-11-30 22:36:47'),
+('d22b953fa4736374feaaf4b2ee38dd9a', 'blockcms|2|1|1|14', '', 'blockcms/2/1/1/14/1d/89/e8/1d89e8014f347982d948469f9543b359301e5949.blockcms.tpl.php', '2020-11-30 22:36:24'),
+('d233cdf4166f53d791a695a6bfafa3cc', 'blocknewproducts-home|20201130|1|1|14', '', 'blocknewproducts_home/20201130/1/1/14/d4/f9/31/d4f9319358b5a40d86ff79038511f880f81b70fd.blocknewproducts_home.tpl.php', '2020-11-30 21:22:27'),
+('eb92149692f7b06a705be8a062f03a16', 'blocknewproducts-tab|20201130|1|1|14', '', 'blocknewproducts_tab/20201130/1/1/14/72/4f/6d/724f6d692f525ebf1cf9abc827e367ef14b60def.tab.tpl.php', '2020-11-30 21:22:26'),
+('f7b2d8122648c39fdccc4e63f44364ce', 'homefeatured|1|1|14', '', 'homefeatured/1/1/14/3a/a0/d6/3aa0d62e1049e5b9d12bc2cae084fdddf0d39b7a.homefeatured.tpl.php', '2020-11-30 21:22:27');
 
 -- --------------------------------------------------------
 
@@ -9240,6 +9338,17 @@ CREATE TABLE `ps_statssearch` (
   `date_add` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Zrzut danych tabeli `ps_statssearch`
+--
+
+INSERT INTO `ps_statssearch` (`id_statssearch`, `id_shop`, `id_shop_group`, `keywords`, `results`, `date_add`) VALUES
+(1, 1, 1, 'map[', 0, '2020-11-30 22:36:46'),
+(2, 1, 1, 'mapa', 0, '2020-11-30 22:36:46'),
+(3, 1, 1, 'mapa', 0, '2020-11-30 22:36:48'),
+(4, 1, 1, 'map', 0, '2020-11-30 22:36:53'),
+(5, 1, 1, 'map', 0, '2020-11-30 22:36:55');
+
 -- --------------------------------------------------------
 
 --
@@ -9281,32 +9390,32 @@ CREATE TABLE `ps_stock_available` (
 --
 
 INSERT INTO `ps_stock_available` (`id_stock_available`, `id_product`, `id_product_attribute`, `id_shop`, `id_shop_group`, `quantity`, `depends_on_stock`, `out_of_stock`) VALUES
-(1, 1, 0, 1, 0, 1799, 0, 2),
-(2, 2, 0, 1, 0, 1799, 0, 2),
-(3, 3, 0, 1, 0, 899, 0, 2),
+(1, 1, 0, 1, 0, 1801, 0, 2),
+(2, 2, 0, 1, 0, 1801, 0, 2),
+(3, 3, 0, 1, 0, 901, 0, 2),
 (4, 4, 0, 1, 0, 900, 0, 2),
-(5, 5, 0, 1, 0, 3600, 0, 2),
-(6, 6, 0, 1, 0, 900, 0, 2),
-(7, 7, 0, 1, 0, 1800, 0, 2),
-(8, 1, 1, 1, 0, 299, 0, 2),
+(5, 5, 0, 1, 0, 3601, 0, 2),
+(6, 6, 0, 1, 0, 901, 0, 2),
+(7, 7, 0, 1, 0, 1802, 0, 2),
+(8, 1, 1, 1, 0, 301, 0, 2),
 (9, 1, 2, 1, 0, 300, 0, 2),
 (10, 1, 3, 1, 0, 300, 0, 2),
 (11, 1, 4, 1, 0, 300, 0, 2),
 (12, 1, 5, 1, 0, 300, 0, 2),
 (13, 1, 6, 1, 0, 300, 0, 2),
-(14, 2, 7, 1, 0, 299, 0, 2),
+(14, 2, 7, 1, 0, 300, 0, 2),
 (15, 2, 8, 1, 0, 300, 0, 2),
 (16, 2, 9, 1, 0, 300, 0, 2),
-(17, 2, 10, 1, 0, 300, 0, 2),
+(17, 2, 10, 1, 0, 301, 0, 2),
 (18, 2, 11, 1, 0, 300, 0, 2),
 (19, 2, 12, 1, 0, 300, 0, 2),
-(20, 3, 13, 1, 0, 299, 0, 2),
+(20, 3, 13, 1, 0, 301, 0, 2),
 (21, 3, 14, 1, 0, 300, 0, 2),
 (22, 3, 15, 1, 0, 300, 0, 2),
 (23, 4, 16, 1, 0, 300, 0, 2),
 (24, 4, 17, 1, 0, 300, 0, 2),
 (25, 4, 18, 1, 0, 300, 0, 2),
-(26, 5, 19, 1, 0, 300, 0, 2),
+(26, 5, 19, 1, 0, 301, 0, 2),
 (27, 5, 20, 1, 0, 300, 0, 2),
 (28, 5, 21, 1, 0, 300, 0, 2),
 (29, 5, 22, 1, 0, 300, 0, 2),
@@ -9319,9 +9428,9 @@ INSERT INTO `ps_stock_available` (`id_stock_available`, `id_product`, `id_produc
 (36, 5, 29, 1, 0, 300, 0, 2),
 (37, 5, 30, 1, 0, 300, 0, 2),
 (38, 6, 31, 1, 0, 300, 0, 2),
-(39, 6, 32, 1, 0, 300, 0, 2),
+(39, 6, 32, 1, 0, 301, 0, 2),
 (40, 6, 33, 1, 0, 300, 0, 2),
-(41, 7, 34, 1, 0, 300, 0, 2),
+(41, 7, 34, 1, 0, 302, 0, 2),
 (42, 7, 35, 1, 0, 300, 0, 2),
 (43, 7, 36, 1, 0, 300, 0, 2),
 (44, 7, 37, 1, 0, 300, 0, 2),
@@ -9803,7 +9912,6 @@ INSERT INTO `ps_tab` (`id_tab`, `id_parent`, `class_name`, `module`, `position`,
 (102, -1, 'AdminDashgoals', 'dashgoals', 8, 1, 0),
 (103, -1, 'AdminThemeConfigurator', 'themeconfigurator', 9, 1, 0),
 (104, 18, 'AdminGamification', 'gamification', 6, 1, 0),
-(105, 99999, 'AdminOnboarding', 'onboarding', 1, 1, 0),
 (106, 0, 'AdminEmarketing', 'emarketing', 13, 1, 0);
 
 -- --------------------------------------------------------
@@ -9938,7 +10046,6 @@ INSERT INTO `ps_tab_lang` (`id_tab`, `id_lang`, `name`) VALUES
 (102, 1, 'Dashgoals'),
 (103, 1, 'themeconfigurator'),
 (104, 1, 'Merchant Expertise'),
-(105, 1, 'Onboarding'),
 (106, 1, 'Advertising');
 
 -- --------------------------------------------------------
@@ -10326,19 +10433,6 @@ CREATE TABLE `ps_themeconfigurator` (
   `html` text,
   `active` tinyint(1) UNSIGNED NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Zrzut danych tabeli `ps_themeconfigurator`
---
-
-INSERT INTO `ps_themeconfigurator` (`id_item`, `id_shop`, `id_lang`, `item_order`, `title`, `title_use`, `hook`, `url`, `target`, `image`, `image_w`, `image_h`, `html`, `active`) VALUES
-(1, 1, 1, 1, '', 0, 'home', 'http://www.prestashop.com/', 0, 'banner-img1.jpg', '383', '267', '', 1),
-(2, 1, 1, 2, '', 0, 'home', 'http://www.prestashop.com/', 0, 'banner-img2.jpg', '383', '267', '', 1),
-(3, 1, 1, 3, '', 0, 'home', 'http://www.prestashop.com/', 0, 'banner-img3.jpg', '383', '267', '', 1),
-(4, 1, 1, 4, '', 0, 'home', 'http://www.prestashop.com/', 0, 'banner-img4.jpg', '383', '142', '', 1),
-(5, 1, 1, 5, '', 0, 'home', 'http://www.prestashop.com/', 0, 'banner-img5.jpg', '777', '142', '', 1),
-(6, 1, 1, 6, '', 0, 'top', 'http://www.prestashop.com/', 0, 'banner-img6.jpg', '381', '219', '', 1),
-(7, 1, 1, 7, '', 0, 'top', 'http://www.prestashop.com/', 0, 'banner-img7.jpg', '381', '219', '', 1);
 
 -- --------------------------------------------------------
 
@@ -13215,25 +13309,25 @@ ALTER TABLE `ps_condition`
 -- AUTO_INCREMENT dla tabeli `ps_configuration`
 --
 ALTER TABLE `ps_configuration`
-  MODIFY `id_configuration` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=368;
+  MODIFY `id_configuration` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=385;
 
 --
 -- AUTO_INCREMENT dla tabeli `ps_configuration_kpi`
 --
 ALTER TABLE `ps_configuration_kpi`
-  MODIFY `id_configuration_kpi` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id_configuration_kpi` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT dla tabeli `ps_connections`
 --
 ALTER TABLE `ps_connections`
-  MODIFY `id_connections` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_connections` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT dla tabeli `ps_connections_source`
 --
 ALTER TABLE `ps_connections_source`
-  MODIFY `id_connections_source` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id_connections_source` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 
 --
 -- AUTO_INCREMENT dla tabeli `ps_contact`
@@ -13425,7 +13519,7 @@ ALTER TABLE `ps_linksmenutop`
 -- AUTO_INCREMENT dla tabeli `ps_log`
 --
 ALTER TABLE `ps_log`
-  MODIFY `id_log` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id_log` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT dla tabeli `ps_mail`
@@ -13515,7 +13609,7 @@ ALTER TABLE `ps_order_detail`
 -- AUTO_INCREMENT dla tabeli `ps_order_history`
 --
 ALTER TABLE `ps_order_history`
-  MODIFY `id_order_history` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_order_history` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT dla tabeli `ps_order_invoice`
@@ -13737,7 +13831,7 @@ ALTER TABLE `ps_state`
 -- AUTO_INCREMENT dla tabeli `ps_statssearch`
 --
 ALTER TABLE `ps_statssearch`
-  MODIFY `id_statssearch` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id_statssearch` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT dla tabeli `ps_stock`
