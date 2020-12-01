@@ -6,7 +6,7 @@ services:
      ports:
       - "3306:3306"
      volumes:
-       - E:/VM/baza:/var/lib/mysql
+       - C:/Users/Dawid/Desktop/BiznesElektroniczny/prestashop_db:/var/lib/mysql
      restart: always
      environment:
        MYSQL_ROOT_PASSWORD: admin
@@ -25,13 +25,13 @@ services:
        PS_FOLDER_ADMIN: psadmin
        PS_FOLDER_INSTALL: psinstall
      volumes:
-       - E:/VM/presta:/var/www/html
+       - C:/Users/Dawid/Desktop/BiznesElektroniczny/prestashop:/var/www/html
+       - C:/Users/Dawid/Desktop/BiznesElektroniczny/logs:/var/log
        
    phpmyadmin:
      depends_on:
        - db_presta
      image: phpmyadmin/phpmyadmin
-     container_name: phpmyadmin
      restart: always
      ports:
        - '8181:80'
