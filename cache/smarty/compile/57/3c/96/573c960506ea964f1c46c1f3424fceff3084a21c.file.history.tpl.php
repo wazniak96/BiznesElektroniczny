@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2020-11-30 18:58:29
+<?php /* Smarty version Smarty-3.1.19, created on 2020-12-01 19:12:41
          compiled from "/var/www/html/themes/default-bootstrap/history.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:15545082895fc532c5b71d44-27501799%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1847948665fc68799a09260-68429439%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '573c960506ea964f1c46c1f3424fceff3084a21c' => 
     array (
       0 => '/var/www/html/themes/default-bootstrap/history.tpl',
-      1 => 1556642532,
+      1 => 1606760765,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '15545082895fc532c5b71d44-27501799',
+  'nocache_hash' => '1847948665fc68799a09260-68429439',
   'function' => 
   array (
   ),
@@ -30,9 +30,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_5fc532c5c45506_16085127',
+  'unifunc' => 'content_5fc68799be56f8_22476112',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5fc532c5c45506_16085127')) {function content_5fc532c5c45506_16085127($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_regex_replace')) include '/var/www/html/tools/smarty/plugins/modifier.regex_replace.php';
+<?php if ($_valid && !is_callable('content_5fc68799be56f8_22476112')) {function content_5fc68799be56f8_22476112($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_regex_replace')) include '/var/www/html/tools/smarty/plugins/modifier.regex_replace.php';
 ?>
 <?php $_smarty_tpl->_capture_stack[0][] = array('path', null, null); ob_start(); ?>
 	<a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('my-account',true), ENT_QUOTES, 'UTF-8', true);?>
@@ -107,7 +107,7 @@ icon/download_product.gif"	alt="<?php echo smartyTranslate(array('s'=>'Products 
 							<?php }?>
 							<a class="color-myaccount" href="javascript:showOrder(1, <?php echo intval($_smarty_tpl->tpl_vars['order']->value['id_order']);?>
 , '<?php ob_start();?><?php echo intval($_smarty_tpl->tpl_vars['order']->value['id_order']);?>
-<?php $_tmp5=ob_get_clean();?><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('order-detail',true,null,"id_order=".$_tmp5), ENT_QUOTES, 'UTF-8', true);?>
+<?php $_tmp1=ob_get_clean();?><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('order-detail',true,null,"id_order=".$_tmp1), ENT_QUOTES, 'UTF-8', true);?>
 ');">
 								<?php echo Order::getUniqReferenceOf($_smarty_tpl->tpl_vars['order']->value['id_order']);?>
 
@@ -153,7 +153,7 @@ icon/download_product.gif"	alt="<?php echo smartyTranslate(array('s'=>'Products 
 						<td class="history_detail">
 							<a class="btn btn-default button button-small" href="javascript:showOrder(1, <?php echo intval($_smarty_tpl->tpl_vars['order']->value['id_order']);?>
 , '<?php ob_start();?><?php echo intval($_smarty_tpl->tpl_vars['order']->value['id_order']);?>
-<?php $_tmp6=ob_get_clean();?><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('order-detail',true,null,"id_order=".$_tmp6), ENT_QUOTES, 'UTF-8', true);?>
+<?php $_tmp2=ob_get_clean();?><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('order-detail',true,null,"id_order=".$_tmp2), ENT_QUOTES, 'UTF-8', true);?>
 ');">
 								<span>
 									<?php echo smartyTranslate(array('s'=>'Details'),$_smarty_tpl);?>
@@ -162,12 +162,12 @@ icon/download_product.gif"	alt="<?php echo smartyTranslate(array('s'=>'Products 
 							</a>
 							<?php if (isset($_smarty_tpl->tpl_vars['opc']->value)&&$_smarty_tpl->tpl_vars['opc']->value) {?>
 								<a class="link-button" href="<?php ob_start();?><?php echo intval($_smarty_tpl->tpl_vars['order']->value['id_order']);?>
-<?php $_tmp7=ob_get_clean();?><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('order-opc',true,null,"submitReorder&id_order=".$_tmp7), ENT_QUOTES, 'UTF-8', true);?>
+<?php $_tmp3=ob_get_clean();?><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('order-opc',true,null,"submitReorder&id_order=".$_tmp3), ENT_QUOTES, 'UTF-8', true);?>
 " title="<?php echo smartyTranslate(array('s'=>'Reorder'),$_smarty_tpl);?>
 ">
 							<?php } else { ?>
 								<a class="link-button" href="<?php ob_start();?><?php echo intval($_smarty_tpl->tpl_vars['order']->value['id_order']);?>
-<?php $_tmp8=ob_get_clean();?><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('order',true,null,"submitReorder&id_order=".$_tmp8), ENT_QUOTES, 'UTF-8', true);?>
+<?php $_tmp4=ob_get_clean();?><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('order',true,null,"submitReorder&id_order=".$_tmp4), ENT_QUOTES, 'UTF-8', true);?>
 " title="<?php echo smartyTranslate(array('s'=>'Reorder'),$_smarty_tpl);?>
 ">
 							<?php }?>

@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2020-11-30 18:58:30
+<?php /* Smarty version Smarty-3.1.19, created on 2020-12-01 19:14:46
          compiled from "/var/www/html/themes/default-bootstrap/modules/bankwire/views/templates/front/payment_execution.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:7711740375fc532c69a5831-56074918%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:11033081255fc68816d8f435-64669806%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '349c54f79ae5c01e59c58dccfc619e034e99bb7f' => 
     array (
       0 => '/var/www/html/themes/default-bootstrap/modules/bankwire/views/templates/front/payment_execution.tpl',
-      1 => 1556642532,
+      1 => 1606760765,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '7711740375fc532c69a5831-56074918',
+  'nocache_hash' => '11033081255fc68816d8f435-64669806',
   'function' => 
   array (
   ),
@@ -28,9 +28,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_5fc532c69feb31_83976177',
+  'unifunc' => 'content_5fc68816eed3a2_06661795',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5fc532c69feb31_83976177')) {function content_5fc532c69feb31_83976177($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_5fc68816eed3a2_06661795')) {function content_5fc68816eed3a2_06661795($_smarty_tpl) {?>
 
 <?php $_smarty_tpl->_capture_stack[0][] = array('path', null, null); ob_start(); ?>
     <a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('order',true,null,"step=3"), ENT_QUOTES, 'UTF-8', true);?>

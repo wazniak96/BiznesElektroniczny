@@ -1,27 +1,27 @@
-<?php /*%%SmartyHeaderCode:13582076655fc534de54ba45-48073074%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:18600758015fc679cb67fb21-82395762%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'a5880b37cb81397979bd6724b1e436aac6fc922c' => 
     array (
       0 => '/var/www/html/themes/default-bootstrap/modules/blockcategories/blockcategories_footer.tpl',
-      1 => 1556642532,
+      1 => 1606760765,
       2 => 'file',
     ),
     '5c53737510b61f5e57aa4fb383106c38f28d329a' => 
     array (
       0 => '/var/www/html/themes/default-bootstrap/modules/blockcategories/category-tree-branch.tpl',
-      1 => 1556642532,
+      1 => 1606760765,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '13582076655fc534de54ba45-48073074',
+  'nocache_hash' => '18600758015fc679cb67fb21-82395762',
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_5fc56294a6b0e9_75969695',
+  'unifunc' => 'content_5fc7c9b27be7f1_78531750',
   'has_nocache_code' => false,
   'cache_lifetime' => 31536000,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5fc56294a6b0e9_75969695')) {function content_5fc56294a6b0e9_75969695($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_5fc7c9b27be7f1_78531750')) {function content_5fc7c9b27be7f1_78531750($_smarty_tpl) {?>
 <!-- Block categories module -->
 <section class="blockcategories_footer footer-block col-xs-12 col-sm-2">
 	<h4>Kategorie</h4>
@@ -29,79 +29,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		<div class="list">
 			<ul class="dhtml">
 												
-<li class="last">
-	<a 
-	href="http://localhost:8080/3-women" title="You will find here all woman fashion collections.  
- This category includes all the basics of your wardrobe and much more: 
- shoes, accessories, printed t-shirts, feminine dresses, women&#039;s jeans!">
-		Women
-	</a>
-			<ul>
-												
 <li >
 	<a 
-	href="http://localhost:8080/4-tops" title="Choose from t-shirts, tops, blouses, short sleeves, long sleeves, tank tops, 3/4 sleeves and more. 
- Find the cut that suits you the best!">
-		Tops
-	</a>
-			<ul>
-												
-<li >
-	<a 
-	href="http://localhost:8080/5-tshirts" title="The must have of your wardrobe, take a look at our different colors, 
- shapes and style of our collection!">
-		T-shirts
+	href="http://localhost:8080/12-szablony-wordpress-cms" title="WordPress jest niewątpliwie najpopularniejszym systemem CMS dostępnym na świecie. Stale jest on rozwijany przeez bogatą społeczność. Łatwość obsługi czyni tę platformę bardzo uniwersalną. Wordpress posiada dużą ilość dodatków i wtyczek, które rozszerzają jego funkcje. Dostępna jest także bogata dokumentacja. Więcej informacji o systemie WordPress znajdą Państwo na  polskiej stronie tej platformy .">
+		Szablony WordPress CMS
 	</a>
 	</li>
 
+							
 																
 <li class="last">
 	<a 
-	href="http://localhost:8080/7-blouses" title="Match your favorites blouses with the right accessories for the perfect look.">
-		Blouses
+	href="http://localhost:8080/13-szablony-joomla-cms" title="Nie będzie wielką przesadą, powiedzieć że Joomla! jest najbardziej utytułowanym systemem CMS dostępnym na rynku. Pozwala on na łatwą aktualizację i rozbudowę strony przez osoby nie posiadające specjalistycznej wiedzy o programowaniu i projektowaniu. Joomla! pozwala tworzyć bardzo rozbudowane witryny a w sieci można znaleść setki dodatkowych, darmowych modułów poszerzających jeszcze bardziej funkcjonalność tego systemu. Więcej o platformie Joomla, a także bogatą dokumentację znajdą Państwo na  polskiej stronie  poświęconej temu systemowi.">
+		Szablony Joomla! CMS
 	</a>
-	</li>
-
-									</ul>
-	</li>
-
-																
-<li class="last">
-	<a 
-	href="http://localhost:8080/8-dresses" title="Find your favorites dresses from our wide choice of evening, casual or summer dresses! 
- We offer dresses for every day, every style and every occasion.">
-		Dresses
-	</a>
-			<ul>
-												
-<li >
-	<a 
-	href="http://localhost:8080/9-casual-dresses" title="You are looking for a dress for every day? Take a look at 
- our selection of dresses to find one that suits you.">
-		Casual Dresses
-	</a>
-	</li>
-
-																
-<li >
-	<a 
-	href="http://localhost:8080/10-evening-dresses" title="Browse our different dresses to choose the perfect dress for an unforgettable evening!">
-		Evening Dresses
-	</a>
-	</li>
-
-																
-<li class="last">
-	<a 
-	href="http://localhost:8080/11-summer-dresses" title="Short dress, long dress, silk dress, printed dress, you will find the perfect dress for summer.">
-		Summer Dresses
-	</a>
-	</li>
-
-									</ul>
-	</li>
-
-									</ul>
 	</li>
 
 							
