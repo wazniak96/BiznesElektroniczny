@@ -4,7 +4,7 @@ services:
    db_presta:
      image: mysql:5.7
      ports:
-      - "3306:3306"
+      - "3307:3306"
      volumes:
        - C:/Users/Dawid/Desktop/BiznesElektroniczny/prestashop_db:/var/lib/mysql
      restart: always
