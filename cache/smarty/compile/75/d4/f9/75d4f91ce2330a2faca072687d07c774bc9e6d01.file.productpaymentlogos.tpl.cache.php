@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2020-11-30 22:23:09
+<?php /* Smarty version Smarty-3.1.19, created on 2020-12-01 18:19:51
          compiled from "/var/www/html/modules/productpaymentlogos/views/templates/hook/productpaymentlogos.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:10509002575fc562bd5888b5-78307629%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:7682082315fc67b37d2feb8-91996165%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '10509002575fc562bd5888b5-78307629',
+  'nocache_hash' => '7682082315fc67b37d2feb8-91996165',
   'function' => 
   array (
   ),
@@ -24,9 +24,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_5fc562bd6e70b6_28420229',
+  'unifunc' => 'content_5fc67b37e204d6_79750877',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5fc562bd6e70b6_28420229')) {function content_5fc562bd6e70b6_28420229($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_5fc67b37e204d6_79750877')) {function content_5fc67b37e204d6_79750877($_smarty_tpl) {?>
 <!-- Productpaymentlogos module -->
 <div id="product_payment_logos">
 	<div class="box-security">
