@@ -1,16 +1,18 @@
-cache/smarty/cache/*
-!cache/smarty/cache/index.php
-cache/smarty/compile/*
-!cache/smarty/compile/index.php
-cache/tcpdf/*
-!cache/tcpdf/index.php
+prestashop/cache/smarty/cache/*
+!prestashop/cache/smarty/cache/index.php
+prestashop/cache/smarty/compile/*
+!prestashop/cache/smarty/compile/index.php
+prestashop/cache/tcpdf/*
+!prestashop/cache/tcpdf/index.php
 
-log/*.log
+prestashop/log/*.log
 
-img/tmp/*
-!img/tmp/index.php
+prestashop/img/tmp/*
+!prestashop/img/tmp/index.php
 
-tools/smarty*/cache/*.php
-!tools/smarty*/cache/index.php
-tools/smarty*/compile/*.php
-!tools/smarty*/compile/index.php
+prestashop/tools/smarty*/cache/*.php
+!prestashop/tools/smarty*/cache/index.php
+prestashop/tools/smarty*/compile/*.php
+!prestashop/tools/smarty*/compile/index.php
+
+__pycache__/

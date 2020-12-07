@@ -1,0 +1,6 @@
+Skrypt napisany jest w Python 3.8. Do uruchomienia wymagana jest biblioteka Scrapy (python -m pip intall scrapy). 
+
+Crawler zapisuje dane w formacie JSON. Zdjęcia zapisywane są w folderze images. 
+
+Uruchomienie skryptu (należy uruchomić z wewnątrz projektu - BiznesElektro). 
+#scrapy crawl templates -O products.json 

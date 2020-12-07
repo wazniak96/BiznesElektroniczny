@@ -6,7 +6,7 @@ services:
      ports:
       - "3307:3306"
      volumes:
-       - C:/Users/Dawid/Desktop/BiznesElektroniczny/prestashop_db:/var/lib/mysql
+       - ../prestashop_db:/var/lib/mysql
      restart: always
      environment:
        MYSQL_ROOT_PASSWORD: admin
@@ -25,8 +25,8 @@ services:
        PS_FOLDER_ADMIN: psadmin
        PS_FOLDER_INSTALL: psinstall
      volumes:
-       - C:/Users/Dawid/Desktop/BiznesElektroniczny/prestashop:/var/www/html
-       - C:/Users/Dawid/Desktop/BiznesElektroniczny/logs:/var/log
+       - ./prestashop:/var/www/html
+       - ../logs:/var/log
        
    phpmyadmin:
      depends_on:
