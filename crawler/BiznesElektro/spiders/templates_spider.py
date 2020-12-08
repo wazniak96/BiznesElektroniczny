@@ -26,30 +26,29 @@ class Templates(scrapy.Spider):
 	
 	def parse_product(self, response):
 		self.log(f'Scraped product url: {response.url}')
+		
 		img = response.xpath("//*[@id='url234']/@src").extract()[0]
 		template_id = response.xpath("//dl[@class='template_number']//dd/text()").get().strip()
-		urllib.request.urlretrieve(img, f"images/{template_id}.jpg")
+		basic_functions = response.xpath("/html/body/div/main/section/div/div/div[2]/ul[2]/p[3]/text()").get()
+		author = response.xpath("/html/body/div/main/section/div/div/div[2]/ul[2]/b/u/a/text()").get()
 		
-		if response.xpath("/html/body/div/main/section/div/div/div[2]/ul[2]/p[3]/text()").get() == None:
-			basic_functions = '';
-		else:
-			basic_functions = response.xpath("/html/body/div/main/section/div/div/div[2]/ul[2]/p[3]/text()").get().strip()
+		if basic_functions == None or author == None:
+			author = response.xpath("/html/body/div/main/section/div/div/div[2]/ul[2]/p[3]/strong[1]/text()").get()
+			basic_functions = response.xpath("/html/body/div/main/section/div/div/div[2]/ul[2]/p[3]/text()")[6].get()
 		
-		if response.xpath("/html/body/div/main/section/div/div/div[2]/ul[2]/b/u/a/text()").get() == None:
-			author = ''
-		else:
-			author = response.xpath("/html/body/div/main/section/div/div/div[2]/ul[2]/b/u/a/text()").get().strip()
-		
-		yield {
-			'id': template_id,
-			'example_url': response.xpath("//div[@class='template-screenshots']/a/@href")[0].extract(),
-			'image_name': f"{template_id}.jpg",
-			'type': response.xpath("/html/body/div/main/section/div/div/div[2]/ul[2]/p[1]/text()").get().strip(),
-			'basic_functions': basic_functions,
-			'author': author,
-			'first_category': response.xpath("/html/body/div/main/section/div/ul/li[2]/a/text()").get().strip(),
-			'second_category': response.xpath("/html/body/div/main/section/div/ul/li[3]/a/text()").get().strip()
-		}
+		if basic_functions != None and author != None:
+			urllib.request.urlretrieve(img, f"images/{template_id}.jpg")
+			
+			yield {
+				'id': template_id,
+				'example_url': response.xpath("//div[@class='template-screenshots']/a/@href")[0].extract(),
+				'image_name': f"{template_id}.jpg",
+				'type': response.xpath("/html/body/div/main/section/div/div/div[2]/ul[2]/p[1]/text()").get().strip(),
+				'basic_functions': basic_functions.strip(),
+				'author': author.strip(),
+				'first_category': response.xpath("/html/body/div/main/section/div/ul/li[2]/a/text()").get().strip(),
+				'second_category': response.xpath("/html/body/div/main/section/div/ul/li[3]/a/text()").get().strip()
+			}
 			
 			
 		
