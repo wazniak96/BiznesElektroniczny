@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db_presta
--- Czas generowania: 02 Gru 2020, 21:12
+-- Czas generowania: 08 Gru 2020, 22:56
 -- Wersja serwera: 5.7.32
 -- Wersja PHP: 7.4.11
 
@@ -123,6 +123,7 @@ INSERT INTO `ps_access` (`id_profile`, `id_tab`, `view`, `add`, `edit`, `delete`
 (1, 104, 1, 1, 1, 1),
 (1, 106, 1, 1, 1, 1),
 (1, 107, 1, 1, 1, 1),
+(1, 108, 1, 1, 1, 1),
 (2, 0, 1, 1, 1, 1),
 (2, 1, 0, 0, 0, 0),
 (2, 2, 0, 0, 0, 0),
@@ -230,6 +231,7 @@ INSERT INTO `ps_access` (`id_profile`, `id_tab`, `view`, `add`, `edit`, `delete`
 (2, 104, 0, 0, 0, 0),
 (2, 106, 0, 0, 0, 0),
 (2, 107, 0, 0, 0, 0),
+(2, 108, 0, 0, 0, 0),
 (3, 0, 1, 1, 1, 1),
 (3, 1, 0, 0, 0, 0),
 (3, 2, 0, 0, 0, 0),
@@ -337,6 +339,7 @@ INSERT INTO `ps_access` (`id_profile`, `id_tab`, `view`, `add`, `edit`, `delete`
 (3, 104, 0, 0, 0, 0),
 (3, 106, 0, 0, 0, 0),
 (3, 107, 0, 0, 0, 0),
+(3, 108, 0, 0, 0, 0),
 (4, 0, 1, 1, 1, 1),
 (4, 1, 0, 0, 0, 0),
 (4, 2, 0, 0, 0, 0),
@@ -443,7 +446,8 @@ INSERT INTO `ps_access` (`id_profile`, `id_tab`, `view`, `add`, `edit`, `delete`
 (4, 103, 0, 0, 0, 0),
 (4, 104, 0, 0, 0, 0),
 (4, 106, 0, 0, 0, 0),
-(4, 107, 0, 0, 0, 0);
+(4, 107, 0, 0, 0, 0),
+(4, 108, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -499,7 +503,8 @@ INSERT INTO `ps_address` (`id_address`, `id_country`, `id_state`, `id_customer`,
 (3, 21, 32, 0, 1, 0, 0, 'manufacturer', 'Fashion', 'manufacturer', 'manufacturer', '767 Fifth Ave.', '', '10154', 'New York', '', '(212) 336-1666', '', '', '', '2020-11-30 19:04:17', '2020-12-01 18:37:14', 1, 1),
 (4, 21, 9, 1, 0, 0, 0, 'My address', 'My Company', 'DOE', 'John', '16, Main street', '2nd floor', '33133', 'Miami', '', '0102030405', '', '', '', '2020-11-30 19:04:17', '2020-11-30 19:04:17', 1, 0),
 (5, 14, 0, 2, 0, 0, 0, 'Mój adres', '', 'Demologinski', 'Demo', 'alabastrowa 5', '', '80-255', 'Gdańsk', '', '555-555-555', '', '', '', '2020-12-01 19:14:03', '2020-12-01 19:14:03', 1, 0),
-(6, 14, 0, 3, 0, 0, 0, 'Mój adres', '', 'Anonowicz', 'Anon', 'ul Lola 1', '', '84-225', 'Gdańsk', '', '888-888-888', '', '', '', '2020-12-02 21:43:10', '2020-12-02 21:43:10', 1, 0);
+(6, 14, 0, 3, 0, 0, 0, 'Mój adres', '', 'Anonowicz', 'Anon', 'ul Lola 1', '', '84-225', 'Gdańsk', '', '888-888-888', '', '', '', '2020-12-02 21:43:10', '2020-12-02 21:43:10', 1, 0),
+(7, 14, 0, 4, 0, 0, 0, 'Mój adres', '', 'Testowski', 'Test', 'Cedrowa 27/99', '', '80-126', 'Gdańsk', '', '123456789', '124356789', '', '', '2020-12-08 22:23:27', '2020-12-08 22:23:27', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -861,7 +866,9 @@ CREATE TABLE `ps_attribute` (
 
 INSERT INTO `ps_attribute` (`id_attribute`, `id_attribute_group`, `color`, `position`) VALUES
 (25, 4, '', 0),
-(26, 4, '', 1);
+(26, 4, '', 1),
+(27, 5, '', 0),
+(28, 5, '', 1);
 
 -- --------------------------------------------------------
 
@@ -881,7 +888,8 @@ CREATE TABLE `ps_attribute_group` (
 --
 
 INSERT INTO `ps_attribute_group` (`id_attribute_group`, `is_color_group`, `group_type`, `position`) VALUES
-(4, 0, 'select', 0);
+(4, 0, 'select', 0),
+(5, 0, 'radio', 1);
 
 -- --------------------------------------------------------
 
@@ -901,7 +909,8 @@ CREATE TABLE `ps_attribute_group_lang` (
 --
 
 INSERT INTO `ps_attribute_group_lang` (`id_attribute_group`, `id_lang`, `name`, `public_name`) VALUES
-(4, 1, 'typ_licencji', 'Typ licencji');
+(4, 1, 'typ_licencji', 'Typ licencji'),
+(5, 1, 'kolor', 'Kolor szablonu');
 
 -- --------------------------------------------------------
 
@@ -919,7 +928,8 @@ CREATE TABLE `ps_attribute_group_shop` (
 --
 
 INSERT INTO `ps_attribute_group_shop` (`id_attribute_group`, `id_shop`) VALUES
-(4, 1);
+(4, 1),
+(5, 1);
 
 -- --------------------------------------------------------
 
@@ -934,6 +944,16 @@ CREATE TABLE `ps_attribute_impact` (
   `weight` decimal(20,6) NOT NULL,
   `price` decimal(17,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Zrzut danych tabeli `ps_attribute_impact`
+--
+
+INSERT INTO `ps_attribute_impact` (`id_attribute_impact`, `id_product`, `id_attribute`, `weight`, `price`) VALUES
+(1, 8, 27, '0.000000', '100.00'),
+(2, 8, 28, '0.000000', '130.00'),
+(3, 8, 25, '0.000000', '160.00'),
+(4, 8, 26, '0.000000', '190.00');
 
 -- --------------------------------------------------------
 
@@ -952,7 +972,9 @@ CREATE TABLE `ps_attribute_lang` (
 --
 
 INSERT INTO `ps_attribute_lang` (`id_attribute`, `id_lang`, `name`) VALUES
+(27, 1, 'dark'),
 (25, 1, 'Jednokrotnego użytku'),
+(28, 1, 'light'),
 (26, 1, 'Wielokrotnego użytku');
 
 -- --------------------------------------------------------
@@ -972,7 +994,9 @@ CREATE TABLE `ps_attribute_shop` (
 
 INSERT INTO `ps_attribute_shop` (`id_attribute`, `id_shop`) VALUES
 (25, 1),
-(26, 1);
+(26, 1),
+(27, 1),
+(28, 1);
 
 -- --------------------------------------------------------
 
@@ -1185,7 +1209,9 @@ INSERT INTO `ps_cart` (`id_cart`, `id_shop_group`, `id_shop`, `id_carrier`, `del
 (4, 1, 1, 2, '{\"3\":\"2,\"}', 1, 4, 4, 1, 1, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 0, 0, '', 0, 0, '2020-11-30 19:04:21', '2020-11-30 19:04:21'),
 (5, 1, 1, 2, '{\"3\":\"2,\"}', 1, 4, 4, 1, 1, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 0, 0, '', 0, 0, '2020-11-30 19:04:21', '2020-11-30 19:04:21'),
 (6, 1, 1, 0, '', 1, 5, 5, 1, 2, 2, 'be87edabdea083d37f46049970e50a9e', 0, 0, '', 0, 0, '2020-12-01 19:13:00', '2020-12-01 22:38:26'),
-(7, 1, 1, 0, '', 1, 6, 6, 1, 3, 3, 'cc1fdfc5a9e4d467aa43249301e9bc27', 0, 0, '', 0, 0, '2020-12-02 21:40:59', '2020-12-02 21:43:38');
+(7, 1, 1, 0, '', 1, 6, 6, 1, 3, 3, 'cc1fdfc5a9e4d467aa43249301e9bc27', 0, 0, '', 0, 0, '2020-12-02 21:40:59', '2020-12-02 21:43:38'),
+(8, 1, 1, 0, '', 1, 7, 7, 1, 4, 0, '625b4209fb0ca7c86fd88c6eb37601fc', 0, 0, '', 0, 0, '2020-12-08 22:21:50', '2020-12-08 23:20:19'),
+(9, 1, 1, 0, '', 1, 7, 7, 1, 4, 7, '625b4209fb0ca7c86fd88c6eb37601fc', 0, 0, '', 0, 0, '2020-12-08 23:53:17', '2020-12-08 23:53:17');
 
 -- --------------------------------------------------------
 
@@ -1220,7 +1246,8 @@ CREATE TABLE `ps_cart_product` (
 
 INSERT INTO `ps_cart_product` (`id_cart`, `id_product`, `id_address_delivery`, `id_shop`, `id_product_attribute`, `quantity`, `date_add`) VALUES
 (6, 8, 5, 1, 0, 1, '2020-12-01 19:13:00'),
-(7, 8, 6, 1, 0, 1, '2020-12-02 21:40:59');
+(7, 8, 6, 1, 0, 1, '2020-12-02 21:40:59'),
+(8, 8, 7, 1, 3, 1, '2020-12-08 23:19:58');
 
 -- --------------------------------------------------------
 
@@ -1970,7 +1997,7 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (151, NULL, NULL, 'PS_VIRTUAL_PROD_FEATURE_ACTIVE', '1', '0000-00-00 00:00:00', '2020-12-01 18:52:30'),
 (152, NULL, NULL, 'PS_CUSTOMIZATION_FEATURE_ACTIVE', '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (153, NULL, NULL, 'PS_CART_RULE_FEATURE_ACTIVE', '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(154, NULL, NULL, 'PS_PACK_FEATURE_ACTIVE', NULL, '0000-00-00 00:00:00', '2020-12-01 19:06:34'),
+(154, NULL, NULL, 'PS_PACK_FEATURE_ACTIVE', NULL, '0000-00-00 00:00:00', '2020-12-08 23:19:17'),
 (155, NULL, NULL, 'PS_ALIAS_FEATURE_ACTIVE', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (156, NULL, NULL, 'PS_TAX_ADDRESS_TYPE', 'id_address_delivery', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (157, NULL, NULL, 'PS_SHOP_DEFAULT', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -2048,7 +2075,7 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (229, NULL, NULL, 'UPGRADER_BACKUPDB_FILENAME', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (230, NULL, NULL, 'UPGRADER_BACKUPFILES_FILENAME', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (231, NULL, NULL, 'BLOCKREINSURANCE_NBBLOCKS', '5', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(232, NULL, NULL, 'HOMESLIDER_WIDTH', '779', '0000-00-00 00:00:00', '2020-11-30 19:05:24'),
+(232, NULL, NULL, 'HOMESLIDER_WIDTH', '1170', '0000-00-00 00:00:00', '2020-12-08 23:34:13'),
 (233, NULL, NULL, 'HOMESLIDER_SPEED', '500', '0000-00-00 00:00:00', '2020-11-30 19:05:24'),
 (234, NULL, NULL, 'HOMESLIDER_PAUSE', '3000', '0000-00-00 00:00:00', '2020-11-30 19:05:24'),
 (235, NULL, NULL, 'HOMESLIDER_LOOP', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -2184,9 +2211,9 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (365, NULL, NULL, 'EMARKETING_FB_ADDTOCART', NULL, '2020-11-30 19:05:55', '2020-11-30 19:05:55'),
 (366, NULL, NULL, 'EMARKETING_FB_PURCHASE', NULL, '2020-11-30 19:05:55', '2020-11-30 19:05:55'),
 (367, NULL, NULL, 'EMARKETING_ROUTETOKEN', 'ci36TpoG', '2020-11-30 19:05:55', '2020-11-30 19:05:55'),
-(368, NULL, NULL, 'GF_NOT_VIEWED_BADGE', NULL, '2020-11-30 19:53:47', '2020-12-02 22:06:23'),
+(368, NULL, NULL, 'GF_NOT_VIEWED_BADGE', NULL, '2020-11-30 19:53:47', '2020-12-08 23:52:20'),
 (369, NULL, NULL, 'PS_SHOW_TYPE_MODULES_1', 'allModules', '2020-11-30 19:57:24', '2020-11-30 19:57:24'),
-(370, NULL, NULL, 'PS_SHOW_INSTALLED_MODULES_1', 'installed', '2020-11-30 19:57:24', '2020-12-02 21:56:27'),
+(370, NULL, NULL, 'PS_SHOW_INSTALLED_MODULES_1', 'installedUninstalled', '2020-11-30 19:57:24', '2020-12-08 23:44:29'),
 (371, NULL, NULL, 'PS_SHOW_ENABLED_MODULES_1', 'enabledDisabled', '2020-11-30 19:57:24', '2020-11-30 19:57:24'),
 (372, NULL, NULL, 'PS_GRID_PRODUCT', '0', '2020-11-30 21:16:34', '2020-11-30 21:16:34'),
 (373, NULL, NULL, 'PS_STORES_DISPLAY_SITEMAP', '0', '2020-11-30 22:53:47', '2020-11-30 22:53:47'),
@@ -2200,7 +2227,7 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (381, NULL, NULL, 'PS_SHOP_PHONE', '555-555-555', '2020-11-30 22:53:48', '2020-11-30 22:53:48'),
 (382, NULL, NULL, 'PS_SHOP_FAX', NULL, '2020-11-30 22:53:48', '2020-11-30 22:53:53'),
 (383, NULL, NULL, 'FOOTER_CMS_TEXT_1', NULL, '2020-11-30 23:28:18', '2020-12-02 21:57:40'),
-(384, NULL, NULL, 'PS_SHOW_CAT_MODULES_1', NULL, '2020-11-30 23:33:07', '2020-12-02 21:56:18'),
+(384, NULL, NULL, 'PS_SHOW_CAT_MODULES_1', NULL, '2020-11-30 23:33:07', '2020-12-08 23:44:38'),
 (385, NULL, NULL, 'BANK_WIRE_DETAILS', 'BPKOPLPW\r\n#PL 60 3709 0055 0454 0130 0022 4444', '2020-12-02 21:37:31', '2020-12-02 21:37:31'),
 (386, NULL, NULL, 'BANK_WIRE_OWNER', 'Adam Kowalski ', '2020-12-02 21:37:32', '2020-12-02 21:37:32'),
 (387, NULL, NULL, 'BANK_WIRE_ADDRESS', 'PKO Bank Polska S.A.\r\nul. Puławska 15\r\n02-515 Warszawa', '2020-12-02 21:37:32', '2020-12-02 21:37:32'),
@@ -2239,8 +2266,11 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (420, NULL, NULL, 'PS_HTACCESS_CACHE_CONTROL', '0', '2020-12-02 22:05:29', '2020-12-02 22:05:29'),
 (421, NULL, NULL, 'PS_DISABLE_NON_NATIVE_MODULE', '0', '2020-12-02 22:05:29', '2020-12-02 22:05:29'),
 (422, NULL, NULL, 'PS_DISABLE_OVERRIDES', '0', '2020-12-02 22:05:29', '2020-12-02 22:05:29'),
-(423, NULL, NULL, 'PS_CCCJS_VERSION', '1', '2020-12-02 22:05:40', '2020-12-02 22:05:40'),
-(424, NULL, NULL, 'PS_CCCCSS_VERSION', '1', '2020-12-02 22:05:40', '2020-12-02 22:05:40');
+(423, NULL, NULL, 'PS_CCCJS_VERSION', '2', '2020-12-02 22:05:40', '2020-12-08 23:40:04'),
+(424, NULL, NULL, 'PS_CCCCSS_VERSION', '2', '2020-12-02 22:05:40', '2020-12-08 23:40:04'),
+(425, NULL, NULL, 'GA_ACCOUNT_ID', 'G-T2R181JLNV', '2020-12-08 23:52:18', '2020-12-08 23:52:18'),
+(426, NULL, NULL, 'GANALYTICS_CONFIGURATION_OK', '1', '2020-12-08 23:52:18', '2020-12-08 23:52:18'),
+(427, NULL, NULL, 'GA_USERID_ENABLED', '1', '2020-12-08 23:52:18', '2020-12-08 23:52:18');
 
 -- --------------------------------------------------------
 
@@ -2372,7 +2402,9 @@ INSERT INTO `ps_connections` (`id_connections`, `id_shop_group`, `id_shop`, `id_
 (6, 1, 1, 3, 1, 2887188481, '2020-12-02 17:40:04', ''),
 (7, 1, 1, 4, 1, 2887188481, '2020-12-02 18:04:43', ''),
 (8, 1, 1, 3, 1, 2886926337, '2020-12-02 20:40:46', ''),
-(9, 1, 1, 5, 1, 2886926337, '2020-12-02 20:41:31', '');
+(9, 1, 1, 5, 1, 2886926337, '2020-12-02 20:41:31', ''),
+(10, 1, 1, 6, 1, 2886860801, '2020-12-08 23:22:05', 'http://localhost:8080/'),
+(11, 1, 1, 7, 1, 2886860801, '2020-12-08 23:40:52', '');
 
 -- --------------------------------------------------------
 
@@ -2562,7 +2594,22 @@ INSERT INTO `ps_connections_source` (`id_connections_source`, `id_connections`, 
 (153, 8, 'http://localhost:8080/dostawcy', 'localhost:8080/mapa-strony', '', '2020-12-02 22:05:53'),
 (154, 8, 'http://localhost:8080/dostawcy', 'localhost:8080/mapa-strony', '', '2020-12-02 22:06:30'),
 (155, 8, 'http://localhost:8080/mapa-strony', 'localhost:8080/najczesciej-kupowane', '', '2020-12-02 22:06:49'),
-(156, 8, 'http://localhost:8080/najczesciej-kupowane', 'localhost:8080/', '', '2020-12-02 22:06:54');
+(156, 8, 'http://localhost:8080/najczesciej-kupowane', 'localhost:8080/', '', '2020-12-02 22:06:54'),
+(157, 10, 'http://localhost:8080/', 'localhost:8080/', '', '2020-12-08 23:22:05'),
+(158, 10, 'http://localhost:8080/', 'localhost:8080/12-szablony-wordpress-cms', '', '2020-12-08 23:35:54'),
+(159, 10, 'http://localhost:8080/', 'localhost:8080/12-szablony-wordpress-cms', '', '2020-12-08 23:36:18'),
+(160, 10, 'http://localhost:8080/', 'localhost:8080/12-szablony-wordpress-cms', '', '2020-12-08 23:36:35'),
+(161, 11, 'http://localhost:8080/', 'localhost:8080/glowna/8-szablon-118183.html', '', '2020-12-08 23:52:43'),
+(162, 11, 'http://localhost:8080/glowna/8-szablon-118183.html', 'localhost:8080/', '', '2020-12-08 23:52:55'),
+(163, 11, 'http://localhost:8080/', 'localhost:8080/logowanie?back=my-account', '', '2020-12-08 23:53:01'),
+(164, 11, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/logowanie', '', '2020-12-08 23:53:11'),
+(165, 11, 'http://localhost:8080/logowanie', 'localhost:8080/moje-konto', '', '2020-12-08 23:53:20'),
+(166, 11, 'http://localhost:8080/moje-konto', 'localhost:8080/', '', '2020-12-08 23:53:27'),
+(167, 11, 'http://localhost:8080/', 'localhost:8080/glowna/8-szablon-118183.html', '', '2020-12-08 23:53:33'),
+(168, 11, 'http://localhost:8080/glowna/8-szablon-118183.html', 'localhost:8080/12-szablony-wordpress-cms', '', '2020-12-08 23:54:02'),
+(169, 11, 'http://localhost:8080/12-szablony-wordpress-cms', 'localhost:8080/', '', '2020-12-08 23:54:19'),
+(170, 11, 'http://localhost:8080/', 'localhost:8080/historia-zamowien', '', '2020-12-08 23:54:28'),
+(171, 11, 'http://localhost:8080/historia-zamowien', 'localhost:8080/', '', '2020-12-08 23:54:46');
 
 -- --------------------------------------------------------
 
@@ -3509,7 +3556,8 @@ CREATE TABLE `ps_customer` (
 INSERT INTO `ps_customer` (`id_customer`, `id_shop_group`, `id_shop`, `id_gender`, `id_default_group`, `id_lang`, `id_risk`, `company`, `siret`, `ape`, `firstname`, `lastname`, `email`, `passwd`, `last_passwd_gen`, `birthday`, `newsletter`, `ip_registration_newsletter`, `newsletter_date_add`, `optin`, `website`, `outstanding_allow_amount`, `show_public_prices`, `max_payment_days`, `secure_key`, `note`, `active`, `is_guest`, `deleted`, `date_add`, `date_upd`) VALUES
 (1, 1, 1, 1, 3, 1, 0, '', '', '', 'John', 'DOE', 'pub@prestashop.com', 'b8446484ac7fae859df621b3c1bf42ad', '2020-11-30 13:04:17', '1970-01-15', 1, '', '2013-12-13 08:19:15', 1, '', '0.000000', 0, 0, '0569b46c87684fd93a34f9dcf251ae4b', '', 1, 0, 0, '2020-11-30 19:04:17', '2020-11-30 19:04:17'),
 (2, 1, 1, 1, 3, 1, 0, NULL, NULL, NULL, 'Demo', 'Demologinski', 'demo@demo.pl', '571605331338e1e84fa8b355703024de', '2020-12-01 13:12:29', '1990-04-14', 0, NULL, '0000-00-00 00:00:00', 0, NULL, '0.000000', 0, 0, 'be87edabdea083d37f46049970e50a9e', NULL, 1, 0, 0, '2020-12-01 19:12:29', '2020-12-01 19:12:29'),
-(3, 1, 1, 1, 3, 1, 0, NULL, NULL, NULL, 'Anon', 'Anonowicz', 'anon@anon.pl', '5bbe702e152e2e8058a2b4212ac36d52', '2020-12-02 15:42:28', '1979-09-07', 0, NULL, '0000-00-00 00:00:00', 0, NULL, '0.000000', 0, 0, 'cc1fdfc5a9e4d467aa43249301e9bc27', NULL, 1, 0, 0, '2020-12-02 21:42:28', '2020-12-02 21:42:28');
+(3, 1, 1, 1, 3, 1, 0, NULL, NULL, NULL, 'Anon', 'Anonowicz', 'anon@anon.pl', '5bbe702e152e2e8058a2b4212ac36d52', '2020-12-02 15:42:28', '1979-09-07', 0, NULL, '0000-00-00 00:00:00', 0, NULL, '0.000000', 0, 0, 'cc1fdfc5a9e4d467aa43249301e9bc27', NULL, 1, 0, 0, '2020-12-02 21:42:28', '2020-12-02 21:42:28'),
+(4, 1, 1, 1, 3, 1, 0, NULL, NULL, NULL, 'Test', 'Testowski', 'test@test.pl', '6c6efa4c3615a4e48bf3632372d6e0f8', '2020-12-08 16:20:54', '0000-00-00', 1, '172.18.0.1', '2020-12-08 22:21:17', 0, NULL, '0.000000', 0, 0, '625b4209fb0ca7c86fd88c6eb37601fc', NULL, 1, 0, 0, '2020-12-08 22:20:54', '2020-12-08 22:20:54');
 
 -- --------------------------------------------------------
 
@@ -3529,7 +3577,8 @@ CREATE TABLE `ps_customer_group` (
 INSERT INTO `ps_customer_group` (`id_customer`, `id_group`) VALUES
 (1, 3),
 (2, 3),
-(3, 3);
+(3, 3),
+(4, 3);
 
 -- --------------------------------------------------------
 
@@ -3718,7 +3767,7 @@ CREATE TABLE `ps_employee` (
 --
 
 INSERT INTO `ps_employee` (`id_employee`, `id_profile`, `id_lang`, `lastname`, `firstname`, `email`, `passwd`, `last_passwd_gen`, `stats_date_from`, `stats_date_to`, `stats_compare_from`, `stats_compare_to`, `stats_compare_option`, `preselect_date_range`, `bo_color`, `bo_theme`, `bo_css`, `default_tab`, `bo_width`, `bo_menu`, `active`, `optin`, `id_last_order`, `id_last_customer_message`, `id_last_customer`, `last_connection_date`) VALUES
-(1, 1, 1, 'XXX', 'Dawid', 'wazniak96@gmail.com', '571605331338e1e84fa8b355703024de', '2020-11-30 13:04:08', '2020-10-30', '2020-11-30', '0000-00-00', '0000-00-00', 1, NULL, NULL, 'default', 'admin-theme.css', 1, 0, 1, 1, 1, 5, 0, 2, '2020-12-02');
+(1, 1, 1, 'XXX', 'Dawid', 'wazniak96@gmail.com', '571605331338e1e84fa8b355703024de', '2020-11-30 13:04:08', '2020-10-30', '2020-11-30', '0000-00-00', '0000-00-00', 1, NULL, NULL, 'default', 'admin-theme.css', 1, 0, 1, 1, 1, 7, 0, 4, '2020-12-08');
 
 -- --------------------------------------------------------
 
@@ -3796,9 +3845,9 @@ CREATE TABLE `ps_feature_product` (
 --
 
 INSERT INTO `ps_feature_product` (`id_feature`, `id_product`, `id_feature_value`) VALUES
-(8, 8, 39),
-(9, 8, 40),
-(10, 8, 41);
+(8, 8, 42),
+(9, 8, 43),
+(10, 8, 44);
 
 -- --------------------------------------------------------
 
@@ -3837,9 +3886,9 @@ CREATE TABLE `ps_feature_value` (
 --
 
 INSERT INTO `ps_feature_value` (`id_feature_value`, `id_feature`, `custom`) VALUES
-(39, 8, 1),
-(40, 9, 1),
-(41, 10, 1);
+(42, 8, 1),
+(43, 9, 1),
+(44, 10, 1);
 
 -- --------------------------------------------------------
 
@@ -3858,9 +3907,24 @@ CREATE TABLE `ps_feature_value_lang` (
 --
 
 INSERT INTO `ps_feature_value_lang` (`id_feature_value`, `id_lang`, `value`) VALUES
-(39, 1, 'Szablony Joomla! CMS'),
-(40, 1, 'Panel administracyjny, Ajax, Bootstrap, Licencja GPL (zdjęcia nie są dołączone), Lekki szablon, Wielozadaniowy, Responsywny, Przystosowany dla wysokich rozdzielczości (np. Retina), Przystosowany do wyszukiwarek, Pojedyńczy produkt, '),
-(41, 1, 'prothemes');
+(42, 1, 'Szablony Joomla! CMS'),
+(43, 1, 'Panel administracyjny, Ajax, Bootstrap, Licencja GPL (zdjęcia nie są dołączone), Lekki szablon, Wielozadaniowy, Responsywny, Przystosowany dla wysokich rozdzielczości (np. Retina), Przystosowany do wyszukiwarek, Pojedyńczy produkt, '),
+(44, 1, 'prothemes');
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `ps_ganalytics`
+--
+
+CREATE TABLE `ps_ganalytics` (
+  `id_google_analytics` int(11) NOT NULL,
+  `id_order` int(11) NOT NULL,
+  `id_customer` int(10) NOT NULL,
+  `id_shop` int(11) NOT NULL,
+  `sent` tinyint(1) DEFAULT NULL,
+  `date_add` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -4013,7 +4077,9 @@ INSERT INTO `ps_guest` (`id_guest`, `id_operating_system`, `id_web_browser`, `id
 (2, 0, 3, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
 (3, 0, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
 (4, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
-(5, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0);
+(5, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(6, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(7, 0, 3, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0);
 
 -- --------------------------------------------------------
 
@@ -4031,9 +4097,7 @@ CREATE TABLE `ps_homeslider` (
 --
 
 INSERT INTO `ps_homeslider` (`id_homeslider_slides`, `id_shop`) VALUES
-(1, 1),
-(2, 1),
-(3, 1);
+(1, 1);
 
 -- --------------------------------------------------------
 
@@ -4052,9 +4116,7 @@ CREATE TABLE `ps_homeslider_slides` (
 --
 
 INSERT INTO `ps_homeslider_slides` (`id_homeslider_slides`, `position`, `active`) VALUES
-(1, 1, 1),
-(2, 2, 1),
-(3, 3, 1);
+(1, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -4077,9 +4139,7 @@ CREATE TABLE `ps_homeslider_slides_lang` (
 --
 
 INSERT INTO `ps_homeslider_slides_lang` (`id_homeslider_slides`, `id_lang`, `title`, `description`, `legend`, `url`, `image`) VALUES
-(1, 1, 'Sample 1', '<h2>EXCEPTEUR<br />OCCAECAT</h2>\n				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tristique in tortor et dignissim. Quisque non tempor leo. Maecenas egestas sem elit</p>\n				<p><button class=\"btn btn-default\" type=\"button\">Shop now !</button></p>', 'sample-1', 'http://www.prestashop.com/?utm_source=back-office&utm_medium=v16_homeslider&utm_campaign=back-office-PL&utm_content=download', 'sample-1.jpg'),
-(2, 1, 'Sample 2', '<h2>EXCEPTEUR<br />OCCAECAT</h2>\n				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tristique in tortor et dignissim. Quisque non tempor leo. Maecenas egestas sem elit</p>\n				<p><button class=\"btn btn-default\" type=\"button\">Shop now !</button></p>', 'sample-2', 'http://www.prestashop.com/?utm_source=back-office&utm_medium=v16_homeslider&utm_campaign=back-office-PL&utm_content=download', 'sample-2.jpg'),
-(3, 1, 'Sample 3', '<h2>EXCEPTEUR<br />OCCAECAT</h2>\n				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tristique in tortor et dignissim. Quisque non tempor leo. Maecenas egestas sem elit</p>\n				<p><button class=\"btn btn-default\" type=\"button\">Shop now !</button></p>', 'sample-3', 'http://www.prestashop.com/?utm_source=back-office&utm_medium=v16_homeslider&utm_campaign=back-office-PL&utm_content=download', 'sample-3.jpg');
+(1, 1, 'Sample 1', '', 'sample-1', 'http://localhost:8080/12-szablony-wordpress-cms', 'd6912d8f9b567977a58df07bf52aabcd6321378e_Untitled_design-Max-Quality.jpg');
 
 -- --------------------------------------------------------
 
@@ -4478,6 +4538,7 @@ INSERT INTO `ps_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (68, 1, 153, 1),
 (68, 1, 154, 1),
 (68, 1, 155, 1),
+(69, 1, 11, 1),
 (2, 1, 10, 2),
 (5, 1, 15, 2),
 (6, 1, 26, 2),
@@ -4521,6 +4582,10 @@ INSERT INTO `ps_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (63, 1, 98, 2),
 (63, 1, 113, 2),
 (64, 1, 57, 2),
+(69, 1, 18, 2),
+(69, 1, 21, 2),
+(69, 1, 30, 2),
+(69, 1, 46, 2),
 (4, 1, 10, 3),
 (4, 1, 96, 3),
 (4, 1, 97, 3),
@@ -4558,6 +4623,7 @@ INSERT INTO `ps_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (38, 1, 68, 4),
 (43, 1, 39, 4),
 (68, 1, 57, 4),
+(69, 1, 9, 4),
 (6, 1, 10, 5),
 (17, 1, 8, 5),
 (18, 1, 26, 5),
@@ -4567,6 +4633,7 @@ INSERT INTO `ps_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (40, 1, 15, 5),
 (44, 1, 39, 5),
 (64, 1, 149, 5),
+(69, 1, 57, 5),
 (7, 1, 10, 6),
 (15, 1, 26, 6),
 (19, 1, 8, 6),
@@ -4583,6 +4650,7 @@ INSERT INTO `ps_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (10, 1, 10, 9),
 (24, 1, 8, 9),
 (48, 1, 39, 9),
+(69, 1, 26, 9),
 (11, 1, 10, 10),
 (25, 1, 8, 10),
 (49, 1, 39, 10),
@@ -4623,7 +4691,8 @@ INSERT INTO `ps_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (39, 1, 10, 30),
 (63, 1, 10, 31),
 (66, 1, 10, 32),
-(68, 1, 10, 33);
+(68, 1, 10, 33),
+(69, 1, 10, 34);
 
 -- --------------------------------------------------------
 
@@ -5076,7 +5145,8 @@ CREATE TABLE `ps_layered_indexable_attribute_group` (
 --
 
 INSERT INTO `ps_layered_indexable_attribute_group` (`id_attribute_group`, `indexable`) VALUES
-(4, 1);
+(4, 1),
+(5, 1);
 
 -- --------------------------------------------------------
 
@@ -5096,7 +5166,8 @@ CREATE TABLE `ps_layered_indexable_attribute_group_lang_value` (
 --
 
 INSERT INTO `ps_layered_indexable_attribute_group_lang_value` (`id_attribute_group`, `id_lang`, `url_name`, `meta_title`) VALUES
-(4, 1, 'typlicencji', '');
+(4, 1, 'typlicencji', ''),
+(5, 1, 'kolor', '');
 
 -- --------------------------------------------------------
 
@@ -5117,7 +5188,9 @@ CREATE TABLE `ps_layered_indexable_attribute_lang_value` (
 
 INSERT INTO `ps_layered_indexable_attribute_lang_value` (`id_attribute`, `id_lang`, `url_name`, `meta_title`) VALUES
 (25, 1, 'jednokrotnego-uzytku', ''),
-(26, 1, 'wielokrotnego-uzytku', '');
+(26, 1, 'wielokrotnego-uzytku', ''),
+(27, 1, 'dark', ''),
+(28, 1, 'light', '');
 
 -- --------------------------------------------------------
 
@@ -5200,7 +5273,7 @@ INSERT INTO `ps_layered_price_index` (`id_product`, `id_currency`, `id_shop`, `p
 (5, 1, 1, 28, 36),
 (6, 1, 1, 30, 38),
 (7, 1, 1, 16, 20),
-(8, 1, 1, 197, 243);
+(8, 1, 1, 457, 563);
 
 -- --------------------------------------------------------
 
@@ -5255,7 +5328,11 @@ INSERT INTO `ps_layered_product_attribute` (`id_attribute`, `id_product`, `id_at
 (16, 5, 3, 1),
 (16, 6, 3, 1),
 (16, 7, 3, 1),
-(24, 4, 3, 1);
+(24, 4, 3, 1),
+(25, 8, 4, 1),
+(26, 8, 4, 1),
+(27, 8, 5, 1),
+(28, 8, 5, 1);
 
 -- --------------------------------------------------------
 
@@ -5342,7 +5419,15 @@ INSERT INTO `ps_log` (`id_log`, `severity`, `error_code`, `message`, `object_typ
 (34, 1, 0, '0; Braintree\\\\Configuration::merchantId needs to be set (or accessToken needs to be passed to Braintree\\\\Gateway).', '', 0, 1, '2020-12-02 21:38:22', '2020-12-02 21:38:22'),
 (35, 1, 0, 'Błąd &ndash; Brakuje poniższego szablonu e-mail: /var/www/html/modules/paypal/mails/pl/error_reporting.txt', '', 0, 0, '2020-12-02 21:43:32', '2020-12-02 21:43:32'),
 (36, 1, 0, 'Frontcontroller::init - Cart cannot be loaded or an order has already been placed using this cart', 'Cart', 7, 0, '2020-12-02 21:44:00', '2020-12-02 21:44:00'),
-(37, 1, 0, '0; Braintree\\\\Configuration::merchantId needs to be set (or accessToken needs to be passed to Braintree\\\\Gateway).', '', 0, 1, '2020-12-02 21:45:40', '2020-12-02 21:45:40');
+(37, 1, 0, '0; Braintree\\\\Configuration::merchantId needs to be set (or accessToken needs to be passed to Braintree\\\\Gateway).', '', 0, 1, '2020-12-02 21:45:40', '2020-12-02 21:45:40'),
+(38, 1, 0, 'Połączenie z panelem administracyjnym z 172.18.0.1', '', 0, 1, '2020-12-08 23:12:57', '2020-12-08 23:12:57'),
+(39, 1, 0, 'dodanie AttributeGroup', 'AttributeGroup', 5, 1, '2020-12-08 23:16:07', '2020-12-08 23:16:07'),
+(40, 1, 0, 'dodanie Attribute', 'Attribute', 27, 1, '2020-12-08 23:16:34', '2020-12-08 23:16:34'),
+(41, 1, 0, 'dodanie Attribute', 'Attribute', 28, 1, '2020-12-08 23:16:52', '2020-12-08 23:16:52'),
+(42, 1, 0, 'Product modyfikacja', 'Product', 8, 1, '2020-12-08 23:19:17', '2020-12-08 23:19:17'),
+(43, 1, 0, 'Frontcontroller::init - Cart cannot be loaded or an order has already been placed using this cart', 'Cart', 8, 0, '2020-12-08 23:20:36', '2020-12-08 23:20:36'),
+(44, 1, 0, '0; Braintree\\\\Configuration::merchantId needs to be set (or accessToken needs to be passed to Braintree\\\\Gateway).', '', 0, 1, '2020-12-08 23:23:51', '2020-12-08 23:23:51'),
+(45, 1, 0, 'Połączenie z panelem administracyjnym z 172.18.0.1', '', 0, 1, '2020-12-08 23:42:09', '2020-12-08 23:42:09');
 
 -- --------------------------------------------------------
 
@@ -5630,7 +5715,8 @@ INSERT INTO `ps_module` (`id_module`, `name`, `active`, `version`) VALUES
 (64, 'gamification', 1, '2.3.2'),
 (66, 'emarketing', 1, '2.2.0'),
 (67, 'psaddonsconnect', 1, '1.0.1'),
-(68, 'paypal', 1, '3.15.0');
+(68, 'paypal', 1, '3.15.0'),
+(69, 'ganalytics', 1, '2.3.4');
 
 -- --------------------------------------------------------
 
@@ -5735,6 +5821,7 @@ INSERT INTO `ps_module_access` (`id_profile`, `id_module`, `view`, `configure`, 
 (2, 66, 1, 1, 1),
 (2, 67, 1, 1, 1),
 (2, 68, 1, 1, 1),
+(2, 69, 1, 1, 1),
 (3, 1, 1, 0, 0),
 (3, 2, 1, 0, 0),
 (3, 3, 1, 0, 0),
@@ -5802,6 +5889,7 @@ INSERT INTO `ps_module_access` (`id_profile`, `id_module`, `view`, `configure`, 
 (3, 66, 1, 0, 0),
 (3, 67, 1, 0, 0),
 (3, 68, 1, 0, 0),
+(3, 69, 1, 0, 0),
 (4, 1, 1, 1, 1),
 (4, 2, 1, 1, 1),
 (4, 3, 1, 1, 1),
@@ -5868,7 +5956,8 @@ INSERT INTO `ps_module_access` (`id_profile`, `id_module`, `view`, `configure`, 
 (4, 64, 1, 1, 1),
 (4, 66, 1, 1, 1),
 (4, 67, 1, 1, 1),
-(4, 68, 1, 1, 1);
+(4, 68, 1, 1, 1),
+(4, 69, 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -6129,7 +6218,10 @@ INSERT INTO `ps_module_group` (`id_module`, `id_shop`, `id_group`) VALUES
 (67, 1, 3),
 (68, 1, 1),
 (68, 1, 2),
-(68, 1, 3);
+(68, 1, 3),
+(69, 1, 1),
+(69, 1, 2),
+(69, 1, 3);
 
 -- --------------------------------------------------------
 
@@ -6162,6 +6254,7 @@ CREATE TABLE `ps_module_shop` (
 --
 
 INSERT INTO `ps_module_shop` (`id_module`, `id_shop`, `enable_device`) VALUES
+(2, 1, 7),
 (3, 1, 7),
 (5, 1, 7),
 (7, 1, 7),
@@ -6187,6 +6280,7 @@ INSERT INTO `ps_module_shop` (`id_module`, `id_shop`, `enable_device`) VALUES
 (34, 1, 7),
 (35, 1, 7),
 (36, 1, 7),
+(37, 1, 7),
 (38, 1, 7),
 (40, 1, 7),
 (41, 1, 7),
@@ -6215,7 +6309,8 @@ INSERT INTO `ps_module_shop` (`id_module`, `id_shop`, `enable_device`) VALUES
 (64, 1, 7),
 (66, 1, 7),
 (67, 1, 7),
-(68, 1, 7);
+(68, 1, 7),
+(69, 1, 7);
 
 -- --------------------------------------------------------
 
@@ -6323,7 +6418,8 @@ INSERT INTO `ps_orders` (`id_order`, `reference`, `id_shop_group`, `id_shop`, `i
 (3, 'UOYEVOLI', 1, 1, 2, 1, 1, 3, 1, 4, 4, 6, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 'Payment by check', '1.000000', 'cheque', 0, 0, '', 0, '', '0.000000', '0.000000', '0.000000', '76.010000', '76.010000', '76.010000', '0.000000', '74.010000', '74.010000', '2.000000', '2.000000', '2.000000', '0.000', '0.000000', '0.000000', '0.000000', 0, 0, 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, '2020-11-30 19:04:43', '2020-11-30 21:10:45'),
 (4, 'FFATNOMMJ', 1, 1, 2, 1, 1, 4, 1, 4, 4, 6, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 'Payment by check', '1.000000', 'cheque', 0, 0, '', 0, '', '0.000000', '0.000000', '0.000000', '89.890000', '89.890000', '89.890000', '0.000000', '87.890000', '87.890000', '2.000000', '2.000000', '2.000000', '0.000', '0.000000', '0.000000', '0.000000', 0, 0, 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, '2020-11-30 19:04:44', '2020-11-30 21:10:45'),
 (5, 'KHWLILZLL', 1, 1, 2, 1, 1, 5, 1, 4, 4, 6, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 'Bank wire', '1.000000', 'bankwire', 0, 0, '', 0, '', '0.000000', '0.000000', '0.000000', '71.510000', '71.510000', '71.510000', '0.000000', '69.510000', '69.510000', '2.000000', '2.000000', '2.000000', '0.000', '0.000000', '0.000000', '0.000000', 0, 0, 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, '2020-11-30 19:04:44', '2020-11-30 21:10:43'),
-(6, 'BEHGGRAQG', 1, 1, 0, 1, 3, 7, 1, 6, 6, 13, 'cc1fdfc5a9e4d467aa43249301e9bc27', 'Przelew na konto', '1.000000', 'bankwire', 0, 0, '', 0, '', '0.000000', '0.000000', '0.000000', '243.000000', '243.000000', '197.560000', '0.000000', '197.560000', '243.000000', '0.000000', '0.000000', '0.000000', '0.000', '0.000000', '0.000000', '0.000000', 2, 2, 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, '2020-12-02 21:43:58', '2020-12-02 21:44:00');
+(6, 'BEHGGRAQG', 1, 1, 0, 1, 3, 7, 1, 6, 6, 13, 'cc1fdfc5a9e4d467aa43249301e9bc27', 'Przelew na konto', '1.000000', 'bankwire', 0, 0, '', 0, '', '0.000000', '0.000000', '0.000000', '243.000000', '243.000000', '197.560000', '0.000000', '197.560000', '243.000000', '0.000000', '0.000000', '0.000000', '0.000', '0.000000', '0.000000', '0.000000', 2, 2, 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, '2020-12-02 21:43:58', '2020-12-02 21:44:00'),
+(7, 'ENQJLOCSB', 1, 1, 0, 1, 4, 8, 1, 7, 7, 13, '625b4209fb0ca7c86fd88c6eb37601fc', 'Przelew na konto', '1.000000', 'bankwire', 0, 0, '', 0, '', '0.000000', '0.000000', '0.000000', '599.700000', '599.700000', '487.560000', '0.000000', '487.560000', '599.700000', '0.000000', '0.000000', '0.000000', '0.000', '0.000000', '0.000000', '0.000000', 2, 2, 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, '2020-12-08 23:20:34', '2020-12-08 23:20:36');
 
 -- --------------------------------------------------------
 
@@ -6444,7 +6540,8 @@ INSERT INTO `ps_order_detail` (`id_order_detail`, `id_order`, `id_order_invoice`
 (13, 5, 0, 0, 1, 1, 1, 'Faded Short Sleeve T-shirts - Color : Orange, Size : S', 1, 1, 0, 0, 0, '16.510000', '0.00', '0.000000', '0.000000', '0.000000', '0.00', '0.000000', '', '', 'demo_1', '', '0.000000', 0, 0, '', '0.000', '0.000000', '0.000', 0, '', 0, '0000-00-00 00:00:00', '16.510000', '16.510000', '16.510000', '16.510000', '0.000000', '0.000000', '0.000000', '16.510000', '4.950000'),
 (14, 5, 0, 0, 1, 2, 7, 'Blouse - Color : Black, Size : S', 1, 1, 0, 0, 0, '26.999852', '0.00', '0.000000', '0.000000', '0.000000', '0.00', '0.000000', '', '', 'demo_2', '', '0.000000', 0, 0, '', '0.000', '0.000000', '0.000', 0, '', 0, '0000-00-00 00:00:00', '27.000000', '27.000000', '27.000000', '27.000000', '0.000000', '0.000000', '0.000000', '26.999852', '8.100000'),
 (15, 5, 0, 0, 1, 3, 13, 'Printed Dress - Color : Orange, Size : S', 1, 1, 0, 0, 0, '25.999852', '0.00', '0.000000', '0.000000', '0.000000', '0.00', '0.000000', '', '', 'demo_3', '', '0.000000', 0, 0, '', '0.000', '0.000000', '0.000', 0, '', 0, '0000-00-00 00:00:00', '26.000000', '26.000000', '26.000000', '26.000000', '0.000000', '0.000000', '0.000000', '25.999852', '7.800000'),
-(16, 6, 0, 0, 1, 8, 0, 'Szablon 118183', 1, 0, 0, 0, 0, '197.560976', '0.00', '0.000000', '0.000000', '0.000000', '0.00', '0.000000', '', '', '118183', '', '0.000000', 1, 0, '', '0.000', '0.000000', '0.000', 0, '', 0, '0000-00-00 00:00:00', '243.000000', '197.560000', '243.000000', '197.560976', '0.000000', '0.000000', '147.000000', '197.560976', '147.000000');
+(16, 6, 0, 0, 1, 8, 0, 'Szablon 118183', 1, 0, 0, 0, 0, '197.560976', '0.00', '0.000000', '0.000000', '0.000000', '0.00', '0.000000', '', '', '118183', '', '0.000000', 1, 0, '', '0.000', '0.000000', '0.000', 0, '', 0, '0000-00-00 00:00:00', '243.000000', '197.560000', '243.000000', '197.560976', '0.000000', '0.000000', '147.000000', '197.560976', '147.000000'),
+(17, 7, 0, 0, 1, 8, 3, 'Szablon 118183 - Typ licencji : Wielokrotnego użytku, Kolor szablonu : dark', 1, 0, 0, 0, 0, '487.560976', '0.00', '0.000000', '0.000000', '0.000000', '0.00', '0.000000', '', '', '118183', '', '0.000000', 1, 0, '', '0.000', '0.000000', '0.000', 0, '', 0, '0000-00-00 00:00:00', '599.700000', '487.560000', '599.700000', '487.560976', '0.000000', '0.000000', '147.000000', '487.560976', '147.000000');
 
 -- --------------------------------------------------------
 
@@ -6464,7 +6561,8 @@ CREATE TABLE `ps_order_detail_tax` (
 --
 
 INSERT INTO `ps_order_detail_tax` (`id_order_detail`, `id_tax`, `unit_amount`, `total_amount`) VALUES
-(16, 1, '45.439024', '45.440000');
+(16, 1, '45.439024', '45.440000'),
+(17, 1, '112.139024', '112.140000');
 
 -- --------------------------------------------------------
 
@@ -6497,7 +6595,9 @@ INSERT INTO `ps_order_history` (`id_order_history`, `id_employee`, `id_order`, `
 (10, 1, 3, 6, '2020-11-30 21:10:45'),
 (11, 1, 2, 6, '2020-11-30 21:10:46'),
 (12, 0, 6, 10, '2020-12-02 21:43:59'),
-(13, 0, 6, 13, '2020-12-02 21:44:00');
+(13, 0, 6, 13, '2020-12-02 21:44:00'),
+(14, 0, 7, 10, '2020-12-08 23:20:34'),
+(15, 0, 7, 13, '2020-12-08 23:20:36');
 
 -- --------------------------------------------------------
 
@@ -7084,7 +7184,7 @@ CREATE TABLE `ps_product` (
 --
 
 INSERT INTO `ps_product` (`id_product`, `id_supplier`, `id_manufacturer`, `id_category_default`, `id_shop_default`, `id_tax_rules_group`, `on_sale`, `online_only`, `ean13`, `upc`, `ecotax`, `quantity`, `minimal_quantity`, `price`, `wholesale_price`, `unity`, `unit_price_ratio`, `additional_shipping_cost`, `reference`, `supplier_reference`, `location`, `width`, `height`, `depth`, `weight`, `out_of_stock`, `quantity_discount`, `customizable`, `uploadable_files`, `text_fields`, `active`, `redirect_type`, `id_product_redirected`, `available_for_order`, `available_date`, `condition`, `show_price`, `indexed`, `visibility`, `cache_is_pack`, `cache_has_attachments`, `is_virtual`, `cache_default_attribute`, `date_add`, `date_upd`, `advanced_stock_management`, `pack_stock_type`) VALUES
-(8, 0, 0, 2, 1, 1, 0, 0, '', '', '0.000000', 0, 1, '197.560976', '147.000000', '', '0.000000', '0.00', '118183', '', '', '0.000000', '0.000000', '0.000000', '0.000000', 2, 0, 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 'new', 1, 1, 'both', 0, 0, 1, 0, '2020-12-01 18:52:29', '2020-12-01 19:06:33', 0, 3);
+(8, 0, 0, 2, 1, 1, 0, 0, '', '', '0.000000', 0, 1, '197.560976', '147.000000', '', '0.000000', '0.00', '118183', '', '', '0.000000', '0.000000', '0.000000', '0.000000', 2, 0, 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 'new', 1, 1, 'both', 0, 0, 1, 1, '2020-12-01 18:52:29', '2020-12-08 23:19:17', 0, 3);
 
 -- --------------------------------------------------------
 
@@ -7122,6 +7222,16 @@ CREATE TABLE `ps_product_attribute` (
   `available_date` date NOT NULL DEFAULT '0000-00-00'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Zrzut danych tabeli `ps_product_attribute`
+--
+
+INSERT INTO `ps_product_attribute` (`id_product_attribute`, `id_product`, `reference`, `supplier_reference`, `location`, `ean13`, `upc`, `wholesale_price`, `price`, `ecotax`, `quantity`, `weight`, `unit_price_impact`, `default_on`, `minimal_quantity`, `available_date`) VALUES
+(1, 8, '118183', '', '', '', '', '0.000000', '260.000000', '0.000000', 0, '0.000000', '0.000000', 1, 1, '0000-00-00'),
+(2, 8, '118183', '', '', '', '', '0.000000', '290.000000', '0.000000', 0, '0.000000', '0.000000', NULL, 1, '0000-00-00'),
+(3, 8, '118183', '', '', '', '', '0.000000', '290.000000', '0.000000', 0, '0.000000', '0.000000', NULL, 1, '0000-00-00'),
+(4, 8, '118183', '', '', '', '', '0.000000', '320.000000', '0.000000', 0, '0.000000', '0.000000', NULL, 1, '0000-00-00');
+
 -- --------------------------------------------------------
 
 --
@@ -7132,6 +7242,20 @@ CREATE TABLE `ps_product_attribute_combination` (
   `id_attribute` int(10) UNSIGNED NOT NULL,
   `id_product_attribute` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Zrzut danych tabeli `ps_product_attribute_combination`
+--
+
+INSERT INTO `ps_product_attribute_combination` (`id_attribute`, `id_product_attribute`) VALUES
+(25, 1),
+(27, 1),
+(25, 2),
+(28, 2),
+(26, 3),
+(27, 3),
+(26, 4),
+(28, 4);
 
 -- --------------------------------------------------------
 
@@ -7163,6 +7287,16 @@ CREATE TABLE `ps_product_attribute_shop` (
   `minimal_quantity` int(10) UNSIGNED NOT NULL DEFAULT '1',
   `available_date` date NOT NULL DEFAULT '0000-00-00'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Zrzut danych tabeli `ps_product_attribute_shop`
+--
+
+INSERT INTO `ps_product_attribute_shop` (`id_product`, `id_product_attribute`, `id_shop`, `wholesale_price`, `price`, `ecotax`, `weight`, `unit_price_impact`, `default_on`, `minimal_quantity`, `available_date`) VALUES
+(8, 1, 1, '0.000000', '260.000000', '0.000000', '0.000000', '0.000000', 1, 1, '0000-00-00'),
+(8, 2, 1, '0.000000', '290.000000', '0.000000', '0.000000', '0.000000', NULL, 1, '0000-00-00'),
+(8, 3, 1, '0.000000', '290.000000', '0.000000', '0.000000', '0.000000', NULL, 1, '0000-00-00'),
+(8, 4, 1, '0.000000', '320.000000', '0.000000', '0.000000', '0.000000', NULL, 1, '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -7304,7 +7438,7 @@ CREATE TABLE `ps_product_shop` (
 --
 
 INSERT INTO `ps_product_shop` (`id_product`, `id_shop`, `id_category_default`, `id_tax_rules_group`, `on_sale`, `online_only`, `ecotax`, `minimal_quantity`, `price`, `wholesale_price`, `unity`, `unit_price_ratio`, `additional_shipping_cost`, `customizable`, `uploadable_files`, `text_fields`, `active`, `redirect_type`, `id_product_redirected`, `available_for_order`, `available_date`, `condition`, `show_price`, `indexed`, `visibility`, `cache_default_attribute`, `advanced_stock_management`, `date_add`, `date_upd`, `pack_stock_type`) VALUES
-(8, 1, 2, 1, 0, 0, '0.000000', 1, '197.560976', '147.000000', '', '0.000000', '0.00', 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 'new', 1, 1, 'both', 0, 0, '2020-12-01 18:52:29', '2020-12-01 19:06:33', 3);
+(8, 1, 2, 1, 0, 0, '0.000000', 1, '197.560976', '147.000000', '', '0.000000', '0.00', 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 'new', 1, 1, 'both', 1, 0, '2020-12-01 18:52:29', '2020-12-08 23:19:17', 3);
 
 -- --------------------------------------------------------
 
@@ -7736,8 +7870,13 @@ INSERT INTO `ps_search_index` (`id_product`, `id_word`, `weight`) VALUES
 (8, 544, 2),
 (8, 495, 3),
 (8, 510, 4),
+(8, 545, 4),
+(8, 547, 4),
+(8, 548, 4),
+(8, 549, 4),
 (8, 493, 8),
-(8, 494, 16);
+(8, 546, 8),
+(8, 494, 56);
 
 -- --------------------------------------------------------
 
@@ -7762,12 +7901,15 @@ INSERT INTO `ps_search_word` (`id_word`, `id_shop`, `id_lang`, `word`) VALUES
 (501, 1, 1, 'ajax'),
 (502, 1, 1, 'bootstrap'),
 (498, 1, 1, 'cms'),
+(549, 1, 1, 'dark'),
 (506, 1, 1, 'dolaczone'),
 (495, 1, 1, 'glowna'),
 (504, 1, 1, 'gpl'),
+(545, 1, 1, 'jednokrotnego'),
 (497, 1, 1, 'joomla'),
 (507, 1, 1, 'lekki'),
 (503, 1, 1, 'licencja'),
+(547, 1, 1, 'light'),
 (499, 1, 1, 'panel'),
 (515, 1, 1, 'pojedynczy'),
 (516, 1, 1, 'produkt'),
@@ -7778,6 +7920,8 @@ INSERT INTO `ps_search_word` (`id_word`, `id_shop`, `id_lang`, `word`) VALUES
 (512, 1, 1, 'rozdzielczosci'),
 (493, 1, 1, 'szablon'),
 (496, 1, 1, 'szablony'),
+(546, 1, 1, 'uzytku'),
+(548, 1, 1, 'wielokrotnego'),
 (508, 1, 1, 'wielozadaniowy'),
 (511, 1, 1, 'wysokich'),
 (514, 1, 1, 'wyszukiwarek'),
@@ -7897,8 +8041,8 @@ CREATE TABLE `ps_smarty_last_flush` (
 --
 
 INSERT INTO `ps_smarty_last_flush` (`type`, `last_flush`) VALUES
-('compile', '2020-12-02 21:06:16'),
-('template', '2020-12-02 21:06:16');
+('compile', '2020-12-08 22:40:04'),
+('template', '2020-12-08 22:40:04');
 
 -- --------------------------------------------------------
 
@@ -7919,23 +8063,43 @@ CREATE TABLE `ps_smarty_lazy_cache` (
 --
 
 INSERT INTO `ps_smarty_lazy_cache` (`template_hash`, `cache_id`, `compile_id`, `filepath`, `last_update`) VALUES
-('2132324ad7612ed7cb91de8444f03dae', 'blocksearch-top|3|3|14', '', 'blocksearch_top/3/3/14/4e/c5/f0/4ec5f09962f5f0725e3faf31c01e69428a9d500b.blocksearch-top.tpl.php', '2020-12-02 21:06:47'),
-('35cd305a7376d26fe34a5dbc3549c31d', 'blockcontact|3|3|14', '', 'blockcontact/3/3/14/3d/5b/15/3d5b1584ffcf7c8b56d0c79b9f00a62f9454dc0f.nav.tpl.php', '2020-12-02 21:06:30'),
-('399f3a8c743ef048e012f3c13f1bc314', 'blockcategories|3|3|14|2|3', '', 'blockcategories/3/3/14/2/3/1b/1c/21/1b1c215ce32173764aa2a2d1f148af37261154be.blockcategories.tpl.php', '2020-12-02 21:06:27'),
-('4f296089919889fb5b29e0c5220afb8a', 'blockcontactinfos|3|3|14', '', 'blockcontactinfos/3/3/14/44/a3/ca/44a3ca6f70fb7cf18ad9ccaabb7c9b7695475dd2.blockcontactinfos.tpl.php', '2020-12-02 21:06:29'),
-('614548d004ca83d561fc28811f573952', 'blockspecials-tab|20201202|3|3|14', '', '', '2020-12-02 21:06:53'),
-('729e08a789498e11db4ee7ed1dafd3af', 'blockspecials-home|20201202|3|3|14', '', '', '2020-12-02 21:06:54'),
-('8cce06d74fb470f1ea86b9243a28d1c9', 'homefeatured-tab|3|3|14', '', 'homefeatured_tab/3/3/14/d1/ec/35/d1ec35425663d01dcc0e04833a4aa96a7fdfb7ba.tab.tpl.php', '2020-12-02 21:06:53'),
-('9b076b330c3b383e100e4c23e6c16d43', 'blocktopmenu|3|3|14|index', '', 'blocktopmenu/3/3/14/index/20/22/61/202261737f7471ff70a95274dd663f2dc7c8ef47.blocktopmenu.tpl.php', '2020-12-02 21:06:27'),
-('a4edb6e4925cf4f684fdf466d509564a', 'blockpaymentlogo|3|3|14', '', '', '2020-12-02 21:06:28'),
-('a818646d437d1d648322d07d6c385caa', 'blockspecials|20201202|14|20201202|3|3|14', '', '', '2020-12-02 21:06:28'),
-('a818646d437d1d648322d07d6c385caa', 'blockspecials|20201202|9|20201202|3|3|14', '', '', '2020-12-02 21:06:48'),
-('b96e09f72175b88e25c97cde76542dd6', 'blockmyaccountfooter|3|3|14', '', 'blockmyaccountfooter/3/3/14/05/44/40/054440a5b928799e8ca909a0b328db11279aee9a.blockmyaccountfooter.tpl.php', '2020-12-02 21:06:29'),
-('bfe7a83fb1ce61839575db203c6a12a1', 'blockcategories|3|3|14|3', '', 'blockcategories/3/3/14/3/a5/88/0b/a5880b37cb81397979bd6724b1e436aac6fc922c.blockcategories_footer.tpl.php', '2020-12-02 21:06:29'),
-('c0f69a7a01e460742fded10f6ab3bcab', 'blocktags|3|3|14', '', '', '2020-12-02 21:06:28'),
-('d22b953fa4736374feaaf4b2ee38dd9a', 'blockcms|0|3|3|14', '', 'blockcms/0/3/3/14/1d/89/e8/1d89e8014f347982d948469f9543b359301e5949.blockcms.tpl.php', '2020-12-02 21:06:28'),
-('d22b953fa4736374feaaf4b2ee38dd9a', 'blockcms|2|3|3|14', '', 'blockcms/2/3/3/14/1d/89/e8/1d89e8014f347982d948469f9543b359301e5949.blockcms.tpl.php', '2020-12-02 21:06:29'),
-('f7b2d8122648c39fdccc4e63f44364ce', 'homefeatured|3|3|14', '', 'homefeatured/3/3/14/3a/a0/d6/3aa0d62e1049e5b9d12bc2cae084fdddf0d39b7a.homefeatured.tpl.php', '2020-12-02 21:06:53');
+('1c2cb083a2501296262fc9eacdebdcbd', 'homeslider|1|1|14', '', 'homeslider/1/1/14/b7/99/17/b79917e19c39a5c2f6896b068d19cda5bdc51987.homeslider.tpl.php', '2020-12-08 22:40:40'),
+('1c2cb083a2501296262fc9eacdebdcbd', 'homeslider|3|3|14', '', 'homeslider/3/3/14/b7/99/17/b79917e19c39a5c2f6896b068d19cda5bdc51987.homeslider.tpl.php', '2020-12-08 22:53:27'),
+('2132324ad7612ed7cb91de8444f03dae', 'blocksearch-top|1|1|14', '', 'blocksearch_top/1/1/14/4e/c5/f0/4ec5f09962f5f0725e3faf31c01e69428a9d500b.blocksearch-top.tpl.php', '2020-12-08 22:40:50'),
+('2132324ad7612ed7cb91de8444f03dae', 'blocksearch-top|3|3|14', '', 'blocksearch_top/3/3/14/4e/c5/f0/4ec5f09962f5f0725e3faf31c01e69428a9d500b.blocksearch-top.tpl.php', '2020-12-08 22:53:18'),
+('35cd305a7376d26fe34a5dbc3549c31d', 'blockcontact|1|1|14', '', 'blockcontact/1/1/14/3d/5b/15/3d5b1584ffcf7c8b56d0c79b9f00a62f9454dc0f.nav.tpl.php', '2020-12-08 22:40:40'),
+('35cd305a7376d26fe34a5dbc3549c31d', 'blockcontact|3|3|14', '', 'blockcontact/3/3/14/3d/5b/15/3d5b1584ffcf7c8b56d0c79b9f00a62f9454dc0f.nav.tpl.php', '2020-12-08 22:53:21'),
+('399f3a8c743ef048e012f3c13f1bc314', 'blockcategories|3|3|14|12|12|3', '', 'blockcategories/3/3/14/12/12/3/1b/1c/21/1b1c215ce32173764aa2a2d1f148af37261154be.blockcategories.tpl.php', '2020-12-08 22:54:00'),
+('399f3a8c743ef048e012f3c13f1bc314', 'blockcategories|3|3|14|2|3', '', 'blockcategories/3/3/14/2/3/1b/1c/21/1b1c215ce32173764aa2a2d1f148af37261154be.blockcategories.tpl.php', '2020-12-08 22:54:33'),
+('4f294e125e754c54d07798d2ae66c229', 'blockbanner|1|1|14', '', 'blockbanner/1/1/14/fa/20/76/fa207644db1eb26d98a795ad71b4eee2ee5ecf5a.blockbanner.tpl.php', '2020-12-08 22:40:39'),
+('4f294e125e754c54d07798d2ae66c229', 'blockbanner|3|3|14', '', 'blockbanner/3/3/14/fa/20/76/fa207644db1eb26d98a795ad71b4eee2ee5ecf5a.blockbanner.tpl.php', '2020-12-08 22:53:21'),
+('4f296089919889fb5b29e0c5220afb8a', 'blockcontactinfos|1|1|14', '', 'blockcontactinfos/1/1/14/44/a3/ca/44a3ca6f70fb7cf18ad9ccaabb7c9b7695475dd2.blockcontactinfos.tpl.php', '2020-12-08 22:40:38'),
+('4f296089919889fb5b29e0c5220afb8a', 'blockcontactinfos|3|3|14', '', 'blockcontactinfos/3/3/14/44/a3/ca/44a3ca6f70fb7cf18ad9ccaabb7c9b7695475dd2.blockcontactinfos.tpl.php', '2020-12-08 22:53:20'),
+('614548d004ca83d561fc28811f573952', 'blockspecials-tab|20201208|1|1|14', '', '', '2020-12-08 22:52:55'),
+('729e08a789498e11db4ee7ed1dafd3af', 'blockspecials-home|20201208|1|1|14', '', '', '2020-12-08 22:52:55'),
+('8cce06d74fb470f1ea86b9243a28d1c9', 'homefeatured-tab|1|1|14', '', 'homefeatured_tab/1/1/14/d1/ec/35/d1ec35425663d01dcc0e04833a4aa96a7fdfb7ba.tab.tpl.php', '2020-12-08 22:40:34'),
+('8cce06d74fb470f1ea86b9243a28d1c9', 'homefeatured-tab|3|3|14', '', 'homefeatured_tab/3/3/14/d1/ec/35/d1ec35425663d01dcc0e04833a4aa96a7fdfb7ba.tab.tpl.php', '2020-12-08 22:53:26'),
+('9b076b330c3b383e100e4c23e6c16d43', 'blocktopmenu|1|1|14|index', '', 'blocktopmenu/1/1/14/index/20/22/61/202261737f7471ff70a95274dd663f2dc7c8ef47.blocktopmenu.tpl.php', '2020-12-08 22:40:33'),
+('9b076b330c3b383e100e4c23e6c16d43', 'blocktopmenu|1|1|14|product|8', '', 'blocktopmenu/1/1/14/product/8/20/22/61/202261737f7471ff70a95274dd663f2dc7c8ef47.blocktopmenu.tpl.php', '2020-12-08 22:52:42'),
+('9b076b330c3b383e100e4c23e6c16d43', 'blocktopmenu|3|3|14|category|12', '', 'blocktopmenu/3/3/14/category/12/20/22/61/202261737f7471ff70a95274dd663f2dc7c8ef47.blocktopmenu.tpl.php', '2020-12-08 22:54:00'),
+('9b076b330c3b383e100e4c23e6c16d43', 'blocktopmenu|3|3|14|index', '', 'blocktopmenu/3/3/14/index/20/22/61/202261737f7471ff70a95274dd663f2dc7c8ef47.blocktopmenu.tpl.php', '2020-12-08 22:53:19'),
+('9b076b330c3b383e100e4c23e6c16d43', 'blocktopmenu|3|3|14|product|8', '', 'blocktopmenu/3/3/14/product/8/20/22/61/202261737f7471ff70a95274dd663f2dc7c8ef47.blocktopmenu.tpl.php', '2020-12-08 22:53:32'),
+('a4edb6e4925cf4f684fdf466d509564a', 'blockpaymentlogo|3|3|14', '', '', '2020-12-08 22:54:34'),
+('a818646d437d1d648322d07d6c385caa', 'blockspecials|20201208|15|20201208|3|3|14', '', '', '2020-12-08 22:54:34'),
+('a818646d437d1d648322d07d6c385caa', 'blockspecials|20201208|20|20201208|3|3|14', '', '', '2020-12-08 22:54:01'),
+('b96e09f72175b88e25c97cde76542dd6', 'blockmyaccountfooter|1|1|14', '', 'blockmyaccountfooter/1/1/14/05/44/40/054440a5b928799e8ca909a0b328db11279aee9a.blockmyaccountfooter.tpl.php', '2020-12-08 22:40:37'),
+('b96e09f72175b88e25c97cde76542dd6', 'blockmyaccountfooter|3|3|14', '', 'blockmyaccountfooter/3/3/14/05/44/40/054440a5b928799e8ca909a0b328db11279aee9a.blockmyaccountfooter.tpl.php', '2020-12-08 22:53:20'),
+('bfe7a83fb1ce61839575db203c6a12a1', 'blockcategories|1|1|14|1', '', 'blockcategories/1/1/14/1/a5/88/0b/a5880b37cb81397979bd6724b1e436aac6fc922c.blockcategories_footer.tpl.php', '2020-12-08 22:40:36'),
+('bfe7a83fb1ce61839575db203c6a12a1', 'blockcategories|1|1|14|2|1', '', 'blockcategories/1/1/14/2/1/a5/88/0b/a5880b37cb81397979bd6724b1e436aac6fc922c.blockcategories_footer.tpl.php', '2020-12-08 22:52:43'),
+('bfe7a83fb1ce61839575db203c6a12a1', 'blockcategories|3|3|14|12|3', '', 'blockcategories/3/3/14/12/3/a5/88/0b/a5880b37cb81397979bd6724b1e436aac6fc922c.blockcategories_footer.tpl.php', '2020-12-08 22:54:02'),
+('bfe7a83fb1ce61839575db203c6a12a1', 'blockcategories|3|3|14|2|3', '', 'blockcategories/3/3/14/2/3/a5/88/0b/a5880b37cb81397979bd6724b1e436aac6fc922c.blockcategories_footer.tpl.php', '2020-12-08 22:53:33'),
+('bfe7a83fb1ce61839575db203c6a12a1', 'blockcategories|3|3|14|3', '', 'blockcategories/3/3/14/3/a5/88/0b/a5880b37cb81397979bd6724b1e436aac6fc922c.blockcategories_footer.tpl.php', '2020-12-08 22:53:19'),
+('c0f69a7a01e460742fded10f6ab3bcab', 'blocktags|3|3|14', '', '', '2020-12-08 22:54:01'),
+('d22b953fa4736374feaaf4b2ee38dd9a', 'blockcms|0|3|3|14', '', 'blockcms/0/3/3/14/1d/89/e8/1d89e8014f347982d948469f9543b359301e5949.blockcms.tpl.php', '2020-12-08 22:54:01'),
+('d22b953fa4736374feaaf4b2ee38dd9a', 'blockcms|2|1|1|14', '', 'blockcms/2/1/1/14/1d/89/e8/1d89e8014f347982d948469f9543b359301e5949.blockcms.tpl.php', '2020-12-08 22:40:36'),
+('d22b953fa4736374feaaf4b2ee38dd9a', 'blockcms|2|3|3|14', '', 'blockcms/2/3/3/14/1d/89/e8/1d89e8014f347982d948469f9543b359301e5949.blockcms.tpl.php', '2020-12-08 22:53:19'),
+('f7b2d8122648c39fdccc4e63f44364ce', 'homefeatured|1|1|14', '', 'homefeatured/1/1/14/3a/a0/d6/3aa0d62e1049e5b9d12bc2cae084fdddf0d39b7a.homefeatured.tpl.php', '2020-12-08 22:40:34'),
+('f7b2d8122648c39fdccc4e63f44364ce', 'homefeatured|3|3|14', '', 'homefeatured/3/3/14/3a/a0/d6/3aa0d62e1049e5b9d12bc2cae084fdddf0d39b7a.homefeatured.tpl.php', '2020-12-08 22:53:26');
 
 -- --------------------------------------------------------
 
@@ -8387,7 +8551,10 @@ INSERT INTO `ps_statssearch` (`id_statssearch`, `id_shop`, `id_shop_group`, `key
 (2, 1, 1, 'mapa', 0, '2020-11-30 22:36:46'),
 (3, 1, 1, 'mapa', 0, '2020-11-30 22:36:48'),
 (4, 1, 1, 'map', 0, '2020-11-30 22:36:53'),
-(5, 1, 1, 'map', 0, '2020-11-30 22:36:55');
+(5, 1, 1, 'map', 0, '2020-11-30 22:36:55'),
+(6, 1, 1, 'ftdghjrthrt', 0, '2020-12-08 22:21:27'),
+(7, 1, 1, 'ftdghjrthrt', 0, '2020-12-08 22:21:28'),
+(8, 1, 1, 'ftdghjrthrt', 0, '2020-12-08 22:21:31');
 
 -- --------------------------------------------------------
 
@@ -8437,7 +8604,11 @@ INSERT INTO `ps_stock_available` (`id_stock_available`, `id_product`, `id_produc
 (57, 5, 0, 1, 0, 0, 0, 0),
 (58, 6, 0, 1, 0, 0, 0, 0),
 (59, 7, 0, 1, 0, 0, 0, 0),
-(60, 8, 0, 1, 0, -1, 0, 1);
+(60, 8, 0, 1, 0, -1, 0, 1),
+(61, 8, 1, 1, 0, 0, 0, 1),
+(62, 8, 2, 1, 0, 0, 0, 1),
+(63, 8, 3, 1, 0, -1, 0, 1),
+(64, 8, 4, 1, 0, 0, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -8888,7 +9059,8 @@ INSERT INTO `ps_tab` (`id_tab`, `id_parent`, `class_name`, `module`, `position`,
 (103, -1, 'AdminThemeConfigurator', 'themeconfigurator', 9, 1, 0),
 (104, 18, 'AdminGamification', 'gamification', 6, 1, 0),
 (106, 0, 'AdminEmarketing', 'emarketing', 13, 1, 0),
-(107, 0, 'AdminPaypalAjaxHandler', 'paypal', 14, 0, 0);
+(107, 0, 'AdminPaypalAjaxHandler', 'paypal', 14, 0, 0),
+(108, -1, 'AdminGanalyticsAjax', 'ganalytics', 10, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -9023,7 +9195,8 @@ INSERT INTO `ps_tab_lang` (`id_tab`, `id_lang`, `name`) VALUES
 (103, 1, 'themeconfigurator'),
 (104, 1, 'Merchant Expertise'),
 (106, 1, 'Advertising'),
-(107, 1, 'Paypal Ajax Handler');
+(107, 1, 'Paypal Ajax Handler'),
+(108, 1, 'Google Analytics Ajax');
 
 -- --------------------------------------------------------
 
@@ -10892,6 +11065,14 @@ ALTER TABLE `ps_feature_value_lang`
   ADD PRIMARY KEY (`id_feature_value`,`id_lang`);
 
 --
+-- Indeksy dla tabeli `ps_ganalytics`
+--
+ALTER TABLE `ps_ganalytics`
+  ADD PRIMARY KEY (`id_google_analytics`),
+  ADD KEY `id_order` (`id_order`),
+  ADD KEY `sent` (`sent`);
+
+--
 -- Indeksy dla tabeli `ps_gender`
 --
 ALTER TABLE `ps_gender`
@@ -12184,7 +12365,7 @@ ALTER TABLE `ps_zone_shop`
 -- AUTO_INCREMENT dla tabeli `ps_address`
 --
 ALTER TABLE `ps_address`
-  MODIFY `id_address` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_address` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT dla tabeli `ps_advice`
@@ -12214,19 +12395,19 @@ ALTER TABLE `ps_attachment_lang`
 -- AUTO_INCREMENT dla tabeli `ps_attribute`
 --
 ALTER TABLE `ps_attribute`
-  MODIFY `id_attribute` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id_attribute` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT dla tabeli `ps_attribute_group`
 --
 ALTER TABLE `ps_attribute_group`
-  MODIFY `id_attribute_group` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_attribute_group` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT dla tabeli `ps_attribute_impact`
 --
 ALTER TABLE `ps_attribute_impact`
-  MODIFY `id_attribute_impact` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id_attribute_impact` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT dla tabeli `ps_badge`
@@ -12244,7 +12425,7 @@ ALTER TABLE `ps_carrier`
 -- AUTO_INCREMENT dla tabeli `ps_cart`
 --
 ALTER TABLE `ps_cart`
-  MODIFY `id_cart` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_cart` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT dla tabeli `ps_cart_rule`
@@ -12328,7 +12509,7 @@ ALTER TABLE `ps_condition`
 -- AUTO_INCREMENT dla tabeli `ps_configuration`
 --
 ALTER TABLE `ps_configuration`
-  MODIFY `id_configuration` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=425;
+  MODIFY `id_configuration` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=428;
 
 --
 -- AUTO_INCREMENT dla tabeli `ps_configuration_kpi`
@@ -12340,13 +12521,13 @@ ALTER TABLE `ps_configuration_kpi`
 -- AUTO_INCREMENT dla tabeli `ps_connections`
 --
 ALTER TABLE `ps_connections`
-  MODIFY `id_connections` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_connections` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT dla tabeli `ps_connections_source`
 --
 ALTER TABLE `ps_connections_source`
-  MODIFY `id_connections_source` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=157;
+  MODIFY `id_connections_source` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=172;
 
 --
 -- AUTO_INCREMENT dla tabeli `ps_contact`
@@ -12370,7 +12551,7 @@ ALTER TABLE `ps_currency`
 -- AUTO_INCREMENT dla tabeli `ps_customer`
 --
 ALTER TABLE `ps_customer`
-  MODIFY `id_customer` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_customer` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT dla tabeli `ps_customer_message`
@@ -12424,7 +12605,13 @@ ALTER TABLE `ps_feature`
 -- AUTO_INCREMENT dla tabeli `ps_feature_value`
 --
 ALTER TABLE `ps_feature_value`
-  MODIFY `id_feature_value` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id_feature_value` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+
+--
+-- AUTO_INCREMENT dla tabeli `ps_ganalytics`
+--
+ALTER TABLE `ps_ganalytics`
+  MODIFY `id_google_analytics` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT dla tabeli `ps_gender`
@@ -12448,7 +12635,7 @@ ALTER TABLE `ps_group_reduction`
 -- AUTO_INCREMENT dla tabeli `ps_guest`
 --
 ALTER TABLE `ps_guest`
-  MODIFY `id_guest` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_guest` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT dla tabeli `ps_homeslider`
@@ -12538,7 +12725,7 @@ ALTER TABLE `ps_linksmenutop`
 -- AUTO_INCREMENT dla tabeli `ps_log`
 --
 ALTER TABLE `ps_log`
-  MODIFY `id_log` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id_log` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT dla tabeli `ps_mail`
@@ -12574,7 +12761,7 @@ ALTER TABLE `ps_meta`
 -- AUTO_INCREMENT dla tabeli `ps_module`
 --
 ALTER TABLE `ps_module`
-  MODIFY `id_module` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
+  MODIFY `id_module` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
 
 --
 -- AUTO_INCREMENT dla tabeli `ps_modules_perfs`
@@ -12604,7 +12791,7 @@ ALTER TABLE `ps_operating_system`
 -- AUTO_INCREMENT dla tabeli `ps_orders`
 --
 ALTER TABLE `ps_orders`
-  MODIFY `id_order` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_order` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT dla tabeli `ps_order_carrier`
@@ -12622,13 +12809,13 @@ ALTER TABLE `ps_order_cart_rule`
 -- AUTO_INCREMENT dla tabeli `ps_order_detail`
 --
 ALTER TABLE `ps_order_detail`
-  MODIFY `id_order_detail` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_order_detail` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT dla tabeli `ps_order_history`
 --
 ALTER TABLE `ps_order_history`
-  MODIFY `id_order_history` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_order_history` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT dla tabeli `ps_order_invoice`
@@ -12736,7 +12923,7 @@ ALTER TABLE `ps_product`
 -- AUTO_INCREMENT dla tabeli `ps_product_attribute`
 --
 ALTER TABLE `ps_product_attribute`
-  MODIFY `id_product_attribute` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id_product_attribute` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT dla tabeli `ps_product_download`
@@ -12820,7 +13007,7 @@ ALTER TABLE `ps_search_engine`
 -- AUTO_INCREMENT dla tabeli `ps_search_word`
 --
 ALTER TABLE `ps_search_word`
-  MODIFY `id_word` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=545;
+  MODIFY `id_word` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=575;
 
 --
 -- AUTO_INCREMENT dla tabeli `ps_sekeyword`
@@ -12856,7 +13043,7 @@ ALTER TABLE `ps_specific_price`
 -- AUTO_INCREMENT dla tabeli `ps_specific_price_priority`
 --
 ALTER TABLE `ps_specific_price_priority`
-  MODIFY `id_specific_price_priority` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_specific_price_priority` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT dla tabeli `ps_specific_price_rule`
@@ -12886,7 +13073,7 @@ ALTER TABLE `ps_state`
 -- AUTO_INCREMENT dla tabeli `ps_statssearch`
 --
 ALTER TABLE `ps_statssearch`
-  MODIFY `id_statssearch` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_statssearch` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT dla tabeli `ps_stock`
@@ -12898,7 +13085,7 @@ ALTER TABLE `ps_stock`
 -- AUTO_INCREMENT dla tabeli `ps_stock_available`
 --
 ALTER TABLE `ps_stock_available`
-  MODIFY `id_stock_available` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+  MODIFY `id_stock_available` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
 -- AUTO_INCREMENT dla tabeli `ps_stock_mvt`
@@ -12958,7 +13145,7 @@ ALTER TABLE `ps_supply_order_state`
 -- AUTO_INCREMENT dla tabeli `ps_tab`
 --
 ALTER TABLE `ps_tab`
-  MODIFY `id_tab` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=108;
+  MODIFY `id_tab` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=109;
 
 --
 -- AUTO_INCREMENT dla tabeli `ps_tab_module_preference`
