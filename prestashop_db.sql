@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db_presta
--- Czas generowania: 09 Gru 2020, 23:12
+-- Czas generowania: 10 Gru 2020, 22:52
 -- Wersja serwera: 5.7.32
 -- Wersja PHP: 7.4.11
 
@@ -2211,7 +2211,7 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (365, NULL, NULL, 'EMARKETING_FB_ADDTOCART', NULL, '2020-11-30 19:05:55', '2020-11-30 19:05:55'),
 (366, NULL, NULL, 'EMARKETING_FB_PURCHASE', NULL, '2020-11-30 19:05:55', '2020-11-30 19:05:55'),
 (367, NULL, NULL, 'EMARKETING_ROUTETOKEN', 'ci36TpoG', '2020-11-30 19:05:55', '2020-11-30 19:05:55'),
-(368, NULL, NULL, 'GF_NOT_VIEWED_BADGE', NULL, '2020-11-30 19:53:47', '2020-12-10 00:11:25'),
+(368, NULL, NULL, 'GF_NOT_VIEWED_BADGE', NULL, '2020-11-30 19:53:47', '2020-12-10 23:52:21'),
 (369, NULL, NULL, 'PS_SHOW_TYPE_MODULES_1', 'allModules', '2020-11-30 19:57:24', '2020-11-30 19:57:24'),
 (370, NULL, NULL, 'PS_SHOW_INSTALLED_MODULES_1', 'installedUninstalled', '2020-11-30 19:57:24', '2020-12-08 23:44:29'),
 (371, NULL, NULL, 'PS_SHOW_ENABLED_MODULES_1', 'enabledDisabled', '2020-11-30 19:57:24', '2020-11-30 19:57:24'),
@@ -2332,9 +2332,9 @@ INSERT INTO `ps_configuration_kpi` (`id_configuration_kpi`, `id_shop_group`, `id
 (35, NULL, NULL, 'DASHGOALS_CONVERSION_12_2020', '2', '2020-11-30 19:05:23', '2020-11-30 19:05:23'),
 (36, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_12_2020', '80', '2020-11-30 19:05:23', '2020-11-30 19:05:23'),
 (37, NULL, NULL, 'UPDATE_MODULES', '0', '2020-11-30 19:57:14', '2020-11-30 19:57:14'),
-(38, NULL, NULL, 'FRONTOFFICE_TRANSLATIONS_EXPIRE', '1607554555', '2020-12-09 23:51:33', '2020-12-09 23:55:55'),
-(39, NULL, NULL, 'TRANSLATE_TOTAL_DEFAULT-BOOTSTRA', '5171', '2020-12-09 23:51:33', '2020-12-09 23:51:33'),
-(40, NULL, NULL, 'TRANSLATE_DONE_DEFAULT-BOOTSTRA', '5171', '2020-12-09 23:51:33', '2020-12-09 23:55:34');
+(38, NULL, NULL, 'FRONTOFFICE_TRANSLATIONS_EXPIRE', '1607640739', '2020-12-09 23:51:33', '2020-12-10 23:52:19'),
+(39, NULL, NULL, 'TRANSLATE_TOTAL_DEFAULT-BOOTSTRA', '935', '2020-12-09 23:51:33', '2020-12-10 23:52:19'),
+(40, NULL, NULL, 'TRANSLATE_DONE_DEFAULT-BOOTSTRA', '53', '2020-12-09 23:51:33', '2020-12-10 23:52:19');
 
 -- --------------------------------------------------------
 
@@ -2411,7 +2411,9 @@ INSERT INTO `ps_connections` (`id_connections`, `id_shop_group`, `id_shop`, `id_
 (10, 1, 1, 6, 1, 2886860801, '2020-12-08 23:22:05', 'http://localhost:8080/'),
 (11, 1, 1, 7, 1, 2886860801, '2020-12-08 23:40:52', ''),
 (12, 1, 1, 7, 1, 2886860801, '2020-12-09 11:51:17', ''),
-(13, 1, 1, 7, 1, 2886860801, '2020-12-09 23:23:48', '');
+(13, 1, 1, 7, 1, 2886860801, '2020-12-09 23:23:48', ''),
+(14, 1, 1, 8, 1, 2886860801, '2020-12-10 22:42:54', ''),
+(15, 1, 1, 8, 1, 2886860801, '2020-12-10 23:45:44', '');
 
 -- --------------------------------------------------------
 
@@ -3774,7 +3776,7 @@ CREATE TABLE `ps_employee` (
 --
 
 INSERT INTO `ps_employee` (`id_employee`, `id_profile`, `id_lang`, `lastname`, `firstname`, `email`, `passwd`, `last_passwd_gen`, `stats_date_from`, `stats_date_to`, `stats_compare_from`, `stats_compare_to`, `stats_compare_option`, `preselect_date_range`, `bo_color`, `bo_theme`, `bo_css`, `default_tab`, `bo_width`, `bo_menu`, `active`, `optin`, `id_last_order`, `id_last_customer_message`, `id_last_customer`, `last_connection_date`) VALUES
-(1, 1, 1, 'XXX', 'Dawid', 'wazniak96@gmail.com', '571605331338e1e84fa8b355703024de', '2020-11-30 13:04:08', '2020-10-30', '2020-11-30', '0000-00-00', '0000-00-00', 1, NULL, NULL, 'default', 'admin-theme.css', 1, 0, 1, 1, 1, 7, 0, 4, '2020-12-09');
+(1, 1, 1, 'XXX', 'Dawid', 'wazniak96@gmail.com', '571605331338e1e84fa8b355703024de', '2020-11-30 13:04:08', '2020-10-30', '2020-11-30', '0000-00-00', '0000-00-00', 1, NULL, NULL, 'default', 'admin-theme.css', 1, 0, 1, 1, 1, 7, 0, 4, '2020-12-10');
 
 -- --------------------------------------------------------
 
@@ -5437,7 +5439,8 @@ INSERT INTO `ps_log` (`id_log`, `severity`, `error_code`, `message`, `object_typ
 (45, 1, 0, 'Połączenie z panelem administracyjnym z 172.18.0.1', '', 0, 1, '2020-12-08 23:42:09', '2020-12-08 23:42:09'),
 (46, 1, 0, 'Połączenie z panelem administracyjnym z 172.18.0.1', '', 0, 1, '2020-12-09 23:24:16', '2020-12-09 23:24:16'),
 (47, 1, 0, 'Contact modyfikacja', 'Contact', 1, 1, '2020-12-09 23:42:14', '2020-12-09 23:42:14'),
-(48, 1, 0, 'Contact modyfikacja', 'Contact', 2, 1, '2020-12-09 23:42:28', '2020-12-09 23:42:28');
+(48, 1, 0, 'Contact modyfikacja', 'Contact', 2, 1, '2020-12-09 23:42:28', '2020-12-09 23:42:28'),
+(49, 1, 0, 'Połączenie z panelem administracyjnym z 172.18.0.1', '', 0, 1, '2020-12-10 23:46:18', '2020-12-10 23:46:18');
 
 -- --------------------------------------------------------
 
@@ -8067,6 +8070,25 @@ CREATE TABLE `ps_smarty_lazy_cache` (
   `filepath` varchar(255) NOT NULL DEFAULT '',
   `last_update` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Zrzut danych tabeli `ps_smarty_lazy_cache`
+--
+
+INSERT INTO `ps_smarty_lazy_cache` (`template_hash`, `cache_id`, `compile_id`, `filepath`, `last_update`) VALUES
+('1c2cb083a2501296262fc9eacdebdcbd', 'homeslider|1|1|14', '', 'homeslider/1/1/14/b7/99/17/b79917e19c39a5c2f6896b068d19cda5bdc51987.homeslider.tpl.php', '2020-12-10 21:42:55'),
+('2132324ad7612ed7cb91de8444f03dae', 'blocksearch-top|1|1|14', '', 'blocksearch_top/1/1/14/4e/c5/f0/4ec5f09962f5f0725e3faf31c01e69428a9d500b.blocksearch-top.tpl.php', '2020-12-10 21:42:51'),
+('35cd305a7376d26fe34a5dbc3549c31d', 'blockcontact|1|1|14', '', 'blockcontact/1/1/14/3d/5b/15/3d5b1584ffcf7c8b56d0c79b9f00a62f9454dc0f.nav.tpl.php', '2020-12-10 21:42:55'),
+('4f294e125e754c54d07798d2ae66c229', 'blockbanner|1|1|14', '', 'blockbanner/1/1/14/fa/20/76/fa207644db1eb26d98a795ad71b4eee2ee5ecf5a.blockbanner.tpl.php', '2020-12-10 21:42:54'),
+('4f296089919889fb5b29e0c5220afb8a', 'blockcontactinfos|1|1|14', '', 'blockcontactinfos/1/1/14/44/a3/ca/44a3ca6f70fb7cf18ad9ccaabb7c9b7695475dd2.blockcontactinfos.tpl.php', '2020-12-10 21:42:54'),
+('614548d004ca83d561fc28811f573952', 'blockspecials-tab|20201210|1|1|14', '', '', '2020-12-10 22:45:43'),
+('729e08a789498e11db4ee7ed1dafd3af', 'blockspecials-home|20201210|1|1|14', '', '', '2020-12-10 22:45:43'),
+('8cce06d74fb470f1ea86b9243a28d1c9', 'homefeatured-tab|1|1|14', '', 'homefeatured_tab/1/1/14/d1/ec/35/d1ec35425663d01dcc0e04833a4aa96a7fdfb7ba.tab.tpl.php', '2020-12-10 21:42:52'),
+('9b076b330c3b383e100e4c23e6c16d43', 'blocktopmenu|1|1|14|index', '', 'blocktopmenu/1/1/14/index/20/22/61/202261737f7471ff70a95274dd663f2dc7c8ef47.blocktopmenu.tpl.php', '2020-12-10 21:42:52'),
+('b96e09f72175b88e25c97cde76542dd6', 'blockmyaccountfooter|1|1|14', '', 'blockmyaccountfooter/1/1/14/05/44/40/054440a5b928799e8ca909a0b328db11279aee9a.blockmyaccountfooter.tpl.php', '2020-12-10 21:42:54'),
+('bfe7a83fb1ce61839575db203c6a12a1', 'blockcategories|1|1|14|1', '', 'blockcategories/1/1/14/1/a5/88/0b/a5880b37cb81397979bd6724b1e436aac6fc922c.blockcategories_footer.tpl.php', '2020-12-10 21:42:53'),
+('d22b953fa4736374feaaf4b2ee38dd9a', 'blockcms|2|1|1|14', '', 'blockcms/2/1/1/14/1d/89/e8/1d89e8014f347982d948469f9543b359301e5949.blockcms.tpl.php', '2020-12-10 21:42:53'),
+('f7b2d8122648c39fdccc4e63f44364ce', 'homefeatured|1|1|14', '', 'homefeatured/1/1/14/3a/a0/d6/3aa0d62e1049e5b9d12bc2cae084fdddf0d39b7a.homefeatured.tpl.php', '2020-12-10 21:42:52');
 
 -- --------------------------------------------------------
 
@@ -12488,7 +12510,7 @@ ALTER TABLE `ps_configuration_kpi`
 -- AUTO_INCREMENT dla tabeli `ps_connections`
 --
 ALTER TABLE `ps_connections`
-  MODIFY `id_connections` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_connections` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT dla tabeli `ps_connections_source`
@@ -12692,7 +12714,7 @@ ALTER TABLE `ps_linksmenutop`
 -- AUTO_INCREMENT dla tabeli `ps_log`
 --
 ALTER TABLE `ps_log`
-  MODIFY `id_log` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `id_log` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 
 --
 -- AUTO_INCREMENT dla tabeli `ps_mail`
