@@ -4,7 +4,7 @@ services:
    db_presta:
      image: mysql:5.7
      ports:
-      - "3307:3306"
+      - '3307:3306'
      volumes:
        - ../prestashop_db:/var/lib/mysql
      restart: always
@@ -15,18 +15,15 @@ services:
        MYSQL_PASSWORD: ps
 
    prestashop:
-     depends_on:
-       - db_presta
-     image: prestashop/prestashop:1.6
-     ports:
-       - "8080:80"
-     restart: always
-     environment:
-       PS_FOLDER_ADMIN: psadmin
-       PS_FOLDER_INSTALL: psinstall
-     volumes:
-       - ./prestashop:/var/www/html
-       - ../logs:/var/log
+    build: .
+    restart: always
+    depends_on:
+      - db_presta
+    ports:
+      - "8080:80"
+      - "8081:443"
+    volumes:
+      - ./prestashop:/var/www/html/
        
    phpmyadmin:
      depends_on:
