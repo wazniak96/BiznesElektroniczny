@@ -1854,7 +1854,7 @@ class AdminImportControllerCore extends AdminController
                         if (empty($single_feature)) {
                             continue;
                         }
-                        $tab_feature = explode(':', $single_feature);
+                        $tab_feature = explode('|', $single_feature);
                         $feature_name = isset($tab_feature[0]) ? trim($tab_feature[0]) : '';
                         $feature_value = isset($tab_feature[1]) ? trim($tab_feature[1]) : '';
                         $position = isset($tab_feature[2]) ? (int)$tab_feature[2] - 1 : false;

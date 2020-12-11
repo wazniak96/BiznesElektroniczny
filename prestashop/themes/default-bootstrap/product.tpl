@@ -474,7 +474,7 @@
 					<tr class="{cycle values="odd,even"}">
 						{if isset($feature.value)}
 						<td>{$feature.name|escape:'html':'UTF-8'}</td>
-						<td>{$feature.value|escape:'html':'UTF-8'}</td>
+						<td>{$feature.value|escape:'UTF-8'}</td>
 						{/if}
 					</tr>
 					{/foreach}
