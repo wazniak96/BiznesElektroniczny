@@ -37,12 +37,13 @@ class Templates(scrapy.Spider):
 			basic_functions = response.xpath("/html/body/div/main/section/div/div/div[2]/ul[2]/p[3]/text()")[6].get()
 		
 		if basic_functions != None and author != None:
-			urllib.request.urlretrieve(img, f"images/{template_id}.jpg")
+			#urllib.request.urlretrieve(img, f"images/{template_id}.jpg")
 			
 			yield {
 				'id': template_id,
+				'price': response.xpath(f'//*[@id="template_price_{template_id}"]/text()').get().strip().replace('zł ', ''),
 				'example_url': response.xpath("//div[@class='template-screenshots']/a/@href")[0].extract(),
-				'image_name': f"{template_id}.jpg",
+				'image': img,
 				'type': response.xpath("/html/body/div/main/section/div/div/div[2]/ul[2]/p[1]/text()").get().strip(),
 				'basic_functions': basic_functions.strip(),
 				'author': author.strip(),
