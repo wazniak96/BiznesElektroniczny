@@ -8,7 +8,10 @@ from selenium import webdriver
 class PythonOrgSearch(unittest.TestCase):
 
     def setUp(self):
-        self.driver = webdriver.Chrome('.\chromedriver.exe')
+        options = webdriver.ChromeOptions()
+        options.add_argument('ignore-certificate-errors')
+
+        self.driver = webdriver.Chrome('.\chromedriver.exe', chrome_options=options)
 
     def test_search_in_python_org(self):
         def generatenapis(ile):
@@ -23,7 +26,7 @@ class PythonOrgSearch(unittest.TestCase):
 
         #Dodanie produktów z kategorii szablonów joomla!
         categories = ["https://localhost/61-joomla-cms", "https://localhost/55-sklepy-prestashop"]
-        units_from_category = 5
+        units_from_category = 2
         for category in categories:
             driver.get(category)
             time.sleep(5)
@@ -80,8 +83,8 @@ class PythonOrgSearch(unittest.TestCase):
 
         driver.find_element_by_xpath("//*[@id='submitAccount']").click()
         time.sleep(3)
-        driver.find_element_by_xpath('/html/body/div/div[2]/div/div[3]/div/p[3]/a[1]').click()
-        time.sleep(1)
+        #driver.find_element_by_xpath('/html/body/div/div[2]/div/div[3]/div/p[3]/a[1]').click()
+        #time.sleep(1)
 
         #Adresy
         assert('Twoje adresy' in driver.page_source)
