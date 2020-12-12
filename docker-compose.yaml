@@ -20,10 +20,11 @@ services:
     depends_on:
       - db_presta
     ports:
-      - "8080:80"
-      - "8081:443"
+      - '8080:80'
+      - '443:443'
     volumes:
       - ./prestashop:/var/www/html/
+      - ../log:/var/log/apache2/
        
    phpmyadmin:
      depends_on:

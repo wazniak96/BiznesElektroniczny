@@ -22,11 +22,12 @@ class PythonOrgSearch(unittest.TestCase):
         driver = self.driver
 
         #Dodanie produktów z kategorii szablonów joomla!
-        categories = ["http://localhost:8080/61-joomla-cms", "http://localhost:8080/55-sklepy-prestashop"]
+        categories = ["https://localhost/61-joomla-cms", "https://localhost/55-sklepy-prestashop"]
         units_from_category = 5
         for category in categories:
             driver.get(category)
-
+            time.sleep(5)
+            
             for i in range(1, units_from_category + 1):
                 driver.find_element_by_xpath(f"/html/body/div/div[2]/div/div[3]/div[2]/ul/li[{i}]/div/div[1]/div/a[1]").click()
                 time.sleep(2)
