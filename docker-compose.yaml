@@ -2,11 +2,9 @@ version: '3.3'
 
 services:
    db_presta:
-     image: mysql:5.7
+     build: ./docker/db/
      ports:
       - '3307:3306'
-     volumes:
-       - ../prestashop_db:/var/lib/mysql
      restart: always
      environment:
        MYSQL_ROOT_PASSWORD: admin
@@ -15,7 +13,7 @@ services:
        MYSQL_PASSWORD: ps
 
    prestashop:
-    build: .
+    build: ./docker/presta/
     restart: always
     depends_on:
       - db_presta
@@ -23,7 +21,6 @@ services:
       - '8080:80'
       - '443:443'
     volumes:
-      - ./prestashop:/var/www/html/
       - ../log:/var/log/apache2/
        
    phpmyadmin:
