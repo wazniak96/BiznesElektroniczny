@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db_presta
--- Czas generowania: 11 Gru 2020, 23:47
+-- Czas generowania: 17 Sty 2021, 01:08
 -- Wersja serwera: 5.7.32
 -- Wersja PHP: 7.4.11
 
@@ -4075,7 +4075,7 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (365, NULL, NULL, 'EMARKETING_FB_ADDTOCART', NULL, '2020-11-30 19:05:55', '2020-11-30 19:05:55'),
 (366, NULL, NULL, 'EMARKETING_FB_PURCHASE', NULL, '2020-11-30 19:05:55', '2020-11-30 19:05:55'),
 (367, NULL, NULL, 'EMARKETING_ROUTETOKEN', 'ci36TpoG', '2020-11-30 19:05:55', '2020-11-30 19:05:55'),
-(368, NULL, NULL, 'GF_NOT_VIEWED_BADGE', NULL, '2020-11-30 19:53:47', '2020-12-12 00:38:23'),
+(368, NULL, NULL, 'GF_NOT_VIEWED_BADGE', NULL, '2020-11-30 19:53:47', '2021-01-17 02:08:09'),
 (369, NULL, NULL, 'PS_SHOW_TYPE_MODULES_1', 'allModules', '2020-11-30 19:57:24', '2020-11-30 19:57:24'),
 (370, NULL, NULL, 'PS_SHOW_INSTALLED_MODULES_1', 'installedUninstalled', '2020-11-30 19:57:24', '2020-12-08 23:44:29'),
 (371, NULL, NULL, 'PS_SHOW_ENABLED_MODULES_1', 'enabledDisabled', '2020-11-30 19:57:24', '2020-11-30 19:57:24'),
@@ -4190,7 +4190,9 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (479, NULL, NULL, 'PS_SSL_ENABLED_EVERYWHERE', '1', '2020-12-12 00:32:30', '2020-12-12 00:33:45'),
 (480, NULL, NULL, 'PS_ALLOW_HTML_IFRAME', '0', '2020-12-12 00:32:30', '2020-12-12 00:32:30'),
 (481, NULL, NULL, 'PS_API_KEY', NULL, '2020-12-12 00:32:30', '2020-12-12 00:33:45'),
-(482, NULL, NULL, 'PS_MULTISHOP_FEATURE_ACTIVE', '0', '2020-12-12 00:32:30', '2020-12-12 00:32:30');
+(482, NULL, NULL, 'PS_MULTISHOP_FEATURE_ACTIVE', '0', '2020-12-12 00:32:30', '2020-12-12 00:32:30'),
+(483, NULL, NULL, 'VELOCITY_SOCIAL_LOGINIZER', 'a:35:{s:9:\"plugin_id\";s:6:\"PS0005\";s:7:\"version\";s:3:\"0.1\";s:6:\"enable\";s:1:\"1\";s:10:\"show_popup\";i:1;s:21:\"show_on_supercheckout\";s:11:\"do_not_show\";s:9:\"col_exist\";i:1;s:18:\"loginizer_sequence\";a:15:{s:8:\"facebook\";i:0;s:6:\"google\";i:1;s:8:\"linkedin\";i:2;s:4:\"live\";i:3;s:7:\"twitter\";i:4;s:5:\"yahoo\";i:5;s:6:\"amazon\";i:6;s:9:\"instagram\";i:7;s:6:\"paypal\";i:8;s:10:\"foursquare\";i:9;s:6:\"github\";i:10;s:6:\"disqus\";i:11;s:2:\"vk\";i:12;s:9:\"wordpress\";i:13;s:7:\"dropbox\";i:14;}s:5:\"index\";a:4:{s:6:\"status\";i:0;s:8:\"position\";s:6:\"header\";s:5:\"title\";s:7:\"Sign Up\";s:4:\"size\";i:0;}s:8:\"category\";a:4:{s:6:\"status\";i:0;s:8:\"position\";s:6:\"header\";s:5:\"title\";s:7:\"Sign Up\";s:4:\"size\";i:0;}s:7:\"product\";a:4:{s:6:\"status\";i:0;s:8:\"position\";s:6:\"header\";s:5:\"title\";s:7:\"Sign Up\";s:4:\"size\";i:0;}s:14:\"authentication\";a:4:{s:6:\"status\";i:1;s:8:\"position\";s:5:\"login\";s:5:\"title\";s:7:\"Sign Up\";s:4:\"size\";i:0;}s:5:\"order\";a:4:{s:6:\"status\";i:0;s:8:\"position\";s:6:\"header\";s:5:\"title\";s:7:\"Sign Up\";s:4:\"size\";i:0;}s:9:\"order-opc\";a:4:{s:6:\"status\";i:0;s:8:\"position\";s:6:\"header\";s:5:\"title\";s:7:\"Sign Up\";s:4:\"size\";i:0;}s:3:\"cms\";a:4:{s:6:\"status\";i:0;s:8:\"position\";s:6:\"header\";s:5:\"title\";s:7:\"Sign Up\";s:4:\"size\";i:0;}s:11:\"prices-drop\";a:4:{s:6:\"status\";i:0;s:8:\"position\";s:6:\"header\";s:5:\"title\";s:7:\"Sign Up\";s:4:\"size\";i:0;}s:12:\"new-products\";a:4:{s:6:\"status\";i:0;s:8:\"position\";s:6:\"header\";s:5:\"title\";s:7:\"Sign Up\";s:4:\"size\";i:0;}s:10:\"best-sales\";a:4:{s:6:\"status\";i:0;s:8:\"position\";s:6:\"header\";s:5:\"title\";s:7:\"Sign Up\";s:4:\"size\";i:0;}s:6:\"stores\";a:4:{s:6:\"status\";i:0;s:8:\"position\";s:6:\"header\";s:5:\"title\";s:7:\"Sign Up\";s:4:\"size\";i:0;}s:7:\"contact\";a:4:{s:6:\"status\";i:0;s:8:\"position\";s:6:\"header\";s:5:\"title\";s:7:\"Sign Up\";s:4:\"size\";i:0;}s:8:\"facebook\";a:3:{s:6:\"app_id\";s:15:\"450570942978325\";s:10:\"app_secret\";s:32:\"17f84ebe638f7eb35def43381ef4de6c\";s:6:\"enable\";s:1:\"1\";}s:5:\"gplus\";a:3:{s:9:\"client_id\";s:73:\"1058658528311-nc1ho2glcbvjp29fvh622ccu7udn560h.apps.googleusercontent.com\";s:13:\"client_secret\";s:24:\"KPZ7mensY4J8r0rzrqnVsrYA\";s:6:\"enable\";s:1:\"1\";}s:4:\"live\";a:2:{s:9:\"client_id\";s:16:\"00000000406BD006\";s:13:\"client_secret\";s:23:\"kpvcYULW802:{uhdIDT31%*\";}s:6:\"linked\";a:2:{s:9:\"client_id\";s:0:\"\";s:13:\"client_secret\";s:0:\"\";}s:7:\"twitter\";a:2:{s:9:\"client_id\";s:0:\"\";s:13:\"client_secret\";s:0:\"\";}s:5:\"yahoo\";a:2:{s:12:\"consumer_key\";s:0:\"\";s:15:\"consumer_secret\";s:0:\"\";}s:5:\"insta\";a:2:{s:9:\"client_id\";s:0:\"\";s:13:\"client_secret\";s:0:\"\";}s:6:\"amazon\";a:2:{s:9:\"client_id\";s:0:\"\";s:13:\"client_secret\";s:0:\"\";}s:3:\"pay\";a:2:{s:9:\"client_id\";s:0:\"\";s:13:\"client_secret\";s:0:\"\";}s:10:\"foursquare\";a:2:{s:9:\"client_id\";s:0:\"\";s:13:\"client_secret\";s:0:\"\";}s:6:\"github\";a:2:{s:9:\"client_id\";s:20:\"96293ab70c3f45191044\";s:13:\"client_secret\";s:40:\"436721eac6a76eafac927588b960b46367e5a300\";}s:6:\"disqus\";a:2:{s:9:\"client_id\";s:0:\"\";s:13:\"client_secret\";s:0:\"\";}s:2:\"vk\";a:2:{s:9:\"client_id\";s:0:\"\";s:13:\"client_secret\";s:0:\"\";}s:9:\"wordpress\";a:2:{s:9:\"client_id\";s:0:\"\";s:13:\"client_secret\";s:0:\"\";}s:7:\"dropbox\";a:2:{s:9:\"client_id\";s:0:\"\";s:13:\"client_secret\";s:0:\"\";}s:10:\"custom_css\";s:0:\"\";}', '2021-01-17 02:00:45', '2021-01-17 02:08:06'),
+(484, NULL, NULL, 'VELOCITY_LOGINIZER_CUSTOMCSS', 's:0:\"\";', '2021-01-17 02:01:18', '2021-01-17 02:01:18');
 
 -- --------------------------------------------------------
 
@@ -4334,7 +4336,8 @@ INSERT INTO `ps_connections` (`id_connections`, `id_shop_group`, `id_shop`, `id_
 (15, 1, 1, 8, 1, 2886860801, '2020-12-10 23:45:44', ''),
 (16, 1, 1, 1, 1, 2887057409, '2020-12-11 16:13:26', ''),
 (17, 1, 1, 7, 1, 2886860801, '2020-12-11 20:20:44', ''),
-(18, 1, 1, 9, 1, 3232264193, '2020-12-12 00:31:56', '');
+(18, 1, 1, 9, 1, 3232264193, '2020-12-12 00:31:56', ''),
+(19, 1, 1, 10, 1, 2887122945, '2021-01-17 01:57:58', '');
 
 -- --------------------------------------------------------
 
@@ -5818,7 +5821,7 @@ CREATE TABLE `ps_employee` (
 --
 
 INSERT INTO `ps_employee` (`id_employee`, `id_profile`, `id_lang`, `lastname`, `firstname`, `email`, `passwd`, `last_passwd_gen`, `stats_date_from`, `stats_date_to`, `stats_compare_from`, `stats_compare_to`, `stats_compare_option`, `preselect_date_range`, `bo_color`, `bo_theme`, `bo_css`, `default_tab`, `bo_width`, `bo_menu`, `active`, `optin`, `id_last_order`, `id_last_customer_message`, `id_last_customer`, `last_connection_date`) VALUES
-(1, 1, 1, 'XXX', 'Dawid', 'wazniak96@gmail.com', '571605331338e1e84fa8b355703024de', '2020-11-30 13:04:08', '2020-10-30', '2020-11-30', '0000-00-00', '0000-00-00', 1, NULL, NULL, 'default', 'admin-theme.css', 1, 0, 1, 1, 1, 8, 0, 5, '2020-12-11');
+(1, 1, 1, 'XXX', 'Dawid', 'wazniak96@gmail.com', '571605331338e1e84fa8b355703024de', '2020-11-30 13:04:08', '2020-10-30', '2020-11-30', '0000-00-00', '0000-00-00', 1, NULL, NULL, 'default', 'admin-theme.css', 1, 0, 1, 1, 1, 8, 0, 5, '2021-01-17');
 
 -- --------------------------------------------------------
 
@@ -12643,6 +12646,7 @@ INSERT INTO `ps_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (69, 1, 30, 2),
 (69, 1, 46, 2),
 (71, 1, 51, 2),
+(72, 1, 152, 2),
 (4, 1, 10, 3),
 (4, 1, 96, 3),
 (4, 1, 97, 3),
@@ -12755,7 +12759,8 @@ INSERT INTO `ps_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (66, 1, 10, 32),
 (68, 1, 10, 33),
 (69, 1, 10, 34),
-(71, 1, 10, 35);
+(71, 1, 10, 35),
+(72, 1, 10, 36);
 
 -- --------------------------------------------------------
 
@@ -17525,7 +17530,8 @@ INSERT INTO `ps_log` (`id_log`, `severity`, `error_code`, `message`, `object_typ
 (83, 1, 0, 'Product modyfikacja', 'Product', 29, 1, '2020-12-11 21:52:56', '2020-12-11 21:52:56'),
 (84, 1, 0, 'Product modyfikacja', 'Product', 48, 1, '2020-12-11 21:54:12', '2020-12-11 21:54:12'),
 (85, 1, 0, 'Product modyfikacja', 'Product', 13, 1, '2020-12-11 21:56:21', '2020-12-11 21:56:21'),
-(86, 1, 0, 'Połączenie z panelem administracyjnym z 192.168.112.1', '', 0, 1, '2020-12-12 00:32:04', '2020-12-12 00:32:04');
+(86, 1, 0, 'Połączenie z panelem administracyjnym z 192.168.112.1', '', 0, 1, '2020-12-12 00:32:04', '2020-12-12 00:32:04'),
+(87, 1, 0, 'Połączenie z panelem administracyjnym z 172.22.0.1', '', 0, 1, '2021-01-17 01:58:28', '2021-01-17 01:58:28');
 
 -- --------------------------------------------------------
 
@@ -17832,7 +17838,8 @@ INSERT INTO `ps_module` (`id_module`, `name`, `active`, `version`) VALUES
 (68, 'paypal', 1, '3.15.0'),
 (69, 'ganalytics', 1, '2.3.4'),
 (70, 'pscleaner', 1, '1.9.2'),
-(71, 'dotpay', 1, '2.4.3');
+(71, 'dotpay', 1, '2.4.3'),
+(72, 'socialloginizer', 1, '1.0.1');
 
 -- --------------------------------------------------------
 
@@ -17940,6 +17947,7 @@ INSERT INTO `ps_module_access` (`id_profile`, `id_module`, `view`, `configure`, 
 (2, 69, 1, 1, 1),
 (2, 70, 1, 1, 1),
 (2, 71, 1, 1, 1),
+(2, 72, 1, 1, 1),
 (3, 1, 1, 0, 0),
 (3, 2, 1, 0, 0),
 (3, 3, 1, 0, 0),
@@ -18010,6 +18018,7 @@ INSERT INTO `ps_module_access` (`id_profile`, `id_module`, `view`, `configure`, 
 (3, 69, 1, 0, 0),
 (3, 70, 1, 0, 0),
 (3, 71, 1, 0, 0),
+(3, 72, 1, 0, 0),
 (4, 1, 1, 1, 1),
 (4, 2, 1, 1, 1),
 (4, 3, 1, 1, 1),
@@ -18079,7 +18088,8 @@ INSERT INTO `ps_module_access` (`id_profile`, `id_module`, `view`, `configure`, 
 (4, 68, 1, 1, 1),
 (4, 69, 1, 1, 1),
 (4, 70, 1, 1, 1),
-(4, 71, 1, 1, 1);
+(4, 71, 1, 1, 1),
+(4, 72, 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -18351,7 +18361,10 @@ INSERT INTO `ps_module_group` (`id_module`, `id_shop`, `id_group`) VALUES
 (70, 1, 3),
 (71, 1, 1),
 (71, 1, 2),
-(71, 1, 3);
+(71, 1, 3),
+(72, 1, 1),
+(72, 1, 2),
+(72, 1, 3);
 
 -- --------------------------------------------------------
 
@@ -18442,7 +18455,8 @@ INSERT INTO `ps_module_shop` (`id_module`, `id_shop`, `enable_device`) VALUES
 (68, 1, 7),
 (69, 1, 7),
 (70, 1, 7),
-(71, 1, 7);
+(71, 1, 7),
+(72, 1, 7);
 
 -- --------------------------------------------------------
 
@@ -21974,10 +21988,12 @@ INSERT INTO `ps_smarty_lazy_cache` (`template_hash`, `cache_id`, `compile_id`, `
 ('1c2cb083a2501296262fc9eacdebdcbd', 'homeslider|1|1|1|14', '', 'homeslider/1/1/1/14/b7/99/17/b79917e19c39a5c2f6896b068d19cda5bdc51987.homeslider.tpl.php', '2020-12-11 23:41:32'),
 ('2132324ad7612ed7cb91de8444f03dae', 'blocksearch-top|1|1|1|14', '', 'blocksearch_top/1/1/1/14/4e/c5/f0/4ec5f09962f5f0725e3faf31c01e69428a9d500b.blocksearch-top.tpl.php', '2020-12-11 23:41:50'),
 ('35cd305a7376d26fe34a5dbc3549c31d', 'blockcontact|1|1|1|14', '', 'blockcontact/1/1/1/14/3d/5b/15/3d5b1584ffcf7c8b56d0c79b9f00a62f9454dc0f.nav.tpl.php', '2020-12-11 23:41:31'),
+('399f3a8c743ef048e012f3c13f1bc314', 'blockcategories|1|1|1|14|2|1', '', 'blockcategories/1/1/1/14/2/1/1b/1c/21/1b1c215ce32173764aa2a2d1f148af37261154be.blockcategories.tpl.php', '2021-01-17 01:04:33'),
 ('399f3a8c743ef048e012f3c13f1bc314', 'blockcategories|1|1|1|14|68|68|1', '', 'blockcategories/1/1/1/14/68/68/1/1b/1c/21/1b1c215ce32173764aa2a2d1f148af37261154be.blockcategories.tpl.php', '2020-12-11 23:41:50'),
 ('4f294e125e754c54d07798d2ae66c229', 'blockbanner|1|1|1|14', '', 'blockbanner/1/1/1/14/fa/20/76/fa207644db1eb26d98a795ad71b4eee2ee5ecf5a.blockbanner.tpl.php', '2020-12-11 23:41:31'),
 ('4f296089919889fb5b29e0c5220afb8a', 'blockcontactinfos|1|1|1|14', '', 'blockcontactinfos/1/1/1/14/44/a3/ca/44a3ca6f70fb7cf18ad9ccaabb7c9b7695475dd2.blockcontactinfos.tpl.php', '2020-12-11 23:41:30'),
 ('614548d004ca83d561fc28811f573952', 'blockspecials-tab|20201212|1|1|1|14', '', 'blockspecials_tab/20201212/1/1/1/14/ff/a2/f3/ffa2f3cf0f343957a57c8a99d56c5295164533de.tab.tpl.php', '2020-12-11 23:41:28'),
+('614548d004ca83d561fc28811f573952', 'blockspecials-tab|20210117|1|1|1|14', '', 'blockspecials_tab/20210117/1/1/1/14/ff/a2/f3/ffa2f3cf0f343957a57c8a99d56c5295164533de.tab.tpl.php', '2021-01-17 00:57:55'),
 ('614e4802f9dfd7bc3afb863d07cd8835', 'productlist_colors|10|1|1', '', '', '2020-12-11 23:41:51'),
 ('614e4802f9dfd7bc3afb863d07cd8835', 'productlist_colors|11|1|1', '', '', '2020-12-11 23:41:51'),
 ('614e4802f9dfd7bc3afb863d07cd8835', 'productlist_colors|12|1|1', '', '', '2020-12-11 23:41:51'),
@@ -21991,18 +22007,52 @@ INSERT INTO `ps_smarty_lazy_cache` (`template_hash`, `cache_id`, `compile_id`, `
 ('614e4802f9dfd7bc3afb863d07cd8835', 'productlist_colors|38|1|1', '', '', '2020-12-11 23:41:51'),
 ('614e4802f9dfd7bc3afb863d07cd8835', 'productlist_colors|39|1|1', '', '', '2020-12-11 23:41:51'),
 ('729e08a789498e11db4ee7ed1dafd3af', 'blockspecials-home|20201212|1|1|1|14', '', 'blockspecials_home/20201212/1/1/1/14/b7/13/c1/b713c100fedffddfa260c35747bbce951f5ad6f6.blockspecials-home.tpl.php', '2020-12-11 23:41:29'),
+('729e08a789498e11db4ee7ed1dafd3af', 'blockspecials-home|20210117|1|1|1|14', '', 'blockspecials_home/20210117/1/1/1/14/b7/13/c1/b713c100fedffddfa260c35747bbce951f5ad6f6.blockspecials-home.tpl.php', '2021-01-17 00:57:56'),
 ('8cce06d74fb470f1ea86b9243a28d1c9', 'homefeatured-tab|1|1|1|14', '', 'homefeatured_tab/1/1/1/14/d1/ec/35/d1ec35425663d01dcc0e04833a4aa96a7fdfb7ba.tab.tpl.php', '2020-12-11 23:41:28'),
 ('9b076b330c3b383e100e4c23e6c16d43', 'blocktopmenu|1|1|1|14|category|68', '', 'blocktopmenu/1/1/1/14/category/68/20/22/61/202261737f7471ff70a95274dd663f2dc7c8ef47.blocktopmenu.tpl.php', '2020-12-11 23:41:50'),
 ('9b076b330c3b383e100e4c23e6c16d43', 'blocktopmenu|1|1|1|14|index', '', 'blocktopmenu/1/1/1/14/index/20/22/61/202261737f7471ff70a95274dd663f2dc7c8ef47.blocktopmenu.tpl.php', '2020-12-11 23:41:27'),
 ('9b076b330c3b383e100e4c23e6c16d43', 'blocktopmenu|1|1|1|14|product|10', '', 'blocktopmenu/1/1/1/14/product/10/20/22/61/202261737f7471ff70a95274dd663f2dc7c8ef47.blocktopmenu.tpl.php', '2020-12-11 23:41:57'),
+('a4edb6e4925cf4f684fdf466d509564a', 'blockpaymentlogo|1|1|1|14', '', '', '2021-01-17 01:06:08'),
 ('a818646d437d1d648322d07d6c385caa', 'blockspecials|20201212|16|20201212|1|1|1|14', '', 'blockspecials/20201212/16/20201212/1/1/1/14/c7/cb/5a/c7cb5a1b8f4aaa78439a29b3cc549b5c1e053c83.blockspecials.tpl.php', '2020-12-11 23:41:51'),
+('a818646d437d1d648322d07d6c385caa', 'blockspecials|20210117|13|20210117|1|1|1|14', '', 'blockspecials/20210117/13/20210117/1/1/1/14/c7/cb/5a/c7cb5a1b8f4aaa78439a29b3cc549b5c1e053c83.blockspecials.tpl.php', '2021-01-17 01:05:00'),
+('a818646d437d1d648322d07d6c385caa', 'blockspecials|20210117|16|20210117|1|1|1|14', '', 'blockspecials/20210117/16/20210117/1/1/1/14/c7/cb/5a/c7cb5a1b8f4aaa78439a29b3cc549b5c1e053c83.blockspecials.tpl.php', '2021-01-17 01:04:34'),
+('a818646d437d1d648322d07d6c385caa', 'blockspecials|20210117|2|20210117|1|1|1|14', '', 'blockspecials/20210117/2/20210117/1/1/1/14/c7/cb/5a/c7cb5a1b8f4aaa78439a29b3cc549b5c1e053c83.blockspecials.tpl.php', '2021-01-17 01:06:08'),
+('a818646d437d1d648322d07d6c385caa', 'blockspecials|20210117|5|20210117|1|1|1|14', '', 'blockspecials/20210117/5/20210117/1/1/1/14/c7/cb/5a/c7cb5a1b8f4aaa78439a29b3cc549b5c1e053c83.blockspecials.tpl.php', '2021-01-17 01:04:51'),
+('a818646d437d1d648322d07d6c385caa', 'blockspecials|20210117|6|20210117|1|1|1|14', '', 'blockspecials/20210117/6/20210117/1/1/1/14/c7/cb/5a/c7cb5a1b8f4aaa78439a29b3cc549b5c1e053c83.blockspecials.tpl.php', '2021-01-17 01:05:24'),
 ('b96e09f72175b88e25c97cde76542dd6', 'blockmyaccountfooter|1|1|1|14', '', 'blockmyaccountfooter/1/1/1/14/05/44/40/054440a5b928799e8ca909a0b328db11279aee9a.blockmyaccountfooter.tpl.php', '2020-12-11 23:41:30'),
 ('bfe7a83fb1ce61839575db203c6a12a1', 'blockcategories|1|1|1|14|1', '', 'blockcategories/1/1/1/14/1/a5/88/0b/a5880b37cb81397979bd6724b1e436aac6fc922c.blockcategories_footer.tpl.php', '2020-12-11 23:41:29'),
 ('bfe7a83fb1ce61839575db203c6a12a1', 'blockcategories|1|1|1|14|68|1', '', 'blockcategories/1/1/1/14/68/1/a5/88/0b/a5880b37cb81397979bd6724b1e436aac6fc922c.blockcategories_footer.tpl.php', '2020-12-11 23:41:52'),
-('c0f69a7a01e460742fded10f6ab3bcab', 'blocktags|1|1|1|14', '', '', '2020-12-11 23:41:51'),
+('c0f69a7a01e460742fded10f6ab3bcab', 'blocktags|1|1|1|14', '', '', '2021-01-17 01:06:08'),
 ('d22b953fa4736374feaaf4b2ee38dd9a', 'blockcms|0|1|1|1|14', '', 'blockcms/0/1/1/1/14/1d/89/e8/1d89e8014f347982d948469f9543b359301e5949.blockcms.tpl.php', '2020-12-11 23:41:51'),
 ('d22b953fa4736374feaaf4b2ee38dd9a', 'blockcms|2|1|1|1|14', '', 'blockcms/2/1/1/1/14/1d/89/e8/1d89e8014f347982d948469f9543b359301e5949.blockcms.tpl.php', '2020-12-11 23:41:30'),
 ('f7b2d8122648c39fdccc4e63f44364ce', 'homefeatured|1|1|1|14', '', 'homefeatured/1/1/1/14/3a/a0/d6/3aa0d62e1049e5b9d12bc2cae084fdddf0d39b7a.homefeatured.tpl.php', '2020-12-11 23:41:28');
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `ps_socialloginizer_mapping`
+--
+
+CREATE TABLE `ps_socialloginizer_mapping` (
+  `id` int(11) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `unique_id` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `ps_socialloginizer_statistics`
+--
+
+CREATE TABLE `ps_socialloginizer_statistics` (
+  `id` int(11) NOT NULL,
+  `customer_id` int(10) UNSIGNED NOT NULL,
+  `username` varchar(25) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `account_type` varchar(20) NOT NULL,
+  `user_login_count` int(11) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -26478,6 +26528,19 @@ ALTER TABLE `ps_smarty_lazy_cache`
   ADD PRIMARY KEY (`template_hash`,`cache_id`,`compile_id`);
 
 --
+-- Indeksy dla tabeli `ps_socialloginizer_mapping`
+--
+ALTER TABLE `ps_socialloginizer_mapping`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeksy dla tabeli `ps_socialloginizer_statistics`
+--
+ALTER TABLE `ps_socialloginizer_statistics`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `customer_id` (`customer_id`);
+
+--
 -- Indeksy dla tabeli `ps_specific_price`
 --
 ALTER TABLE `ps_specific_price`
@@ -26987,7 +27050,7 @@ ALTER TABLE `ps_condition`
 -- AUTO_INCREMENT dla tabeli `ps_configuration`
 --
 ALTER TABLE `ps_configuration`
-  MODIFY `id_configuration` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=483;
+  MODIFY `id_configuration` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=485;
 
 --
 -- AUTO_INCREMENT dla tabeli `ps_configuration_kpi`
@@ -26999,7 +27062,7 @@ ALTER TABLE `ps_configuration_kpi`
 -- AUTO_INCREMENT dla tabeli `ps_connections`
 --
 ALTER TABLE `ps_connections`
-  MODIFY `id_connections` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id_connections` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT dla tabeli `ps_connections_source`
@@ -27215,7 +27278,7 @@ ALTER TABLE `ps_linksmenutop`
 -- AUTO_INCREMENT dla tabeli `ps_log`
 --
 ALTER TABLE `ps_log`
-  MODIFY `id_log` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
+  MODIFY `id_log` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
 
 --
 -- AUTO_INCREMENT dla tabeli `ps_mail`
@@ -27251,7 +27314,7 @@ ALTER TABLE `ps_meta`
 -- AUTO_INCREMENT dla tabeli `ps_module`
 --
 ALTER TABLE `ps_module`
-  MODIFY `id_module` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
+  MODIFY `id_module` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
 
 --
 -- AUTO_INCREMENT dla tabeli `ps_modules_perfs`
@@ -27497,7 +27560,7 @@ ALTER TABLE `ps_search_engine`
 -- AUTO_INCREMENT dla tabeli `ps_search_word`
 --
 ALTER TABLE `ps_search_word`
-  MODIFY `id_word` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=256;
+  MODIFY `id_word` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=162;
 
 --
 -- AUTO_INCREMENT dla tabeli `ps_sekeyword`
@@ -27524,6 +27587,18 @@ ALTER TABLE `ps_shop_url`
   MODIFY `id_shop_url` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT dla tabeli `ps_socialloginizer_mapping`
+--
+ALTER TABLE `ps_socialloginizer_mapping`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT dla tabeli `ps_socialloginizer_statistics`
+--
+ALTER TABLE `ps_socialloginizer_statistics`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT dla tabeli `ps_specific_price`
 --
 ALTER TABLE `ps_specific_price`
@@ -27533,7 +27608,7 @@ ALTER TABLE `ps_specific_price`
 -- AUTO_INCREMENT dla tabeli `ps_specific_price_priority`
 --
 ALTER TABLE `ps_specific_price_priority`
-  MODIFY `id_specific_price_priority` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_specific_price_priority` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT dla tabeli `ps_specific_price_rule`
@@ -27736,6 +27811,12 @@ ALTER TABLE `ps_zone`
 --
 ALTER TABLE `ps_dotpay_credit_cards`
   ADD CONSTRAINT `fk_customer_id` FOREIGN KEY (`customer_id`) REFERENCES `ps_customer` (`id_customer`) ON DELETE CASCADE;
+
+--
+-- Ograniczenia dla tabeli `ps_socialloginizer_statistics`
+--
+ALTER TABLE `ps_socialloginizer_statistics`
+  ADD CONSTRAINT `ps_socialloginizer_statistics_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `ps_customer` (`id_customer`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

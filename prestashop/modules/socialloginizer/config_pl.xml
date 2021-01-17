@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+	<name>socialloginizer</name>
+	<displayName><![CDATA[Free Social Login 15 in 1]]></displayName>
+	<version><![CDATA[1.0.1]]></version>
+	<description><![CDATA[Umożliwia klientom, aby zalogować się na stronie internetowej za pośrednictwem r&oacute;żnych platform społecznych. ]]></description>
+	<author><![CDATA[Knowband]]></author>
+	<tab><![CDATA[front_office_features]]></tab>
+	<confirmUninstall><![CDATA[Czy na pewno chcesz odinstalować? ]]></confirmUninstall>
+	<is_configurable>1</is_configurable>
+	<need_instance>0</need_instance>
+	<limited_countries></limited_countries>
+</module>

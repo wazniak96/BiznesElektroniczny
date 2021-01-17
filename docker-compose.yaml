@@ -21,6 +21,7 @@ services:
       - '8080:80'
       - '443:443'
     volumes:
+      - ./prestashop:/var/www/html/
       - ../log:/var/log/apache2/
        
    phpmyadmin:
