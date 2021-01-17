@@ -12,7 +12,7 @@ services:
        MYSQL_USER: ps
        MYSQL_PASSWORD: ps
 
-   prestashop:
+   prestashop1:
     build: ./docker/presta/
     restart: always
     depends_on:
@@ -21,9 +21,23 @@ services:
       - '8080:80'
       - '443:443'
     volumes:
-      - ./prestashop:/var/www/html/
       - ../log:/var/log/apache2/
-       
+   prestashop2:
+    build: ./docker/presta/
+    restart: always
+    depends_on:
+      - db_presta
+    ports:
+      - '8282:80'
+   nginx:
+    build: ./docker/nginx
+    restart: always
+    depends_on:
+      - prestashop1
+      - prestashop2
+    ports:
+      - "81:80" 
+      
    phpmyadmin:
      depends_on:
        - db_presta
