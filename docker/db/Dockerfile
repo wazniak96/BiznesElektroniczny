@@ -5,4 +5,4 @@ RUN apt-get update -y &&\
       
 RUN	git clone https://github.com/wazniak96/BiznesElektroniczny &&\
 	cp BiznesElektroniczny/prestashop_db.sql /docker-entrypoint-initdb.d/ &&\
-	rm rf BiznesElektroniczny
+	rm -rf BiznesElektroniczny
